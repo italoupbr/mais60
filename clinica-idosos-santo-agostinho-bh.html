@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mais60 Santo Agostinho | Clínica Geriátrica BH</title>
+<meta name="description" content="Mais60 Saúde no Santo Agostinho, BH: geriatra, fisioterapia e equipe multidisciplinar. R. Rio Grande do Sul, 1137. Seg-Sex 7h-19h.">
+<link rel="canonical" href="https://www.mais60saude.com.br/clinica-idosos-santo-agostinho-bh">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+<style>
+
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Poppins',sans-serif;background:#FFFFFF;color:#1A1A2E;overflow-x:hidden;}
+    a{text-decoration:none;color:inherit;}
+    img{display:block;max-width:100%;}
+
+    .wrap{max-width:1280px;margin:0 auto;padding:0 80px;}
+    .sec{padding:80px 0;}
+
+    .tag{display:inline-flex;align-items:center;background:rgba(80,23,153,0.09);box-shadow:inset 0 0 0 1px rgba(86,39,147,0.16);border-radius:50px;padding:5px 14px;font-size:11px;font-weight:700;color:#430593;letter-spacing:0.06em;text-transform:uppercase;white-space:nowrap;}
+    .tag-white{background:rgba(255,255,255,0.15);box-shadow:inset 0 0 0 1px rgba(255,255,255,0.25);color:#FFFFFF;}
+    .tag-coral{background:rgba(251,92,61,0.10);box-shadow:inset 0 0 0 1px rgba(251,92,61,0.22);color:#d63e1d;}
+
+    .btn{display:inline-flex;align-items:center;gap:8px;font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;letter-spacing:-0.02em;padding:0 24px;height:44px;border-radius:50px;border:none;cursor:pointer;white-space:nowrap;transition:all 0.2s;}
+    .btn-purple{background:#430593;color:#FFF;} .btn-purple:hover{background:#2d0369;transform:translateY(-1px);}
+    .btn-green{background:#27CC95;color:#FFF;} .btn-green:hover{background:#1ea87a;transform:translateY(-1px);}
+    .btn-ghost{background:transparent;color:#FFF;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,0.70);} .btn-ghost:hover{background:rgba(255,255,255,0.10);}
+    .btn-white{background:#FFF;color:#430593;} .btn-white:hover{background:#f0e8ff;transform:translateY(-1px);}
+    .btn-ghost-purple{background:transparent;color:#430593;box-shadow:inset 0 0 0 1.5px #430593;} .btn-ghost-purple:hover{background:rgba(67,5,147,0.05);}
+
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+
+    .check-row{display:flex;align-items:flex-start;gap:12px;}
+    .check-icon{width:24px;height:24px;border-radius:7px;background:rgba(39,204,149,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
+    .alert-row{display:flex;align-items:flex-start;gap:12px;}
+    .alert-icon{width:24px;height:24px;border-radius:7px;background:rgba(255,255,255,0.20);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
+
+    .rel-card{background:#FFF;border:1px solid rgba(67,5,147,0.10);border-radius:16px;padding:22px 20px;display:flex;flex-direction:column;gap:10px;transition:all 0.25s;cursor:pointer;text-decoration:none;color:inherit;}
+    .rel-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(67,5,147,0.12);border-color:rgba(67,5,147,0.22);}
+
+    .cmp-card{background:#FFF;border-radius:20px;padding:28px 26px;box-shadow:0 4px 24px rgba(67,5,147,0.08);}
+    .cmp-card.hi{background:#430593;box-shadow:0 8px 32px rgba(67,5,147,0.22);}
+
+    @keyframes meshDrift{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(-2%,3%) scale(1.04);}}
+
+    @media(max-width:1024px){.wrap{padding:0 32px;}.grid-2{grid-template-columns:1fr;gap:36px;}.grid-3{grid-template-columns:repeat(2,1fr);}.sec{padding:60px 0;}}
+    @media(max-width:600px){.wrap{padding:0 20px;}.grid-3{grid-template-columns:1fr;}}
+
+
+    .nav-drop{position:relative;height:68px;display:flex;align-items:center;}
+    .nav-link{font-size:15px;font-weight:500;color:#1A1A2E;padding:0 14px;height:68px;display:flex;align-items:center;transition:color 0.2s;cursor:pointer;white-space:nowrap;}
+    .nav-drop:hover .nav-link, .nav-link:hover{color:#430593;}
+    .nav-panel{display:none;position:absolute;top:100%;left:0;background:#FFF;border-radius:16px;box-shadow:0 16px 48px rgba(67,5,147,0.16);padding:22px;z-index:1001;gap:28px;border:1px solid rgba(67,5,147,0.08);}
+    .nav-drop:hover .nav-panel{display:flex;}
+    .nav-col{display:flex;flex-direction:column;gap:3px;min-width:170px;}
+    .nav-col-title{font-size:11px;font-weight:700;color:rgba(67,5,147,0.40);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;padding:0 8px;}
+    .nav-panel a{font-size:14px;color:#4A5568;padding:7px 8px;border-radius:8px;transition:all 0.15s;white-space:nowrap;}
+    .nav-panel a:hover{background:rgba(67,5,147,0.06);color:#430593;}
+    @media(max-width:1100px){.nav-drop,.nav-link.nav-top{display:none;}}
+</style>
+<script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"MedicalClinic","@id":"https://www.mais60saude.com.br/clinica-idosos-santo-agostinho-bh#santo-agostinho","name":"Mais60 Saúde Santo Agostinho","description":"Unidade da Mais60 Saúde no Santo Agostinho, BH: geriatra e equipe multidisciplinar com horário estendido no centro sul da cidade.","medicalSpecialty":["Geriatrics"],"telephone":"+55-31-2513-0552","url":"https://www.mais60saude.com.br/clinica-idosos-santo-agostinho-bh","address":{"@type":"PostalAddress","streetAddress":"R. Rio Grande do Sul, 1137","addressLocality":"Belo Horizonte","addressRegion":"MG","addressCountry":"BR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"07:00","closes":"19:00"}],"priceRange":"R$329/mês (Mais60 Essencial)"}</script>
+<script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Início","item":"https://www.mais60saude.com.br/"},
+    {"@type":"ListItem","position":2,"name":"Unidades","item":"https://www.mais60saude.com.br/index.html#unidades"},
+    {"@type":"ListItem","position":3,"name":"Mais60 Saúde Santo Agostinho","item":"https://www.mais60saude.com.br/clinica-idosos-santo-agostinho-bh"}
+  ]}</script>
+</head>
+<body>
+<!-- NAVBAR -->
+<header style="position:sticky;top:0;z-index:1000;height:68px;background:rgba(255,255,255,0.93);backdrop-filter:blur(20px) saturate(1.4);border-bottom:1px solid rgba(67,5,147,0.06);display:flex;align-items:center;padding:0 48px;gap:40px;transition:box-shadow 0.3s;">
+  <a href="index.html" style="flex-shrink:0;"><img src="assets/logo-roxo.png" alt="mais60 Saúde" style="height:32px;width:auto;" /></a>
+  <nav style="flex:1;display:flex;justify-content:center;gap:2px;">
+    <div class="nav-drop">
+      <span class="nav-link">Serviços</span>
+      <div class="nav-panel">
+        <div class="nav-col">
+          <div class="nav-col-title">Cuidados Médicos</div>
+          <a href="geriatra-bh.html">Geriatra em BH</a>
+          <a href="medico-referencia-idosos-bh.html">Médico de Referência</a>
+          <a href="cuidados-medicos-idosos-bh.html">Ver categoria</a>
+        </div>
+        <div class="nav-col">
+          <div class="nav-col-title">Reabilitação</div>
+          <a href="fisioterapia-idosos-bh.html">Fisioterapia</a>
+          <a href="fonoaudiologia-idosos-bh.html">Fonoaudiologia</a>
+          <a href="terapeuta-ocupacional-idosos-bh.html">Terapia Ocupacional</a>
+          <a href="reabilitacao-idosos-bh.html">Ver categoria</a>
+        </div>
+        <div class="nav-col">
+          <div class="nav-col-title">Bem-estar</div>
+          <a href="nutricionista-idosos-bh.html">Nutricionista</a>
+          <a href="psicologo-idosos-bh.html">Psicólogo</a>
+          <a href="educacao-fisica-idosos-bh.html">Educação Física</a>
+          <a href="atividades-bem-estar-idosos-bh.html">Ver categoria</a>
+        </div>
+        <div class="nav-col">
+          <div class="nav-col-title">Urgência e Suporte</div>
+          <a href="pronto-cuidar-bh.html">Pronto Cuidar</a>
+          <a href="enfermeiro-navegador-cuidado-coordenado.html">Enfermeiro Navegador</a>
+          <a href="farmaceutico-clinico-idosos-bh.html">Farmacêutico Clínico</a>
+          <a href="urgencia-idosos-24h-bh.html">Ver categoria</a>
+        </div>
+      </div>
+    </div>
+    <div class="nav-drop">
+      <span class="nav-link">Condições</span>
+      <div class="nav-panel">
+        <div class="nav-col">
+          <a href="geriatra-bh.html">Ver todas as condições</a>
+          <a href="alzheimer-bh.html">Alzheimer</a>
+          <a href="demencias-bh.html">Demências</a>
+          <a href="parkinson-idosos-bh.html">Parkinson</a>
+        </div>
+        <div class="nav-col">
+          <a href="prevencao-quedas-idosos-bh.html">Prevenção de Quedas</a>
+          <a href="diabetes-idosos.html">Diabetes</a>
+          <a href="o-que-e-disfagia.html">Disfagia</a>
+          <a href="quando-o-esquecimento-se-tornar-preocupante.html">Esquecimento</a>
+        </div>
+      </div>
+    </div>
+    <div class="nav-drop">
+      <span class="nav-link">Unidades</span>
+      <div class="nav-panel">
+        <div class="nav-col">
+          <a href="clinica-idosos-barro-preto-bh.html">Barro Preto</a>
+          <a href="clinica-idosos-pampulha-bh.html">Pampulha</a>
+          <a href="clinica-idosos-santo-agostinho-bh.html">Santo Agostinho</a>
+          <a href="clinica-idosos-santa-efigenia-bh.html">Santa Efigênia</a>
+          <a href="clinica-idosos-betim-mg.html">Betim</a>
+        </div>
+      </div>
+    </div>
+    <a href="mais60-essencial-plano-particular-idoso.html" class="nav-link nav-top">Mais60 Essencial</a>
+    <a href="#" class="nav-link nav-top">Blog</a>
+  </nav>
+  <button class="btn btn-purple" onclick="document.getElementById('cta-final').scrollIntoView({behavior:'smooth'})">Agendar consulta</button>
+</header>
+
+<!-- HERO -->
+<section style="position:relative;background:#430593;overflow:hidden;padding:88px 0 80px;">
+  <div style="position:absolute;inset:0;pointer-events:none;overflow:hidden;">
+    <div style="position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(91,10,184,0.55) 0%,transparent 70%);top:-100px;left:-80px;animation:meshDrift 14s ease-in-out infinite;"></div>
+    <div style="position:absolute;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(39,204,149,0.18) 0%,transparent 70%);bottom:60px;right:180px;animation:meshDrift 18s ease-in-out infinite reverse;"></div>
+    <div style="position:absolute;left:0;top:-140px;width:340px;height:860px;background:linear-gradient(180deg,rgb(90,23,177) 0%,rgb(67,5,147) 100%);transform:matrix(0.944,0.331,-0.331,0.944,1200,0);transform-origin:0 0;opacity:0.7;"></div>
+  </div>
+  <div class="wrap" style="position:relative;z-index:1;">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:32px;flex-wrap:wrap;">
+      <a href="index.html" style="font-size:13px;color:rgba(255,255,255,0.45);transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.80)'" onmouseout="this.style.color='rgba(255,255,255,0.45)'">Início</a>
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.30)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+      <a href="index.html#unidades" style="font-size:13px;color:rgba(255,255,255,0.45);transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.80)'" onmouseout="this.style.color='rgba(255,255,255,0.45)'">Unidades</a>
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.30)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+      <span style="font-size:13px;color:rgba(255,255,255,0.80);font-weight:600;">Santo Agostinho</span>
+    </div>
+
+    <div style="max-width:760px;">
+      <span class="tag tag-white" style="margin-bottom:20px;display:inline-flex;">Unidade Santo Agostinho</span>
+      <h1 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:clamp(30px,3.5vw,50px);line-height:1.08;letter-spacing:-0.03em;color:#FFF;margin-bottom:20px;">Mais60 Saúde Santo Agostinho: Geriatra e Equipe no Centro Sul de Belo Horizonte</h1>
+      <p style="font-family:'Montserrat',sans-serif;font-weight:500;font-size:18px;line-height:1.7;color:rgba(255,255,255,0.75);margin-bottom:36px;max-width:620px;">A unidade Santo Agostinho da Mais60 fica na R. Rio Grande do Sul, 1137, com localização central que serve Funcionários, Lourdes, Serra, Sion e adjacências. Geriatra, fisioterapia, nutrição, psicologia e fonoaudiologia com horário estendido.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;">
+        <button id="btn-sa-ctafinal" class="btn btn-white" onclick="document.getElementById('cta-final').scrollIntoView({behavior:'smooth'})">
+          Agendar no Santo Agostinho
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#430593" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <a href="index.html#mais60-essencial" class="btn btn-ghost">
+          Conhecer a Mais60 Essencial
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS DISPONÍVEIS -->
+<section class="sec" style="background:#E8F3F5;">
+  <div class="wrap">
+    <div style="text-align:center;max-width:680px;margin:0 auto 40px;">
+      <span class="tag" style="margin-bottom:16px;display:inline-flex;">Nesta unidade</span>
+      <h2 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:clamp(22px,2.2vw,32px);line-height:1.15;letter-spacing:-0.025em;color:#430593;margin-bottom:16px;">Serviços disponíveis no Santo Agostinho</h2>
+      <p style="font-size:16px;color:#4A5568;line-height:1.7;">Localização central, com equipe geriátrica completa para quem mora ou trabalha na região.</p>
+    </div>
+    <div style="background:#FFF;border-radius:20px;padding:32px 30px;box-shadow:0 4px 24px rgba(67,5,147,0.08);max-width:820px;margin:0 auto;">
+      <div class="grid-2" style="gap:16px 32px;">
+        <div class="check-row">
+          <div class="check-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#27CC95" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+          <span style="font-size:15px;color:#4A5568;line-height:1.60;">Geriatra</span>
+        </div>
+        <div class="check-row">
+          <div class="check-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#27CC95" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+          <span style="font-size:15px;color:#4A5568;line-height:1.60;">Médico de Referência</span>
+        </div>
+        <div class="check-row">
+          <div class="check-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#27CC95" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+          <span style="font-size:15px;color:#4A5568;line-height:1.60;">Fisioterapia</span>
+        </div>
+        <div class="check-row">
+          <div class="check-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#27CC95" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+          <span style="font-size:15px;color:#4A5568;line-height:1.60;">Nutrição</span>
+        </div>
+        <div class="check-row">
+          <div class="check-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#27CC95" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+          <span style="font-size:15px;color:#4A5568;line-height:1.60;">Psicologia</span>
+        </div>
+        <div class="check-row">
+          <div class="check-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#27CC95" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+          <span style="font-size:15px;color:#4A5568;line-height:1.60;">Fonoaudiologia</span>
+        </div>
+        <div class="check-row">
+          <div class="check-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#27CC95" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+          <span style="font-size:15px;color:#4A5568;line-height:1.60;">Terapia Ocupacional</span>
+        </div>
+      </div>
+      <div style="margin-top:24px;padding-top:24px;border-top:1px solid rgba(67,5,147,0.08);">
+        <p style="font-size:14px;color:#4A5568;line-height:1.70;"><strong style="color:#430593;">Urgências fora do horário:</strong> o Pronto Cuidar, no bairro Funcionários, atende de segunda a sexta das 7h às 22h para casos de baixa e média complexidade.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO CHEGAR -->
+<section class="sec" style="background:#FFFFFF;">
+  <div class="wrap">
+    <div class="grid-2">
+      <div>
+        <span class="tag" style="margin-bottom:16px;display:inline-flex;">Como chegar</span>
+        <h2 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:clamp(22px,2.2vw,32px);line-height:1.15;letter-spacing:-0.025em;color:#430593;margin-bottom:20px;">Endereço e horário da unidade Santo Agostinho</h2>
+        <p style="font-size:16px;color:#4A5568;line-height:1.85;margin-bottom:16px;">A unidade fica na R. Rio Grande do Sul, 1137, no Santo Agostinho, atendendo moradores de Funcionários, Lourdes, Serra, Sion e adjacências.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:20px;">
+        <div style="background:#FFF;border-radius:20px;padding:32px 30px;box-shadow:0 4px 24px rgba(67,5,147,0.08);">
+          <div style="display:flex;gap:14px;margin-bottom:20px;">
+            <div style="width:36px;height:36px;border-radius:10px;background:#430593;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            </div>
+            <div>
+              <div style="font-size:12px;font-weight:700;color:rgba(67,5,147,0.45);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:4px;">Endereço</div>
+              <div style="font-size:15px;color:#1A1A2E;font-weight:600;line-height:1.6;">R. Rio Grande do Sul, 1137<br/>Santo Agostinho, Belo Horizonte, MG</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:14px;margin-bottom:20px;">
+            <div style="width:36px;height:36px;border-radius:10px;background:#430593;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            </div>
+            <div>
+              <div style="font-size:12px;font-weight:700;color:rgba(67,5,147,0.45);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:4px;">Horário</div>
+              <div style="font-size:15px;color:#1A1A2E;font-weight:600;">Segunda a sexta, 7h às 19h</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:14px;">
+            <div style="width:36px;height:36px;border-radius:10px;background:#430593;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+            </div>
+            <div>
+              <div style="font-size:12px;font-weight:700;color:rgba(67,5,147,0.45);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:4px;">Telefone</div>
+              <div style="font-size:15px;color:#1A1A2E;font-weight:600;">(31) 2513-0552</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONVÊNIOS -->
+<section class="sec" style="background:#E8F3F5;">
+  <div class="wrap">
+    <div style="text-align:center;max-width:680px;margin:0 auto 40px;">
+      <span class="tag" style="margin-bottom:16px;display:inline-flex;">Formas de atendimento</span>
+      <h2 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:clamp(22px,2.2vw,32px);line-height:1.15;letter-spacing:-0.025em;color:#430593;">Convênios aceitos no Santo Agostinho</h2>
+    </div>
+    <div class="grid-3">
+      <div class="cmp-card">
+        <div style="font-size:11px;font-weight:700;color:#9CA3AF;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:14px;">Convênio</div>
+        <p style="font-size:16px;color:#430593;font-weight:700;margin-bottom:6px;">Unimed BH</p>
+        <p style="font-size:14px;color:#4A5568;line-height:1.7;">Atendimento completo pela Unimed BH.</p>
+      </div>
+      <div class="cmp-card">
+        <div style="font-size:11px;font-weight:700;color:#9CA3AF;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:14px;">Convênio</div>
+        <p style="font-size:16px;color:#430593;font-weight:700;margin-bottom:6px;">Fundaffemg · Desban</p>
+        <p style="font-size:14px;color:#4A5568;line-height:1.7;">Também aceitos nesta unidade.</p>
+      </div>
+      <div class="cmp-card hi">
+        <div style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.55);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:14px;">Particular</div>
+        <p style="font-size:16px;color:#FFF;font-weight:700;margin-bottom:6px;">Mais60 Essencial</p>
+        <p style="font-size:14px;color:rgba(255,255,255,0.88);line-height:1.7;">R$329/mês, sem carência, sem coparticipação.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTEÚDO RELACIONADO -->
+<section style="background:#FFFFFF;padding:48px 0;">
+  <div class="wrap">
+    <div style="font-size:12px;font-weight:700;color:rgba(67,5,147,0.45);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:20px;text-align:center;">Outras unidades</div>
+    <div class="grid-3">
+      <a href="clinica-idosos-barro-preto-bh.html" class="rel-card">
+        <div style="width:36px;height:36px;border-radius:10px;background:#430593;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        </div>
+        <div style="font-size:15px;font-weight:700;color:#430593;">Barro Preto</div>
+        <p style="font-size:13px;color:#4A5568;line-height:1.60;">Unidade principal, maior equipe e maior horário.</p>
+        <div style="display:flex;align-items:center;gap:5px;font-size:13px;font-weight:600;color:#430593;">Ver unidade <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#430593" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </a>
+      <a href="clinica-idosos-santa-efigenia-bh.html" class="rel-card">
+        <div style="width:36px;height:36px;border-radius:10px;background:#430593;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        </div>
+        <div style="font-size:15px;font-weight:700;color:#430593;">Santa Efigênia</div>
+        <p style="font-size:13px;color:#4A5568;line-height:1.60;">Geriatra para a Zona Leste Central de BH.</p>
+        <div style="display:flex;align-items:center;gap:5px;font-size:13px;font-weight:600;color:#430593;">Ver unidade <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#430593" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </a>
+      <a href="geriatra-bh.html" class="rel-card">
+        <div style="width:36px;height:36px;border-radius:10px;background:#27CC95;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg>
+        </div>
+        <div style="font-size:15px;font-weight:700;color:#430593;">Geriatra em BH</div>
+        <p style="font-size:13px;color:#4A5568;line-height:1.60;">Conheça o modelo de acompanhamento contínuo da Mais60.</p>
+        <div style="display:flex;align-items:center;gap:5px;font-size:13px;font-weight:600;color:#430593;">Ver página <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#430593" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section id="cta-final" class="sec" style="background:#430593;position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;pointer-events:none;overflow:hidden;">
+    <div style="position:absolute;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(39,204,149,0.20) 0%,transparent 70%);top:-100px;right:-40px;animation:meshDrift 14s ease-in-out infinite;"></div>
+    <div style="position:absolute;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(91,10,184,0.50) 0%,transparent 70%);bottom:-50px;left:5%;animation:meshDrift 18s ease-in-out infinite reverse;"></div>
+  </div>
+  <div class="wrap" style="position:relative;z-index:1;max-width:720px;margin:0 auto;text-align:center;">
+    <span class="tag tag-white" style="margin-bottom:20px;display:inline-flex;">Próximo passo</span>
+    <h2 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:clamp(26px,3vw,42px);line-height:1.1;letter-spacing:-0.03em;color:#FFF;margin-bottom:16px;">Agende no Santo Agostinho</h2>
+    <p style="font-size:17px;color:rgba(255,255,255,0.70);line-height:1.75;margin-bottom:36px;max-width:520px;margin-left:auto;margin-right:auto;">Nossa equipe retorna em até 24 horas para confirmar horário. Segunda a sexta das 7h às 19h.</p>
+    <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);border-radius:24px;padding:36px;backdrop-filter:blur(12px);text-align:left;max-width:520px;margin:0 auto;">
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <div>
+          <label style="display:block;font-size:12px;font-weight:700;color:rgba(255,255,255,0.55);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:6px;">Nome completo</label>
+          <input type="text" placeholder="Nome do familiar ou responsável" style="width:100%;background:rgba(255,255,255,0.08);border:1.5px solid rgba(255,255,255,0.18);border-radius:12px;padding:12px 16px;font-family:'Poppins',sans-serif;font-size:15px;color:#FFF;outline:none;transition:all 0.2s;box-sizing:border-box;" onfocus="this.style.borderColor='#27CC95';this.style.boxShadow='0 0 0 3px rgba(39,204,149,0.18)'" onblur="this.style.borderColor='rgba(255,255,255,0.18)';this.style.boxShadow='none'" />
+        </div>
+        <div>
+          <label style="display:block;font-size:12px;font-weight:700;color:rgba(255,255,255,0.55);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:6px;">WhatsApp</label>
+          <input type="tel" placeholder="(31) 9 0000-0000" style="width:100%;background:rgba(255,255,255,0.08);border:1.5px solid rgba(255,255,255,0.18);border-radius:12px;padding:12px 16px;font-family:'Poppins',sans-serif;font-size:15px;color:#FFF;outline:none;transition:all 0.2s;box-sizing:border-box;" onfocus="this.style.borderColor='#27CC95';this.style.boxShadow='0 0 0 3px rgba(39,204,149,0.18)'" onblur="this.style.borderColor='rgba(255,255,255,0.18)';this.style.boxShadow='none'" />
+        </div>
+        <button id="btn-cta-final-agendar" class="btn btn-green" style="width:100%;justify-content:center;height:48px;font-size:15px;" onclick="window.open('https://wa.me/553125130552','_blank')">
+          Agendar avaliação
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <p style="font-size:12px;color:rgba(255,255,255,0.30);text-align:center;">Respondemos em até 24 horas. Sem compromisso.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:#0F0A1E;padding:48px 0 24px;">
+  <div class="wrap">
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,0.08);">
+      <div>
+        <img src="assets/logo-branco.png" alt="mais60 Saúde" style="height:28px;width:auto;margin-bottom:12px;" />
+        <p style="font-size:14px;color:rgba(255,255,255,0.40);line-height:1.7;max-width:300px;">Mais cuidado para mais saúde. Clínica geriátrica em BH.</p>
+      </div>
+      <div>
+        <div style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.28);letter-spacing:0.10em;text-transform:uppercase;margin-bottom:14px;">Unidades</div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <a href="clinica-idosos-barro-preto-bh.html" style="font-size:14px;color:rgba(255,255,255,0.55);transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.90)'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">Barro Preto</a>
+          <a href="clinica-idosos-pampulha-bh.html" style="font-size:14px;color:rgba(255,255,255,0.55);transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.90)'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">Pampulha</a>
+          <span style="font-size:14px;color:rgba(255,255,255,0.90);font-weight:600;">Santo Agostinho</span>
+          <a href="clinica-idosos-santa-efigenia-bh.html" style="font-size:14px;color:rgba(255,255,255,0.55);transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.90)'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">Santa Efigênia</a>
+          <a href="clinica-idosos-betim-mg.html" style="font-size:14px;color:rgba(255,255,255,0.55);transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.90)'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">Betim</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.28);letter-spacing:0.10em;text-transform:uppercase;margin-bottom:14px;">Convênios</div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <span style="font-size:14px;color:rgba(255,255,255,0.55);">Unimed BH</span>
+          <span style="font-size:14px;color:rgba(255,255,255,0.55);">Fundaffemg</span>
+          <span style="font-size:14px;color:rgba(255,255,255,0.55);">Desban</span>
+          <span style="font-size:14px;color:#27CC95;font-weight:600;">Mais60 Essencial R$329/mês</span>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:20px;">
+      <span style="font-size:12px;color:rgba(255,255,255,0.22);">© 2026 Mais60 Saúde | EFG Saúde LTDA | CNPJ 18.627.245/0001-09</span>
+      <div style="display:flex;gap:20px;">
+        <a href="#" style="font-size:12px;color:rgba(255,255,255,0.22);transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.55)'" onmouseout="this.style.color='rgba(255,255,255,0.22)'">Política de Privacidade</a>
+        <a href="#" style="font-size:12px;color:rgba(255,255,255,0.22);transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.55)'" onmouseout="this.style.color='rgba(255,255,255,0.22)'">Termos de Uso</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp float -->
+<div style="position:fixed;bottom:28px;right:28px;z-index:998;">
+  <button onclick="window.open('https://wa.me/553125130552','_blank')" style="width:56px;height:56px;border-radius:9999px;background:#25D366;border:none;cursor:pointer;box-shadow:0 4px 20px rgba(37,211,102,0.45);display:flex;align-items:center;justify-content:center;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.10)'" onmouseout="this.style.transform='scale(1)'" title="Falar pelo WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="#FFF"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+  </button>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const nav = document.querySelector('header');
+  window.addEventListener('scroll', () => {
+    if (nav) nav.style.boxShadow = window.scrollY > 30 ? '0 4px 24px rgba(67,5,147,0.08)' : 'none';
+  }, { passive: true });
+});
+</script>
+</body>
+</html>

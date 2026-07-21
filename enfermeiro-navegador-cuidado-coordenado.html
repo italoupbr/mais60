@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Enfermeiro Navegador | Monitoramento 24h para Idosos em BH | Mais60</title>
+<meta name="description" content="Enfermagem de referência 24h para idosos em BH: monitoramento contínuo, orientação à família, coordenação de cuidados. Diferencial exclusivo Mais60 Saúde.">
+<link rel="canonical" href="https://www.mais60saude.com.br/enfermeiro-navegador-cuidado-coordenado">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+<style>
+
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Poppins',sans-serif;background:#FFFFFF;color:#1A1A2E;overflow-x:hidden;}
+    a{text-decoration:none;color:inherit;}
+    img{display:block;max-width:100%;}
+
+    .wrap{max-width:1280px;margin:0 auto;padding:0 80px;}
+    .sec{padding:80px 0;}
+
+    .tag{display:inline-flex;align-items:center;background:rgba(80,23,153,0.09);box-shadow:inset 0 0 0 1px rgba(86,39,147,0.16);border-radius:50px;padding:5px 14px;font-size:11px;font-weight:700;color:#430593;letter-spacing:0.06em;text-transform:uppercase;white-space:nowrap;}
+    .tag-white{background:rgba(255,255,255,0.15);box-shadow:inset 0 0 0 1px rgba(255,255,255,0.25);color:#FFFFFF;}
+    .tag-coral{background:rgba(251,92,61,0.10);box-shadow:inset 0 0 0 1px rgba(251,92,61,0.22);color:#d63e1d;}
+
+    .btn{display:inline-flex;align-items:center;gap:8px;font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;letter-spacing:-0.02em;padding:0 24px;height:44px;border-radius:50px;border:none;cursor:pointer;white-space:nowrap;transition:all 0.2s;}
+    .btn-purple{background:#430593;color:#FFF;} .btn-purple:hover{background:#2d0369;transform:translateY(-1px);}
+    .btn-green{background:#27CC95;color:#FFF;} .btn-green:hover{background:#1ea87a;transform:translateY(-1px);}
+    .btn-ghost{background:transparent;color:#FFF;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,0.70);} .btn-ghost:hover{background:rgba(255,255,255,0.10);}
+    .btn-white{background:#FFF;color:#430593;} .btn-white:hover{background:#f0e8ff;transform:translateY(-1px);}
+    .btn-ghost-purple{background:transparent;color:#430593;box-shadow:inset 0 0 0 1.5px #430593;} .btn-ghost-purple:hover{background:rgba(67,5,147,0.05);}
+
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+
+    .check-row{display:flex;align-items:flex-start;gap:12px;}
+    .check-icon{width:24px;height:24px;border-radius:7px;background:rgba(39,204,149,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
+    .alert-row{display:flex;align-items:flex-start;gap:12px;}
+    .alert-icon{width:24px;height:24px;border-radius:7px;background:rgba(255,255,255,0.20);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
+
+    .faq-item{border-bottom:1px solid rgba(67,5,147,0.08);padding:20px 0;cursor:pointer;}
+    .faq-q{font-size:16px;font-weight:600;color:#430593;display:flex;justify-content:space-between;align-items:center;gap:16px;line-height:1.4;}
+    .faq-a{font-size:15px;color:#4A5568;line-height:1.80;margin-top:14px;display:none;}
+    .faq-item.open .faq-a{display:block;}
+    .faq-item.open .fchev{transform:rotate(180deg);}
+    .fchev{transition:transform 0.22s;flex-shrink:0;}
+
+    .rel-card{background:#FFF;border:1px solid rgba(67,5,147,0.10);border-radius:16px;padding:22px 20px;display:flex;flex-direction:column;gap:10px;transition:all 0.25s;cursor:pointer;text-decoration:none;color:inherit;}
+    .rel-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(67,5,147,0.12);border-color:rgba(67,5,147,0.22);}
+
+    .cmp-card{background:#FFF;border-radius:20px;padding:28px 26px;box-shadow:0 4px 24px rgba(67,5,147,0.08);}
+    .cmp-card.hi{background:#430593;box-shadow:0 8px 32px rgba(67,5,147,0.22);}
+
+    @keyframes meshDrift{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(-2%,3%) scale(1.04);}}
+
+    @media(max-width:1024px){.wrap{padding:0 32px;}.grid-2{grid-template-columns:1fr;gap:36px;}.grid-3{grid-template-columns:repeat(2,1fr);}.sec{padding:60px 0;}}
+    @media(max-width:600px){.wrap{padding:0 20px;}.grid-3{grid-template-columns:1fr;}}
+
+
+    .nav-drop{position:relative;height:68px;display:flex;align-items:center;}
+    .nav-link{font-size:15px;font-weight:500;color:#1A1A2E;padding:0 14px;height:68px;display:flex;align-items:center;transition:color 0.2s;cursor:pointer;white-space:nowrap;}
+    .nav-drop:hover .nav-link, .nav-link:hover{color:#430593;}
+    .nav-panel{display:none;position:absolute;top:100%;left:0;background:#FFF;border-radius:16px;box-shadow:0 16px 48px rgba(67,5,147,0.16);padding:22px;z-index:1001;gap:28px;border:1px solid rgba(67,5,147,0.08);}
+    .nav-drop:hover .nav-panel{display:flex;}
+    .nav-col{display:flex;flex-direction:column;gap:3px;min-width:170px;}
+    .nav-col-title{font-size:11px;font-weight:700;color:rgba(67,5,147,0.40);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;padding:0 8px;}
+    .nav-panel a{font-size:14px;color:#4A5568;padding:7px 8px;border-radius:8px;transition:all 0.15s;white-space:nowrap;}
+    .nav-panel a:hover{background:rgba(67,5,147,0.06);color:#430593;}
+    @media(max-width:1100px){.nav-drop,.nav-link.nav-top{display:none;}}
+</style>
+<script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"O enfermeiro navegador substitui as consultas médicas?","acceptedAnswer":{"@type":"Answer","text":"Não. O enfermeiro navegador monitora o paciente entre as consultas e aciona o geriatra quando identifica um sinal de alerta. As consultas com o geriatra continuam sendo o espaço de avaliação e decisão clínica."}},
+    {"@type":"Question","name":"Como é o contato com a família?","acceptedAnswer":{"@type":"Answer","text":"Por telefone ou WhatsApp, com frequência ajustada ao caso: mais próxima em períodos de ajuste de medicação ou instabilidade clínica, mais espaçada quando o quadro está estável."}},
+    {"@type":"Question","name":"Está incluso no Mais60 Essencial?","acceptedAnswer":{"@type":"Answer","text":"Sim. O acompanhamento do enfermeiro navegador faz parte do Mais60 Essencial, o plano particular por R$329 por mês, sem carência e sem coparticipação."}}
+  ]}</script>
+<script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"MedicalClinic","name":"Mais60 Saúde: Enfermeiro Navegador","description":"Enfermagem de referência para pessoas com mais de 60 anos em Belo Horizonte: monitoramento contínuo entre consultas, orientação à família e coordenação de cuidados com o geriatra.","medicalSpecialty":["Geriatrics","Nursing"],"address":{"@type":"PostalAddress","addressLocality":"Belo Horizonte","addressRegion":"MG","addressCountry":"BR"}}</script>
+</head>
+<body>
+<!-- NAVBAR -->
+<header style="position:sticky;top:0;z-index:1000;height:68px;background:rgba(255,255,255,0.93);backdrop-filter:blur(20px) saturate(1.4);border-bottom:1px solid rgba(67,5,147,0.06);display:flex;align-items:center;padding:0 48px;gap:40px;transition:box-shadow 0.3s;">
+  <a href="index.html" style="flex-shrink:0;"><img src="assets/logo-roxo.png" alt="mais60 Saúde" style="height:32px;width:auto;" /></a>
+  <nav style="flex:1;display:flex;justify-content:center;gap:2px;">
+    <div class="nav-drop">
+      <span class="nav-link">Serviços</span>
+      <div class="nav-panel">
+        <div class="nav-col">
+          <div class="nav-col-title">Cuidados Médicos</div>
+          <a href="geriatra-bh.html">Geriatra em BH</a>
+          <a href="medico-referencia-idosos-bh.html">Médico de Referência</a>
+          <a href="cuidados-medicos-idosos-bh.html">Ver categoria</a>
+        </div>
+        <div class="nav-col">
+          <div class="nav-col-title">Reabilitação</div>
+          <a href="fisioterapia-idosos-bh.html">Fisioterapia</a>
+          <a href="fonoaudiologia-idosos-bh.html">Fonoaudiologia</a>
+          <a href="terapeuta-ocupacional-idosos-bh.html">Terapia Ocupacional</a>
+          <a href="reabilitacao-idosos-bh.html">Ver categoria</a>
+        </div>
+        <div class="nav-col">
+          <div class="nav-col-title">Bem-estar</div>
+          <a href="nutricionista-idosos-bh.html">Nutricionista</a>
+          <a href="psicologo-idosos-bh.html">Psicólogo</a>
+          <a href="educacao-fisica-idosos-bh.html">Educação Física</a>
+          <a href="atividades-bem-estar-idosos-bh.html">Ver categoria</a>
+        </div>
+        <div class="nav-col">
+          <div class="nav-col-title">Urgência e Suporte</div>
+          <a href="pronto-cuidar-bh.html">Pronto Cuidar</a>
+          <a href="enfermeiro-navegador-cuidado-coordenado.html">Enfermeiro Navegador</a>
+          <a href="farmaceutico-clinico-idosos-bh.html">Farmacêutico Clínico</a>
+          <a href="urgencia-idosos-24h-bh.html">Ver categoria</a>
+        </div>
+      </div>
+    </div>
+    <div class="nav-drop">
+      <span class="nav-link">Condições</span>
+      <div class="nav-panel">
+        <div class="nav-col">
+          <a href="geriatra-bh.html">Ver todas as condições</a>
+          <a href="alzheimer-bh.html">Alzheimer</a>
+          <a href="demencias-bh.html">Demências</a>
+          <a href="parkinson-idosos-bh.html">Parkinson</a>
+        </div>
+        <div class="nav-col">
+          <a href="prevencao-quedas-idosos-bh.html">Prevenção de Quedas</a>
+          <a href="diabetes-idosos.html">Diabetes</a>
+          <a href="o-que-e-disfagia.html">Disfagia</a>
+          <a href="quando-o-esquecimento-se-tornar-preocupante.html">Esquecimento</a>
+        </div>
+      </div>
+    </div>
+    <div class="nav-drop">
+      <span class="nav-link">Unidades</span>
+      <div class="nav-panel">
+        <div class="nav-col">
+          <a href="clinica-idosos-barro-preto-bh.html">Barro Preto</a>
+          <a href="clinica-idosos-pampulha-bh.html">Pampulha</a>
+          <a href="clinica-idosos-santo-agostinho-bh.html">Santo Agostinho</a>
+          <a href="clinica-idosos-santa-efigenia-bh.html">Santa Efigênia</a>
+          <a href="clinica-idosos-betim-mg.html">Betim</a>
+        </div>
+      </div>
+    </div>
+    <a href="mais60-essencial-plano-particular-idoso.html" class="nav-link nav-top">Mais60 Essencial</a>
+    <a href="#" class="nav-link nav-top">Blog</a>
+  </nav>
+  <button class="btn btn-purple" onclick="document.getElementById('cta-final').scrollIntoView({behavior:'smooth'})">Agendar consulta</button>
+</header>
+
+<!-- HERO -->
+<section style="position:relative;background:#430593;overflow:hidden;padding:88px 0 80px;">
+  <div style="position:absolute;inset:0;pointer-events:none;overflow:hidden;">
+    <div style="position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(91,10,184,0.55) 0%,transparent 70%);top:-100px;left:-80px;animation:meshDrift 14s ease-in-out infinite;"></div>
+    <div style="position:absolute;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(39,204,149,0.18) 0%,transparent 70%);bottom:60px;right:180px;animation:meshDrift 18s ease-in-out infinite reverse;"></div>
+    <div style="position:absolute;left:0;top:-140px;width:340px;height:860px;background:linear-gradient(180deg,rgb(90,23,177) 0%,rgb(67,5,147) 100%);transform:matrix(0.944,0.331,-0.331,0.944,1200,0);transform-origin:0 0;opacity:0.7;"></div>
+  </div>
+  <div class="wrap" style="position:relative;z-index:1;">
+    <!-- Breadcrumb -->
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:32px;flex-wrap:wrap;">
+      <a href="index.html" style="font-size:13px;color:rgba(255,255,255,0.45);transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.80)'" onmouseout="this.style.color='rgba(255,255,255,0.45)'">Início</a>
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.30)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+      <a href="cuidados-medicos-idosos-bh.html" style="font-size:13px;color:rgba(255,255,255,0.45);transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.80)'" onmouseout="this.style.color='rgba(255,255,255,0.45)'">Cuidados Médicos</a>
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.30)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+      <span style="font-size:13px;color:rgba(255,255,255,0.80);font-weight:600;">Enfermeiro Navegador</span>
+    </div>
+
+    <div style="max-width:760px;">
+      <span class="tag tag-white" style="margin-bottom:20px;display:inline-flex;">Diferencial Exclusivo Mais60</span>
+      <h1 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:clamp(28px,3.3vw,48px);line-height:1.10;letter-spacing:-0.03em;color:#FFF;margin-bottom:20px;">Enfermeiro Navegador: O Profissional que Cuida do Seu Familiar Entre as Consultas Médicas</h1>
+      <p style="font-family:'Montserrat',sans-serif;font-weight:500;font-size:18px;line-height:1.7;color:rgba(255,255,255,0.75);margin-bottom:36px;max-width:640px;">O enfermeiro navegador da Mais60 é o profissional disponível para monitorar o paciente, orientar a família e acionar o geriatra antes que um problema vire urgência. Nenhuma informação clínica se perde entre os profissionais. Nenhuma mudança de estado passa despercebida até a próxima consulta.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;">
+        <button id="btn-enf-conhecer" class="btn btn-white" onclick="document.getElementById('cta-final').scrollIntoView({behavior:'smooth'})">
+          Conhecer o cuidado coordenado
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#430593" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <a href="index.html#mais60-essencial" class="btn btn-ghost">
+          Conhecer a Mais60 Essencial
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- O QUE ACONTECE ENTRE CONSULTAS — Featured snippet -->
+<section class="sec" style="background:#E8F3F5;">
+  <div class="wrap">
+    <div class="grid-2">
+      <div>
+        <span class="tag" style="margin-bottom:16px;display:inline-flex;">Featured snippet</span>
+        <h2 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:clamp(22px,2.2vw,32px);line-height:1.15;letter-spacing:-0.025em;color:#430593;margin-bottom:20px;">O que acontece com o idoso entre uma consulta e outra?</h2>
+        <p style="font-size:17px;color:#4A5568;line-height:1.85;margin-bottom:20px;">A consulta dura minutos. A vida do paciente entre as consultas dura semanas ou meses. É nesse intervalo que a maioria dos problemas começa: a pressão que sobe gradualmente uma semana depois da consulta, os medicamentos tomados de forma errada por engano, o apetite que vai caindo e a família atribui ao tempo frio, a confusão mental que aparece numa segunda-feira e só é mencionada na sexta.</p>
+        <p style="font-size:16px;color:#4A5568;line-height:1.85;">O enfermeiro navegador existe para fechar esse espaço: um ponto de contato constante entre a família e a equipe clínica, com autoridade para reconhecer um sinal de alerta e agir antes que ele se transforme em uma urgência.</p>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:20px;">
+        <div style="background:#FFF;border-radius:20px;padding:32px 30px;box-shadow:0 4px 24px rgba(67,5,147,0.08);">
+          <div style="font-size:12px;font-weight:700;color:rgba(67,5,147,0.45);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:16px;">O que passa despercebido sem monitoramento</div>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <div class="check-row">
+              <div class="check-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#27CC95" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+              <span style="font-size:15px;color:#4A5568;line-height:1.60;">Pressão que sobe de forma gradual após a consulta</span>
+            </div>
+            <div class="check-row">
+              <div class="check-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#27CC95" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+              <span style="font-size:15px;color:#4A5568;line-height:1.60;">Medicamentos tomados de forma errada por engano</span>
+            </div>
+            <div class="check-row">
+              <div class="check-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#27CC95" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+              <span style="font-size:15px;color:#4A5568;line-height:1.60;">Apetite em queda, muitas vezes atribuído ao tempo frio</span>
+            </div>
+            <div class="check-row">
+              <div class="check-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#27CC95" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+              <span style="font-size:15px;color:#4A5568;line-height:1.60;">Confusão mental nova, mencionada só dias depois</span>
+            </div>
+          </div>
+        </div>
+        <div style="background:#FFF;border-radius:16px;padding:20px 22px;border-left:4px solid #27CC95;">
+          <p style="font-size:14px;color:#4A5568;line-height:1.70;"><strong style="color:#430593;">Nenhum concorrente da Mais60 em BH oferece este serviço.</strong> É o maior diferencial da marca: um profissional de enfermagem dedicado a acompanhar o paciente entre as consultas, não apenas durante elas.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- O QUE O ENFERMEIRO NAVEGADOR FAZ -->
+<section class="sec" style="background:#FFFFFF;">
+  <div class="wrap">
+    <div style="text-align:center;max-width:700px;margin:0 auto 48px;">
+      <span class="tag" style="margin-bottom:16px;display:inline-flex;">Atuação</span>
+      <h2 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:clamp(22px,2.2vw,32px);line-height:1.15;letter-spacing:-0.025em;color:#430593;">O que o enfermeiro navegador faz pelo seu familiar?</h2>
+    </div>
+    <div class="grid-2">
+      <div style="display:flex;flex-direction:column;gap:20px;">
+        <div style="background:#E8F3F5;border-radius:16px;padding:22px 20px;display:flex;align-items:flex-start;gap:16px;">
+          <div style="width:44px;height:44px;border-radius:12px;background:#430593;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <div>
+            <div style="font-size:16px;font-weight:700;color:#430593;margin-bottom:4px;">Monitoramento proativo</div>
+            <p style="font-size:14px;color:#4A5568;line-height:1.65;">Contato regular com o paciente e a família, em frequência definida pelo geriatra: semanal, por exemplo, para pacientes em ajuste de medicamentos.</p>
+          </div>
+        </div>
+        <div style="background:#E8F3F5;border-radius:16px;padding:22px 20px;display:flex;align-items:flex-start;gap:16px;">
+          <div style="width:44px;height:44px;border-radius:12px;background:#430593;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <div>
+            <div style="font-size:16px;font-weight:700;color:#430593;margin-bottom:4px;">Identificação de sinais de alerta</div>
+            <p style="font-size:14px;color:#4A5568;line-height:1.65;">Piora de pressão, confusão nova, perda de apetite persistente, sonolência aumentada ou dor nova: tudo escalado ao geriatra antes de virar urgência.</p>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:20px;">
+        <div style="background:#E8F3F5;border-radius:16px;padding:22px 20px;display:flex;align-items:flex-start;gap:16px;">
+          <div style="width:44px;height:44px;border-radius:12px;background:#430593;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <div>
+            <div style="font-size:16px;font-weight:700;color:#430593;margin-bottom:4px;">Orientação para a família</div>
+            <p style="font-size:14px;color:#4A5568;line-height:1.65;">"Isso é normal ou devo ir ao Pronto Cuidar?" respondido com base no histórico clínico completo do paciente, não em suposição.</p>
+          </div>
+        </div>
+        <div style="background:#E8F3F5;border-radius:16px;padding:22px 20px;display:flex;align-items:flex-start;gap:16px;">
+          <div style="width:44px;height:44px;border-radius:12px;background:#430593;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <div>
+            <div style="font-size:16px;font-weight:700;color:#430593;margin-bottom:4px;">Acionamento do Pronto Cuidar</div>
+            <p style="font-size:14px;color:#4A5568;line-height:1.65;">Quando necessário, o enfermeiro navegador aciona o Pronto Cuidar com comunicação antecipada à equipe que vai atender o paciente.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POR QUE A FAMÍLIA NÃO CONSEGUE SUBSTITUIR -->
+<section class="sec" style="background:#430593;position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;pointer-events:none;overflow:hidden;">
+    <div style="position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(39,204,149,0.16) 0%,transparent 70%);top:-100px;right:-40px;animation:meshDrift 16s ease-in-out infinite;"></div>
+  </div>
+  <div class="wrap" style="position:relative;z-index:1;">
+    <div class="grid-2">
+      <div>
+        <span class="tag" style="background:rgba(255,255,255,0.15);box-shadow:inset 0 0 0 1px rgba(255,255,255,0.25);color:#FFF;margin-bottom:16px;display:inline-flex;">Por que isso importa</span>
+        <h2 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:clamp(22px,2.2vw,32px);line-height:1.15;letter-spacing:-0.025em;color:#FFF;margin-bottom:20px;">Por que a família não consegue substituir o enfermeiro navegador?</h2>
+        <p style="font-size:16px;color:rgba(255,255,255,0.80);line-height:1.85;">A filha que liga todos os dias e pergunta "como você está?" recebe um "estou bem" de um paciente que pode estar tomando a medicação errada há dias, sem ter como avaliar isso contra os parâmetros clínicos do prontuário. Ligação diária não é o mesmo que avaliação clínica.</p>
+      </div>
+      <div style="background:rgba(255,255,255,0.08);border-radius:20px;padding:32px 30px;">
+        <div style="font-size:12px;font-weight:700;color:rgba(255,255,255,0.45);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:18px;">O que famílias relatam antes da Mais60</div>
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <div class="alert-row">
+            <div class="alert-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18L18 6M6 6l12 12"/></svg></div>
+            <span style="font-size:15px;color:rgba(255,255,255,0.85);line-height:1.60;">Médicos com orientações que às vezes se contradizem</span>
+          </div>
+          <div class="alert-row">
+            <div class="alert-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18L18 6M6 6l12 12"/></svg></div>
+            <span style="font-size:15px;color:rgba(255,255,255,0.85);line-height:1.60;">Receitas difíceis de entender</span>
+          </div>
+          <div class="alert-row">
+            <div class="alert-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18L18 6M6 6l12 12"/></svg></div>
+            <span style="font-size:15px;color:rgba(255,255,255,0.85);line-height:1.60;">Exames que chegam sem que o médico os veja</span>
+          </div>
+          <div class="alert-row">
+            <div class="alert-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18L18 6M6 6l12 12"/></svg></div>
+            <span style="font-size:15px;color:rgba(255,255,255,0.85);line-height:1.60;">Idoso que frequenta o pronto-socorro com regularidade desnecessária</span>
+          </div>
+        </div>
+        <div style="margin-top:18px;padding-top:18px;border-top:1px solid rgba(255,255,255,0.15);">
+          <p style="font-size:14px;color:rgba(255,255,255,0.70);line-height:1.70;">O enfermeiro navegador substitui esse cenário por um ponto central de coordenação, com um único profissional acompanhando a evolução do paciente ao longo do tempo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CITAÇÃO RT -->
+<section class="sec" style="background:#FFFFFF;">
+  <div class="wrap" style="max-width:760px;margin:0 auto;text-align:center;">
+    <div style="font-size:60px;font-weight:900;color:rgba(67,5,147,0.06);line-height:0.5;margin-bottom:16px;font-family:Georgia,serif;">"</div>
+    <div style="background:rgba(67,5,147,0.04);border:1px dashed rgba(67,5,147,0.22);border-radius:16px;padding:24px 28px;margin-bottom:28px;">
+      <p style="font-size:13px;font-weight:600;color:rgba(67,5,147,0.45);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:8px;">Pendente: Quote do Dr. Estevão</p>
+      <p style="font-size:15px;color:rgba(67,5,147,0.45);font-style:italic;line-height:1.70;">Ângulo sugerido: o enfermeiro navegador é o que torna o cuidado contínuo de verdade, sem ele o plano do geriatra fica no papel entre uma consulta e outra.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:4px;">
+      <div style="width:44px;height:44px;border-radius:50%;background:rgba(67,5,147,0.08);display:flex;align-items:center;justify-content:center;margin-bottom:6px;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#430593" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a4 4 0 0 1 8 0v2"/></svg>
+      </div>
+      <span style="font-size:15px;font-weight:700;color:#430593;">Dr. Estevão</span>
+      <span style="font-size:13px;color:#4A5568;">Geriatra · Responsável Técnico · CRM-MG [confirmar]</span>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" style="background:#E8F3F5;">
+  <div class="wrap" style="max-width:760px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:40px;">
+      <span class="tag" style="margin-bottom:14px;display:inline-flex;">Perguntas frequentes</span>
+      <h2 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:clamp(20px,2vw,28px);line-height:1.2;letter-spacing:-0.025em;color:#430593;">Dúvidas sobre o Enfermeiro Navegador</h2>
+    </div>
+    <div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">O enfermeiro navegador substitui as consultas médicas?<svg class="fchev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#430593" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></div>
+        <div class="faq-a">Não. O enfermeiro navegador monitora o paciente entre as consultas e aciona o geriatra quando identifica um sinal de alerta. As consultas com o geriatra continuam sendo o espaço de avaliação e decisão clínica.</div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Como é o contato com a família?<svg class="fchev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#430593" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></div>
+        <div class="faq-a">Por telefone ou WhatsApp, com frequência ajustada ao caso: mais próxima em períodos de ajuste de medicação ou instabilidade clínica, mais espaçada quando o quadro está estável.</div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Está incluso no Mais60 Essencial?<svg class="fchev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#430593" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></div>
+        <div class="faq-a">Sim. O acompanhamento do enfermeiro navegador faz parte do Mais60 Essencial, o plano particular por R$329 por mês, sem carência e sem coparticipação.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTEÚDO RELACIONADO -->
+<section style="background:#FFFFFF;padding:48px 0;">
+  <div class="wrap">
+    <div style="font-size:12px;font-weight:700;color:rgba(67,5,147,0.45);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:20px;text-align:center;">Conteúdo relacionado</div>
+    <div class="grid-3">
+      <a href="geriatra-bh.html" class="rel-card">
+        <div style="width:36px;height:36px;border-radius:10px;background:#430593;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg>
+        </div>
+        <div style="font-size:15px;font-weight:700;color:#430593;">Geriatra em BH</div>
+        <p style="font-size:13px;color:#4A5568;line-height:1.60;">Acompanhamento contínuo, base do cuidado coordenado pela equipe.</p>
+        <div style="display:flex;align-items:center;gap:5px;font-size:13px;font-weight:600;color:#430593;">Ver página <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#430593" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </a>
+      <a href="farmaceutico-clinico-idosos-bh.html" class="rel-card">
+        <div style="width:36px;height:36px;border-radius:10px;background:#430593;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.46 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.44-3.14Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.46 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.44-3.14Z"/></svg>
+        </div>
+        <div style="font-size:15px;font-weight:700;color:#430593;">Farmacêutico Clínico</div>
+        <p style="font-size:13px;color:#4A5568;line-height:1.60;">Revisão de medicamentos que previne quedas e internações.</p>
+        <div style="display:flex;align-items:center;gap:5px;font-size:13px;font-weight:600;color:#430593;">Ver página <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#430593" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </a>
+      <a href="pronto-cuidar-bh.html" class="rel-card">
+        <div style="width:36px;height:36px;border-radius:10px;background:#FB5C3D;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <div style="font-size:15px;font-weight:700;color:#430593;">Pronto Cuidar</div>
+        <p style="font-size:13px;color:#4A5568;line-height:1.60;">Urgência para idosos sem fila de pronto-socorro, no Bairro Funcionários.</p>
+        <div style="display:flex;align-items:center;gap:5px;font-size:13px;font-weight:600;color:#430593;">Ver página <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#430593" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section id="cta-final" class="sec" style="background:#430593;position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;pointer-events:none;overflow:hidden;">
+    <div style="position:absolute;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(39,204,149,0.20) 0%,transparent 70%);top:-100px;right:-40px;animation:meshDrift 14s ease-in-out infinite;"></div>
+    <div style="position:absolute;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(91,10,184,0.50) 0%,transparent 70%);bottom:-50px;left:5%;animation:meshDrift 18s ease-in-out infinite reverse;"></div>
+  </div>
+  <div class="wrap" style="position:relative;z-index:1;max-width:720px;margin:0 auto;text-align:center;">
+    <span class="tag tag-white" style="margin-bottom:20px;display:inline-flex;">Próximo passo</span>
+    <h2 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:clamp(26px,3vw,42px);line-height:1.1;letter-spacing:-0.03em;color:#FFF;margin-bottom:16px;">Quer que seu familiar tenha um enfermeiro navegador dedicado?</h2>
+    <p style="font-size:17px;color:rgba(255,255,255,0.70);line-height:1.75;margin-bottom:36px;max-width:520px;margin-left:auto;margin-right:auto;">Agende uma avaliação com o geriatra e conheça o cuidado coordenado da Mais60. Nossa equipe retorna em até 24 horas para confirmar unidade e horário.</p>
+    <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);border-radius:24px;padding:36px;backdrop-filter:blur(12px);text-align:left;max-width:520px;margin:0 auto;">
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <div>
+          <label style="display:block;font-size:12px;font-weight:700;color:rgba(255,255,255,0.55);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:6px;">Nome completo</label>
+          <input type="text" placeholder="Nome do familiar ou responsável" style="width:100%;background:rgba(255,255,255,0.08);border:1.5px solid rgba(255,255,255,0.18);border-radius:12px;padding:12px 16px;font-family:'Poppins',sans-serif;font-size:15px;color:#FFF;outline:none;transition:all 0.2s;box-sizing:border-box;" onfocus="this.style.borderColor='#27CC95';this.style.boxShadow='0 0 0 3px rgba(39,204,149,0.18)'" onblur="this.style.borderColor='rgba(255,255,255,0.18)';this.style.boxShadow='none'" />
+        </div>
+        <div>
+          <label style="display:block;font-size:12px;font-weight:700;color:rgba(255,255,255,0.55);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:6px;">WhatsApp</label>
+          <input type="tel" placeholder="(31) 9 0000-0000" style="width:100%;background:rgba(255,255,255,0.08);border:1.5px solid rgba(255,255,255,0.18);border-radius:12px;padding:12px 16px;font-family:'Poppins',sans-serif;font-size:15px;color:#FFF;outline:none;transition:all 0.2s;box-sizing:border-box;" onfocus="this.style.borderColor='#27CC95';this.style.boxShadow='0 0 0 3px rgba(39,204,149,0.18)'" onblur="this.style.borderColor='rgba(255,255,255,0.18)';this.style.boxShadow='none'" />
+        </div>
+        <div>
+          <label style="display:block;font-size:12px;font-weight:700;color:rgba(255,255,255,0.55);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:6px;">Unidade preferida</label>
+          <div style="position:relative;">
+            <select style="width:100%;background:rgba(255,255,255,0.08);border:1.5px solid rgba(255,255,255,0.18);border-radius:12px;padding:12px 40px 12px 16px;font-family:'Poppins',sans-serif;font-size:15px;color:rgba(255,255,255,0.85);outline:none;appearance:none;cursor:pointer;box-sizing:border-box;" onfocus="this.style.borderColor='#27CC95'" onblur="this.style.borderColor='rgba(255,255,255,0.18)'">
+              <option style="background:#430593;">Selecionar unidade</option>
+              <option style="background:#430593;">Barro Preto</option>
+              <option style="background:#430593;">Pampulha</option>
+              <option style="background:#430593;">Santo Agostinho</option>
+              <option style="background:#430593;">Santa Efigênia</option>
+              <option style="background:#430593;">Betim</option>
+              <option style="background:#430593;">Não sei ainda</option>
+            </select>
+            <span style="position:absolute;right:14px;top:50%;transform:translateY(-50%);color:rgba(255,255,255,0.45);pointer-events:none;font-size:12px;">▾</span>
+          </div>
+        </div>
+        <button id="btn-cta-final-agendar" class="btn btn-green" style="width:100%;justify-content:center;height:48px;font-size:15px;">
+          Agendar avaliação
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <p style="font-size:12px;color:rgba(255,255,255,0.30);text-align:center;">Respondemos em até 24 horas. Sem compromisso.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:#0F0A1E;padding:48px 0 24px;">
+  <div class="wrap">
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,0.08);">
+      <div>
+        <img src="assets/logo-branco.png" alt="mais60 Saúde" style="height:28px;width:auto;margin-bottom:12px;" />
+        <p style="font-size:14px;color:rgba(255,255,255,0.40);line-height:1.7;max-width:300px;">Mais cuidado para mais saúde. Clínica geriátrica em BH.</p>
+      </div>
+      <div>
+        <div style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.28);letter-spacing:0.10em;text-transform:uppercase;margin-bottom:14px;">Cuidados Médicos</div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <a href="geriatra-bh.html" style="font-size:14px;color:rgba(255,255,255,0.55);transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.90)'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">Geriatra em BH</a>
+          <span style="font-size:14px;color:rgba(255,255,255,0.90);font-weight:600;">Enfermeiro Navegador</span>
+          <a href="farmaceutico-clinico-idosos-bh.html" style="font-size:14px;color:rgba(255,255,255,0.55);transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.90)'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">Farmacêutico Clínico</a>
+          <a href="pronto-cuidar-bh.html" style="font-size:14px;color:rgba(255,255,255,0.55);transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.90)'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">Pronto Cuidar</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.28);letter-spacing:0.10em;text-transform:uppercase;margin-bottom:14px;">Convênios</div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <span style="font-size:14px;color:rgba(255,255,255,0.55);">Unimed BH</span>
+          <span style="font-size:14px;color:rgba(255,255,255,0.55);">Fundaffemg</span>
+          <span style="font-size:14px;color:rgba(255,255,255,0.55);">Desban</span>
+          <span style="font-size:14px;color:#27CC95;font-weight:600;">Mais60 Essencial R$329/mês</span>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:20px;">
+      <span style="font-size:12px;color:rgba(255,255,255,0.22);">© 2026 Mais60 Saúde | EFG Saúde LTDA | CNPJ 18.627.245/0001-09</span>
+      <div style="display:flex;gap:20px;">
+        <a href="#" style="font-size:12px;color:rgba(255,255,255,0.22);transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.55)'" onmouseout="this.style.color='rgba(255,255,255,0.22)'">Política de Privacidade</a>
+        <a href="#" style="font-size:12px;color:rgba(255,255,255,0.22);transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.55)'" onmouseout="this.style.color='rgba(255,255,255,0.22)'">Termos de Uso</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp float -->
+<div style="position:fixed;bottom:28px;right:28px;z-index:998;">
+  <button onclick="window.open('https://wa.me/553125130552','_blank')" style="width:56px;height:56px;border-radius:9999px;background:#25D366;border:none;cursor:pointer;box-shadow:0 4px 20px rgba(37,211,102,0.45);display:flex;align-items:center;justify-content:center;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.10)'" onmouseout="this.style.transform='scale(1)'" title="Falar pelo WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="#FFF"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+  </button>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const nav = document.querySelector('header');
+  window.addEventListener('scroll', () => {
+    if (nav) nav.style.boxShadow = window.scrollY > 30 ? '0 4px 24px rgba(67,5,147,0.08)' : 'none';
+  }, { passive: true });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reabilitação para Idosos em BH | Fisioterapia Geriátrica | Mais60</title>
+<meta name="description" content="Fisioterapia geriátrica, fonoaudiologia, terapia ocupacional e prevenção de quedas para idosos em Belo Horizonte, integradas ao geriatra da Mais60 Saúde.">
+<link rel="canonical" href="https://www.mais60saude.com.br/reabilitacao-idosos-bh">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+<style>
+
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'Poppins',sans-serif;background:#FFFFFF;color:#1A1A2E;overflow-x:hidden;}
+    a{text-decoration:none;color:inherit;}
+    img{display:block;max-width:100%;}
+
+    .wrap{max-width:1280px;margin:0 auto;padding:0 80px;}
+    .sec{padding:80px 0;}
+    .sec-paper{background:#E8F3F5;}
+    .sec-purple{background:#430593;}
+    .sec-white{background:#FFFFFF;}
+
+    /* Tag */
+    .tag{display:inline-flex;align-items:center;background:rgba(80,23,153,0.09);box-shadow:inset 0 0 0 1px rgba(86,39,147,0.16);border-radius:50px;padding:5px 14px;font-size:11px;font-weight:700;color:#430593;letter-spacing:0.06em;text-transform:uppercase;white-space:nowrap;}
+    .tag-white{background:rgba(255,255,255,0.15);box-shadow:inset 0 0 0 1px rgba(255,255,255,0.25);color:#FFFFFF;}
+
+    /* Buttons */
+    .btn{display:inline-flex;align-items:center;gap:8px;font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;letter-spacing:-0.02em;padding:0 24px;height:44px;border-radius:50px;border:none;cursor:pointer;white-space:nowrap;transition:all 0.2s;}
+    .btn-purple{background:#430593;color:#FFF;} .btn-purple:hover{background:#2d0369;transform:translateY(-1px);}
+    .btn-green{background:#27CC95;color:#FFF;}  .btn-green:hover{background:#1ea87a;transform:translateY(-1px);}
+    .btn-ghost{background:transparent;color:#FFF;box-shadow:inset 0 0 0 1.5px #FFF;} .btn-ghost:hover{background:rgba(255,255,255,0.10);}
+    .btn-ghost-purple{background:transparent;color:#430593;box-shadow:inset 0 0 0 1.5px #430593;} .btn-ghost-purple:hover{background:rgba(67,5,147,0.05);}
+    .btn-white{background:#FFF;color:#430593;} .btn-white:hover{background:#f0e8ff;transform:translateY(-1px);}
+
+    /* Grid helpers */
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+    .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+
+    /* Service card */
+    .svc-card{background:#FFF;border:1px solid rgba(67,5,147,0.10);border-radius:20px;padding:28px 24px;display:flex;flex-direction:column;gap:0;transition:all 0.25s;cursor:pointer;text-decoration:none;color:inherit;}
+    .svc-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(67,5,147,0.12);border-color:rgba(67,5,147,0.22);}
+
+    /* Icon box */
+    .icon-box{width:44px;height:44px;border-radius:12px;background:#430593;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-bottom:16px;}
+
+    /* Stat card */
+    .stat-card{background:#FFF;border-radius:20px;padding:32px 24px;box-shadow:0 2px 16px rgba(67,5,147,0.08);display:flex;flex-direction:column;gap:8px;}
+
+    /* Timeline step */
+    .step{display:flex;gap:20px;align-items:flex-start;}
+    .step-num{width:40px;height:40px;border-radius:50%;background:#430593;color:#FFF;font-size:16px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Montserrat',sans-serif;}
+
+    /* Unit card */
+    .unit-card{background:#FFF;border-radius:16px;padding:24px;border:1px solid rgba(67,5,147,0.08);box-shadow:0 2px 10px rgba(67,5,147,0.06);transition:all 0.2s;}
+    .unit-card:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(67,5,147,0.12);}
+
+    /* FAQ */
+    .faq-item{border-bottom:1px solid rgba(67,5,147,0.08);padding:20px 0;cursor:pointer;}
+    .faq-q{font-size:16px;font-weight:600;color:#430593;display:flex;justify-content:space-between;align-items:center;gap:16px;}
+    .faq-a{font-size:15px;color:#4A5568;line-height:1.75;margin-top:14px;display:none;}
+    .faq-item.open .faq-a{display:block;}
+    .faq-item.open .faq-chevron{transform:rotate(180deg);}
+    .faq-chevron{transition:transform 0.2s;flex-shrink:0;}
+
+    @keyframes meshDrift{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(-2%,3%) scale(1.04);}}
+
+    @media(max-width:1024px){
+      .wrap{padding:0 32px;}
+      .grid-2{grid-template-columns:1fr;gap:36px;}
+      .grid-3{grid-template-columns:repeat(2,1fr);}
+      .grid-4{grid-template-columns:repeat(2,1fr);}
+      .sec{padding:60px 0;}
+    }
+    @media(max-width:600px){
+      .wrap{padding:0 20px;}
+      .grid-3,.grid-4{grid-template-columns:1fr;}
+    }
+  
+
+    .nav-drop{position:relative;height:68px;display:flex;align-items:center;}
+    .nav-link{font-size:15px;font-weight:500;color:#1A1A2E;padding:0 14px;height:68px;display:flex;align-items:center;transition:color 0.2s;cursor:pointer;white-space:nowrap;}
+    .nav-drop:hover .nav-link, .nav-link:hover{color:#430593;}
+    .nav-panel{display:none;position:absolute;top:100%;left:0;background:#FFF;border-radius:16px;box-shadow:0 16px 48px rgba(67,5,147,0.16);padding:22px;z-index:1001;gap:28px;border:1px solid rgba(67,5,147,0.08);}
+    .nav-drop:hover .nav-panel{display:flex;}
+    .nav-col{display:flex;flex-direction:column;gap:3px;min-width:170px;}
+    .nav-col-title{font-size:11px;font-weight:700;color:rgba(67,5,147,0.40);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;padding:0 8px;}
+    .nav-panel a{font-size:14px;color:#4A5568;padding:7px 8px;border-radius:8px;transition:all 0.15s;white-space:nowrap;}
+    .nav-panel a:hover{background:rgba(67,5,147,0.06);color:#430593;}
+    @media(max-width:1100px){.nav-drop,.nav-link.nav-top{display:none;}}
+</style>
+<script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"Quando o idoso precisa de reabilitação?","acceptedAnswer":{"@type":"Answer","text":"Após quedas, cirurgias, AVCs ou diagnóstico de Parkinson e outras condições que afetam mobilidade, fala ou autonomia. Também é indicada de forma preventiva para idosos com risco aumentado de queda ou perda funcional."}},
+      {"@type":"Question","name":"A reabilitação previne quedas?","acceptedAnswer":{"@type":"Answer","text":"Sim. A avaliação geriátrica identifica os fatores de risco, fraqueza muscular, alteração de equilíbrio, efeitos de medicamentos, e a equipe multidisciplinar age sobre cada um deles antes que o acidente aconteça."}},
+      {"@type":"Question","name":"A Mais60 atende reabilitação por convênio?","acceptedAnswer":{"@type":"Answer","text":"Atendemos pelos convênios Unimed BH, Fundaffemg e Desban. Para beneficiários sem cobertura adequada, o plano particular Mais60 Essencial inclui fisioterapia, fonoaudiologia e terapia ocupacional integradas ao geriatra por R$329/mês."}}
+    ]
+  }
+  </script>
+<script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"MedicalClinic",
+    "name":"Mais60 Saúde: Reabilitação Geriátrica",
+    "description":"Fisioterapia geriátrica, fonoaudiologia, terapia ocupacional e prevenção de quedas para idosos em BH.",
+    "medicalSpecialty":["Geriatrics","PhysicalTherapy","SpeechTherapy","OccupationalTherapy"],
+    "address":{"@type":"PostalAddress","addressLocality":"Belo Horizonte","addressRegion":"MG","addressCountry":"BR"}
+  }
+  </script>
+</head>
+<body>
+<!-- ══ NAVBAR ══ -->
+<header style="position:sticky;top:0;z-index:1000;height:68px;background:rgba(255,255,255,0.93);backdrop-filter:blur(20px) saturate(1.4);border-bottom:1px solid rgba(67,5,147,0.06);display:flex;align-items:center;padding:0 48px;gap:40px;">
+  <a href="index.html" style="flex-shrink:0;"><img src="assets/logo-roxo.png" alt="mais60 Saúde" style="height:32px;width:auto;" /></a>
+  <nav style="flex:1;display:flex;justify-content:center;gap:2px;">
+    <div class="nav-drop">
+      <span class="nav-link">Serviços</span>
+      <div class="nav-panel">
+        <div class="nav-col">
+          <div class="nav-col-title">Cuidados Médicos</div>
+          <a href="geriatra-bh.html">Geriatra em BH</a>
+          <a href="medico-referencia-idosos-bh.html">Médico de Referência</a>
+          <a href="cuidados-medicos-idosos-bh.html">Ver categoria</a>
+        </div>
+        <div class="nav-col">
+          <div class="nav-col-title">Reabilitação</div>
+          <a href="fisioterapia-idosos-bh.html">Fisioterapia</a>
+          <a href="fonoaudiologia-idosos-bh.html">Fonoaudiologia</a>
+          <a href="terapeuta-ocupacional-idosos-bh.html">Terapia Ocupacional</a>
+          <a href="reabilitacao-idosos-bh.html">Ver categoria</a>
+        </div>
+        <div class="nav-col">
+          <div class="nav-col-title">Bem-estar</div>
+          <a href="nutricionista-idosos-bh.html">Nutricionista</a>
+          <a href="psicologo-idosos-bh.html">Psicólogo</a>
+          <a href="educacao-fisica-idosos-bh.html">Educação Física</a>
+          <a href="atividades-bem-estar-idosos-bh.html">Ver categoria</a>
+        </div>
+        <div class="nav-col">
+          <div class="nav-col-title">Urgência e Suporte</div>
+          <a href="pronto-cuidar-bh.html">Pronto Cuidar</a>
+          <a href="enfermeiro-navegador-cuidado-coordenado.html">Enfermeiro Navegador</a>
+          <a href="farmaceutico-clinico-idosos-bh.html">Farmacêutico Clínico</a>
+          <a href="urgencia-idosos-24h-bh.html">Ver categoria</a>
+        </div>
+      </div>
+    </div>
+    <div class="nav-drop">
+      <span class="nav-link">Condições</span>
+      <div class="nav-panel">
+        <div class="nav-col">
+          <a href="geriatra-bh.html">Ver todas as condições</a>
+          <a href="alzheimer-bh.html">Alzheimer</a>
+          <a href="demencias-bh.html">Demências</a>
+          <a href="parkinson-idosos-bh.html">Parkinson</a>
+        </div>
+        <div class="nav-col">
+          <a href="prevencao-quedas-idosos-bh.html">Prevenção de Quedas</a>
+          <a href="diabetes-idosos.html">Diabetes</a>
+          <a href="o-que-e-disfagia.html">Disfagia</a>
+          <a href="quando-o-esquecimento-se-tornar-preocupante.html">Esquecimento</a>
+        </div>
+      </div>
+    </div>
+    <div class="nav-drop">
+      <span class="nav-link">Unidades</span>
+      <div class="nav-panel">
+        <div class="nav-col">
+          <a href="clinica-idosos-barro-preto-bh.html">Barro Preto</a>
+          <a href="clinica-idosos-pampulha-bh.html">Pampulha</a>
+          <a href="clinica-idosos-santo-agostinho-bh.html">Santo Agostinho</a>
+          <a href="clinica-idosos-santa-efigenia-bh.html">Santa Efigênia</a>
+          <a href="clinica-idosos-betim-mg.html">Betim</a>
+        </div>
+      </div>
+    </div>
+    <a href="mais60-essencial-plano-particular-idoso.html" class="nav-link nav-top">Mais60 Essencial</a>
+    <a href="#" class="nav-link nav-top">Blog</a>
+  </nav>
+  <button class="btn btn-purple" onclick="document.getElementById('cta-final').scrollIntoView({behavior:'smooth'})">Agendar consulta</button>
+</header>
+
+<!-- ══ HERO ══ -->
+<section style="position:relative;background:#430593;overflow:hidden;padding:88px 0 80px;">
+  <!-- mesh glow -->
+  <div style="position:absolute;inset:0;pointer-events:none;overflow:hidden;">
+    <div style="position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(91,10,184,0.6) 0%,transparent 70%);top:-100px;left:-80px;animation:meshDrift 14s ease-in-out infinite;"></div>
+    <div style="position:absolute;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(39,204,149,0.18) 0%,transparent 70%);bottom:60px;right:160px;animation:meshDrift 18s ease-in-out infinite reverse;"></div>
+    <div style="position:absolute;left:0;top:-140px;width:340px;height:860px;background:linear-gradient(180deg,rgb(90,23,177) 0%,rgb(67,5,147) 100%);transform:matrix(0.944,0.331,-0.331,0.944,1200,0);transform-origin:0 0;opacity:0.7;"></div>
+  </div>
+  <div class="wrap" style="position:relative;z-index:1;">
+    <!-- Breadcrumb -->
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:32px;">
+      <a href="index.html" style="font-size:13px;color:rgba(255,255,255,0.50);transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.85)'" onmouseout="this.style.color='rgba(255,255,255,0.50)'">Início</a>
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+      <span style="font-size:13px;color:rgba(255,255,255,0.80);font-weight:600;">Reabilitação</span>
+    </div>
+
+    <div style="max-width:720px;">
+      <span class="tag tag-white" style="margin-bottom:20px;display:inline-flex;">Reabilitação Geriátrica em BH</span>
+      <h1 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:clamp(32px,3.5vw,52px);line-height:1.08;letter-spacing:-0.03em;color:#FFF;margin-bottom:20px;">Reabilitação para idosos em Belo Horizonte</h1>
+      <p style="font-family:'Montserrat',sans-serif;font-weight:500;font-size:18px;line-height:1.7;color:rgba(255,255,255,0.75);margin-bottom:36px;max-width:600px;">Na Mais60, fisioterapeuta, fonoaudiólogo e terapeuta ocupacional trabalham junto com o geriatra. Um único histórico, um único objetivo: mais autonomia para o seu familiar.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;">
+        <button id="btn-hero-agendar-avaliacao" class="btn btn-white" onclick="document.getElementById('cta-final').scrollIntoView({behavior:'smooth'})">
+          Agendar avaliação
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#430593" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <a id="btn-hero-conhecer-geriatra" href="geriatra-bh.html" class="btn btn-ghost">Conhecer o geriatra</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ RESPOSTA DIRETA (AI-friendly snippet) ══ -->
+<section class="sec sec-paper">
+  <div class="wrap">
+    <div class="grid-2">
+      <div>
+        <span class="tag" style="margin-bottom:16px;display:inline-flex;">O que é reabilitação geriátrica</span>
+        <h2 style="font-size:clamp(22px,2.2vw,32px);font-weight:700;color:#430593;line-height:1.15;letter-spacing:-0.025em;margin-bottom:20px;">Reabilitação integrada ao cuidado geriátrico</h2>
+        <!-- this block is intentionally formatted as a clean paragraph for AI extraction -->
+        <p style="font-size:17px;color:#4A5568;line-height:1.8;margin-bottom:24px;">A reabilitação geriátrica reúne fisioterapia, fonoaudiologia e terapia ocupacional para devolver e preservar a autonomia do idoso. Na Mais60, esses profissionais atuam de forma integrada, sob a coordenação do geriatra, em vez de funcionarem em clínicas separadas. Isso garante um plano único, ajustado ao quadro completo da pessoa.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <span style="font-size:13px;font-weight:600;color:#430593;background:rgba(67,5,147,0.08);border:1px solid rgba(67,5,147,0.14);border-radius:9999px;padding:4px 14px;">Unimed BH</span>
+          <span style="font-size:13px;font-weight:600;color:#430593;background:rgba(67,5,147,0.08);border:1px solid rgba(67,5,147,0.14);border-radius:9999px;padding:4px 14px;">Fundaffemg</span>
+          <span style="font-size:13px;font-weight:600;color:#430593;background:rgba(67,5,147,0.08);border:1px solid rgba(67,5,147,0.14);border-radius:9999px;padding:4px 14px;">Desban</span>
+          <span style="font-size:13px;font-weight:600;color:#27CC95;background:rgba(39,204,149,0.10);border:1px solid rgba(39,204,149,0.22);border-radius:9999px;padding:4px 14px;">Mais60 Essencial</span>
+        </div>
+      </div>
+      <!-- Visual: integrated care diagram -->
+      <div style="background:#FFF;border-radius:24px;padding:36px;box-shadow:0 4px 24px rgba(67,5,147,0.10);">
+        <div style="font-size:12px;font-weight:700;color:rgba(67,5,147,0.40);letter-spacing:0.08em;text-transform:uppercase;text-align:center;margin-bottom:24px;">Equipe integrada de reabilitação</div>
+        <!-- Hub diagram -->
+        <div style="position:relative;display:flex;align-items:center;justify-content:center;height:200px;">
+          <!-- Center -->
+          <div style="width:64px;height:64px;border-radius:50%;background:#430593;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 8px rgba(67,5,147,0.10);z-index:2;position:relative;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.46 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.44-3.14Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.46 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.44-3.14Z"/></svg>
+          </div>
+          <!-- Satellites -->
+          <!-- Fisio - top left -->
+          <div style="position:absolute;top:10px;left:20px;display:flex;flex-direction:column;align-items:center;gap:6px;">
+            <div style="width:44px;height:44px;border-radius:12px;background:rgba(39,204,149,0.12);border:1.5px solid #27CC95;display:flex;align-items:center;justify-content:center;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#27CC95" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1.5"/><path d="m9 9 3-3 3 3"/><path d="m6 12 3-3"/><path d="m15 9 3 3"/><path d="m9 15 3-3 3 3"/></svg>
+            </div>
+            <span style="font-size:10px;font-weight:700;color:#430593;letter-spacing:-0.01em;text-align:center;line-height:1.2;">Fisio&shy;terapia</span>
+          </div>
+          <!-- Fono - top right -->
+          <div style="position:absolute;top:10px;right:20px;display:flex;flex-direction:column;align-items:center;gap:6px;">
+            <div style="width:44px;height:44px;border-radius:12px;background:rgba(39,204,149,0.12);border:1.5px solid #27CC95;display:flex;align-items:center;justify-content:center;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#27CC95" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="11" rx="3"/><path d="M5 10a7 7 0 0 0 14 0"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="8" y1="22" x2="16" y2="22"/></svg>
+            </div>
+            <span style="font-size:10px;font-weight:700;color:#430593;letter-spacing:-0.01em;text-align:center;line-height:1.2;">Fonoa&shy;udiologia</span>
+          </div>
+          <!-- TO - bottom left -->
+          <div style="position:absolute;bottom:10px;left:20px;display:flex;flex-direction:column;align-items:center;gap:6px;">
+            <div style="width:44px;height:44px;border-radius:12px;background:rgba(39,204,149,0.12);border:1.5px solid #27CC95;display:flex;align-items:center;justify-content:center;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#27CC95" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            </div>
+            <span style="font-size:10px;font-weight:700;color:#430593;letter-spacing:-0.01em;text-align:center;line-height:1.2;">Terapia Ocup.</span>
+          </div>
+          <!-- Prev quedas - bottom right -->
+          <div style="position:absolute;bottom:10px;right:20px;display:flex;flex-direction:column;align-items:center;gap:6px;">
+            <div style="width:44px;height:44px;border-radius:12px;background:rgba(39,204,149,0.12);border:1.5px solid #27CC95;display:flex;align-items:center;justify-content:center;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#27CC95" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <span style="font-size:10px;font-weight:700;color:#430593;letter-spacing:-0.01em;text-align:center;line-height:1.2;">Prev. Quedas</span>
+          </div>
+          <!-- SVG connecting lines -->
+          <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" viewBox="0 0 360 200">
+            <line x1="60" y1="55" x2="162" y2="100" stroke="rgba(67,5,147,0.15)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <line x1="300" y1="55" x2="198" y2="100" stroke="rgba(67,5,147,0.15)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <line x1="60" y1="155" x2="162" y2="100" stroke="rgba(67,5,147,0.15)" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <line x1="300" y1="155" x2="198" y2="100" stroke="rgba(67,5,147,0.15)" stroke-width="1.5" stroke-dasharray="4 3"/>
+          </svg>
+        </div>
+        <div style="text-align:center;margin-top:16px;">
+          <span style="font-size:12px;font-weight:600;color:#430593;background:rgba(67,5,147,0.08);border-radius:9999px;padding:4px 14px;">Coordenado pelo Geriatra</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ DADOS DE CONTEXTO ══ -->
+<section class="sec sec-white">
+  <div class="wrap">
+    <div style="text-align:center;max-width:600px;margin:0 auto 48px;">
+      <span class="tag" style="margin-bottom:14px;display:inline-flex;">Dados de saúde pública</span>
+      <h2 style="font-size:clamp(22px,2.2vw,32px);font-weight:700;color:#430593;line-height:1.15;letter-spacing:-0.025em;">Por que a reabilitação importa antes da queda acontecer</h2>
+    </div>
+    <div class="grid-3" style="margin-bottom:36px;">
+      <div class="stat-card">
+        <div style="font-size:56px;font-weight:800;color:#430593;line-height:1;letter-spacing:-0.04em;background:linear-gradient(135deg,#430593,#27CC95);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">30%</div>
+        <div style="font-size:17px;font-weight:600;color:#1A1A2E;line-height:1.3;">dos idosos caem pelo menos uma vez por ano</div>
+        <div style="font-size:12px;color:#9CA3AF;font-weight:500;margin-top:4px;">Ministério da Saúde</div>
+      </div>
+      <div class="stat-card">
+        <div style="font-size:56px;font-weight:800;line-height:1;letter-spacing:-0.04em;background:linear-gradient(135deg,#430593,#27CC95);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">1 em 4</div>
+        <div style="font-size:17px;font-weight:600;color:#1A1A2E;line-height:1.3;">que caem precisam de internação hospitalar</div>
+        <div style="font-size:12px;color:#9CA3AF;font-weight:500;margin-top:4px;">Ministério da Saúde</div>
+      </div>
+      <div class="stat-card">
+        <div style="font-size:56px;font-weight:800;line-height:1;letter-spacing:-0.04em;background:linear-gradient(135deg,#430593,#27CC95);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">70%</div>
+        <div style="font-size:17px;font-weight:600;color:#1A1A2E;line-height:1.3;">das quedas acontecem dentro de casa</div>
+        <div style="font-size:12px;color:#9CA3AF;font-weight:500;margin-top:4px;">Ministério da Saúde</div>
+      </div>
+    </div>
+    <div style="background:#E8F3F5;border-radius:16px;padding:24px 28px;display:flex;align-items:flex-start;gap:16px;max-width:800px;margin:0 auto;">
+      <div style="width:36px;height:36px;border-radius:10px;background:#430593;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      </div>
+      <p style="font-size:15px;color:#4A5568;line-height:1.75;">A reabilitação atua tanto na <strong style="color:#430593;">recuperação</strong> quanto na <strong style="color:#430593;">prevenção</strong>, reduzindo o risco antes que o acidente aconteça. O geriatra da Mais60 avalia o histórico completo, incluindo medicamentos que aumentam o risco de queda, e define o plano com a equipe.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ GERIATRA COORDENA ══ -->
+<section class="sec sec-paper">
+  <div class="wrap">
+    <div class="grid-2">
+      <div style="background:#430593;border-radius:24px;padding:48px;position:relative;overflow:hidden;">
+        <div style="position:absolute;top:-40px;right:-40px;width:200px;height:200px;border-radius:50%;background:rgba(39,204,149,0.15);pointer-events:none;"></div>
+        <div style="position:absolute;bottom:-20px;left:-20px;width:140px;height:140px;border-radius:50%;background:rgba(91,10,184,0.40);pointer-events:none;"></div>
+        <div style="position:relative;z-index:1;">
+          <div style="width:52px;height:52px;border-radius:14px;background:rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.46 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.44-3.14Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.46 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.44-3.14Z"/></svg>
+          </div>
+          <div style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.55);letter-spacing:0.10em;text-transform:uppercase;margin-bottom:12px;">Geriatra Coordenador</div>
+          <div style="font-size:28px;font-weight:700;color:#FFF;line-height:1.15;letter-spacing:-0.02em;margin-bottom:16px;">Um profissional vê o quadro inteiro</div>
+          <p style="font-size:15px;color:rgba(255,255,255,0.70);line-height:1.75;">Quando fisioterapia e fonoaudiologia atuam sem comunicação, cada profissional trata uma parte. Na Mais60, o geriatra garante que todos trabalhem com o mesmo objetivo.</p>
+        </div>
+      </div>
+      <div>
+        <span class="tag" style="margin-bottom:16px;display:inline-flex;">Coordenação do cuidado</span>
+        <h2 style="font-size:clamp(22px,2.2vw,32px);font-weight:700;color:#430593;line-height:1.15;letter-spacing:-0.025em;margin-bottom:20px;">O geriatra coordena a reabilitação</h2>
+        <p style="font-size:16px;color:#4A5568;line-height:1.8;margin-bottom:28px;">Na Mais60, o geriatra acompanha o quadro completo do idoso e define, junto da equipe, o plano de reabilitação. Quando o caso envolve mais de uma área, fisioterapia e fonoaudiologia, por exemplo, todos trabalham com o mesmo histórico e o mesmo objetivo. Nenhuma informação se perde entre consultas.</p>
+        <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:32px;">
+          <div style="display:flex;align-items:flex-start;gap:12px;">
+            <div style="width:22px;height:22px;border-radius:6px;background:rgba(39,204,149,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#27CC95" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+            </div>
+            <span style="font-size:15px;color:#4A5568;line-height:1.6;">Um único prontuário compartilhado por toda a equipe</span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:12px;">
+            <div style="width:22px;height:22px;border-radius:6px;background:rgba(39,204,149,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#27CC95" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+            </div>
+            <span style="font-size:15px;color:#4A5568;line-height:1.6;">Plano de reabilitação alinhado com os medicamentos em uso</span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:12px;">
+            <div style="width:22px;height:22px;border-radius:6px;background:rgba(39,204,149,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#27CC95" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+            </div>
+            <span style="font-size:15px;color:#4A5568;line-height:1.6;">Enfermeiro Navegador acompanha a evolução entre consultas</span>
+          </div>
+        </div>
+        <a id="btn-geriatra-conhecer" href="geriatra-bh.html" class="btn btn-purple">
+          Conhecer o cuidado do geriatra
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SERVIÇOS FILHOS ══ -->
+<section class="sec sec-white">
+  <div class="wrap">
+    <div style="text-align:center;max-width:600px;margin:0 auto 48px;">
+      <span class="tag" style="margin-bottom:14px;display:inline-flex;">Serviços de reabilitação</span>
+      <h2 style="font-size:clamp(22px,2.2vw,32px);font-weight:700;color:#430593;line-height:1.15;letter-spacing:-0.025em;">Cada serviço integrado ao geriatra</h2>
+    </div>
+    <div class="grid-4">
+
+      <a id="btn-servicos-fisioterapia" href="fisioterapia-idosos-bh.html" class="svc-card">
+        <div class="icon-box">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1.5"/><path d="m9 9 3-3 3 3"/><path d="m6 12 3-3"/><path d="m15 9 3 3"/><path d="m9 15 3-3 3 3"/><path d="m6 18 3-3"/><path d="m15 15 3 3"/></svg>
+        </div>
+        <div style="font-size:17px;font-weight:700;color:#430593;margin-bottom:8px;letter-spacing:-0.02em;">Fisioterapia para idosos</div>
+        <p style="font-size:14px;color:#4A5568;line-height:1.65;flex:1;">Reabilitação funcional, prevenção de quedas e recuperação de mobilidade com protocolo geriátrico integrado.</p>
+        <div style="display:flex;align-items:center;gap:6px;margin-top:16px;font-size:14px;font-weight:600;color:#430593;">
+          Saiba mais
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#430593" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+
+      <a id="btn-servicos-fonoaudiologia" href="fonoaudiologia-idosos-bh.html" class="svc-card">
+        <div class="icon-box">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="11" rx="3"/><path d="M5 10a7 7 0 0 0 14 0"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="8" y1="22" x2="16" y2="22"/></svg>
+        </div>
+        <div style="font-size:17px;font-weight:700;color:#430593;margin-bottom:8px;letter-spacing:-0.02em;">Fonoaudiologia e deglutição</div>
+        <p style="font-size:14px;color:#4A5568;line-height:1.65;flex:1;">Disfagia, distúrbios de comunicação e linguagem no envelhecimento, integrado ao nutricionista e geriatra.</p>
+        <div style="display:flex;align-items:center;gap:6px;margin-top:16px;font-size:14px;font-weight:600;color:#430593;">
+          Saiba mais
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#430593" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+
+      <a id="btn-servicos-to" href="terapeuta-ocupacional-idosos-bh.html" class="svc-card">
+        <div class="icon-box">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+        </div>
+        <div style="font-size:17px;font-weight:700;color:#430593;margin-bottom:8px;letter-spacing:-0.02em;">Terapia ocupacional</div>
+        <p style="font-size:14px;color:#4A5568;line-height:1.65;flex:1;">Autonomia nas atividades do dia a dia. Adaptação do ambiente doméstico para segurança e independência.</p>
+        <div style="display:flex;align-items:center;gap:6px;margin-top:16px;font-size:14px;font-weight:600;color:#430593;">
+          Saiba mais
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#430593" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+
+      <a id="btn-servicos-prevencao-quedas" href="prevencao-quedas-idosos-bh.html" class="svc-card">
+        <div class="icon-box">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div style="font-size:17px;font-weight:700;color:#430593;margin-bottom:8px;letter-spacing:-0.02em;">Prevenção de quedas</div>
+        <p style="font-size:14px;color:#4A5568;line-height:1.65;flex:1;">Avaliação de risco com equipe multidisciplinar. Identificação de fatores evitáveis, incluindo medicamentos e ambiente.</p>
+        <div style="display:flex;align-items:center;gap:6px;margin-top:16px;font-size:14px;font-weight:600;color:#430593;">
+          Saiba mais
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#430593" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ COMO FUNCIONA ══ -->
+<section class="sec sec-paper">
+  <div class="wrap">
+    <div class="grid-2">
+      <div>
+        <span class="tag" style="margin-bottom:16px;display:inline-flex;">Como funciona</span>
+        <h2 style="font-size:clamp(22px,2.2vw,32px);font-weight:700;color:#430593;line-height:1.15;letter-spacing:-0.025em;margin-bottom:36px;">Três passos para um plano de reabilitação integrado</h2>
+        <div style="display:flex;flex-direction:column;gap:28px;">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div>
+              <div style="font-size:17px;font-weight:700;color:#430593;margin-bottom:6px;">Avaliação geriátrica ampla</div>
+              <p style="font-size:15px;color:#4A5568;line-height:1.7;">O geriatra avalia o histórico completo, condições crônicas, medicamentos, risco de queda e capacidade funcional, e identifica o que precisa de reabilitação.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div>
+              <div style="font-size:17px;font-weight:700;color:#430593;margin-bottom:6px;">Plano integrado com a equipe</div>
+              <p style="font-size:15px;color:#4A5568;line-height:1.7;">Fisioterapeuta, fonoaudiólogo e terapeuta ocupacional recebem o histórico e definem um plano unificado. Sem retrabalho, sem contradições.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div>
+              <div style="font-size:17px;font-weight:700;color:#430593;margin-bottom:6px;">Acompanhamento contínuo</div>
+              <p style="font-size:15px;color:#4A5568;line-height:1.7;">O Enfermeiro Navegador monitora a evolução entre consultas e aciona o geriatra quando qualquer sinal clínico muda. O plano se ajusta com a pessoa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Visual connector decoration -->
+      <div style="background:#FFF;border-radius:24px;padding:40px;box-shadow:0 4px 24px rgba(67,5,147,0.08);display:flex;flex-direction:column;justify-content:center;gap:0;">
+        <div style="text-align:center;font-size:12px;font-weight:700;color:rgba(67,5,147,0.40);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:28px;">Resultado esperado</div>
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          <div style="background:#E8F3F5;border-radius:14px;padding:18px 20px;display:flex;align-items:center;gap:14px;">
+            <div style="width:40px;height:40px;border-radius:10px;background:#430593;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div style="font-size:14px;font-weight:600;color:#430593;line-height:1.4;">Maior autonomia nas atividades diárias</div>
+          </div>
+          <div style="background:#E8F3F5;border-radius:14px;padding:18px 20px;display:flex;align-items:center;gap:14px;">
+            <div style="width:40px;height:40px;border-radius:10px;background:#27CC95;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div style="font-size:14px;font-weight:600;color:#430593;line-height:1.4;">Redução do risco de queda e internação</div>
+          </div>
+          <div style="background:#E8F3F5;border-radius:14px;padding:18px 20px;display:flex;align-items:center;gap:14px;">
+            <div style="width:40px;height:40px;border-radius:10px;background:#06AAFC;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 11a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 2.18 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L6.91 9.91a16 16 0 0 0 6.72 6.72l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div style="font-size:14px;font-weight:600;color:#430593;line-height:1.4;">Família com mais tranquilidade e informação</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CITAÇÃO RT ══ -->
+<section class="sec sec-purple" style="position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;pointer-events:none;overflow:hidden;">
+    <div style="position:absolute;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(39,204,149,0.18) 0%,transparent 70%);top:-100px;right:100px;animation:meshDrift 16s ease-in-out infinite;"></div>
+    <div style="position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(91,10,184,0.50) 0%,transparent 70%);bottom:-60px;left:-40px;animation:meshDrift 12s ease-in-out infinite reverse;"></div>
+  </div>
+  <div class="wrap" style="position:relative;z-index:1;max-width:800px;">
+    <div style="text-align:center;">
+      <div style="font-size:64px;font-weight:900;color:rgba(255,255,255,0.08);line-height:0.6;margin-bottom:20px;font-family:Georgia,serif;">"</div>
+      <!-- Placeholder: aguardando quote do Dr. Estevão -->
+      <div style="background:rgba(255,255,255,0.08);border:1px dashed rgba(255,255,255,0.25);border-radius:16px;padding:24px 28px;margin-bottom:28px;">
+        <p style="font-size:14px;font-weight:600;color:rgba(255,255,255,0.45);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:8px;">Pendente: Quote do Dr. Estevão</p>
+        <p style="font-size:15px;color:rgba(255,255,255,0.35);font-style:italic;line-height:1.7;">Ângulo sugerido: a queda que parece descuido pode ser efeito colateral de um medicamento, e o geriatra reconhece esses padrões porque tem formação específica para o idoso.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:4px;">
+        <div style="width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;margin-bottom:8px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.70)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a4 4 0 0 1 8 0v2"/></svg>
+        </div>
+        <span style="font-size:15px;font-weight:700;color:#FFF;">Dr. Estevão</span>
+        <span style="font-size:13px;color:rgba(255,255,255,0.55);">Geriatra · Responsável Técnico · CRM-MG [confirmar]</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ UNIDADES ══ -->
+<section class="sec sec-white" id="unidades">
+  <div class="wrap">
+    <div style="text-align:center;max-width:560px;margin:0 auto 48px;">
+      <span class="tag" style="margin-bottom:14px;display:inline-flex;">Onde estamos</span>
+      <h2 style="font-size:clamp(22px,2.2vw,32px);font-weight:700;color:#430593;line-height:1.15;letter-spacing:-0.025em;">6 unidades em BH e Betim</h2>
+    </div>
+    <div class="grid-3">
+      <div class="unit-card">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+          <div style="width:10px;height:10px;border-radius:50%;background:#430593;flex-shrink:0;"></div>
+          <span style="font-size:11px;font-weight:700;color:#430593;background:rgba(67,5,147,0.08);padding:2px 10px;border-radius:9999px;letter-spacing:0.06em;text-transform:uppercase;">Principal</span>
+        </div>
+        <div style="font-size:17px;font-weight:700;color:#430593;margin-bottom:8px;">Barro Preto</div>
+        <div style="font-size:14px;color:#4A5568;line-height:1.65;margin-bottom:6px;">R. Juiz de Fora, 1071 · BH</div>
+        <div style="font-size:12px;font-weight:600;color:#430593;background:#E8F3F5;border-radius:9999px;padding:3px 10px;display:inline-block;">Seg–Sex 7h–22h · Sáb 7h–13h</div>
+      </div>
+      <div class="unit-card">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;"><div style="width:10px;height:10px;border-radius:50%;background:#27CC95;flex-shrink:0;"></div><span style="font-size:11px;font-weight:700;color:#15a675;background:rgba(39,204,149,0.10);padding:2px 10px;border-radius:9999px;letter-spacing:0.06em;text-transform:uppercase;">Pampulha</span></div>
+        <div style="font-size:17px;font-weight:700;color:#430593;margin-bottom:8px;">Pampulha</div>
+        <div style="font-size:14px;color:#4A5568;line-height:1.65;margin-bottom:6px;">R. Arthur Itabirano, 262 · BH</div>
+        <div style="font-size:12px;font-weight:600;color:#430593;background:#E8F3F5;border-radius:9999px;padding:3px 10px;display:inline-block;">Seg–Sex 8h–18h</div>
+      </div>
+      <div class="unit-card">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;"><div style="width:10px;height:10px;border-radius:50%;background:#06AAFC;flex-shrink:0;"></div><span style="font-size:11px;font-weight:700;color:#0589cc;background:rgba(6,170,252,0.10);padding:2px 10px;border-radius:9999px;letter-spacing:0.06em;text-transform:uppercase;">Sto. Agostinho</span></div>
+        <div style="font-size:17px;font-weight:700;color:#430593;margin-bottom:8px;">Santo Agostinho</div>
+        <div style="font-size:14px;color:#4A5568;line-height:1.65;margin-bottom:6px;">R. Rio Grande do Sul, 1137 · BH</div>
+        <div style="font-size:12px;font-weight:600;color:#430593;background:#E8F3F5;border-radius:9999px;padding:3px 10px;display:inline-block;">Seg–Sex 7h–19h</div>
+      </div>
+      <div class="unit-card">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;"><div style="width:10px;height:10px;border-radius:50%;background:#FFA300;flex-shrink:0;"></div><span style="font-size:11px;font-weight:700;color:#c97a00;background:rgba(255,163,0,0.10);padding:2px 10px;border-radius:9999px;letter-spacing:0.06em;text-transform:uppercase;">Sta. Efigênia</span></div>
+        <div style="font-size:17px;font-weight:700;color:#430593;margin-bottom:8px;">Santa Efigênia</div>
+        <div style="font-size:14px;color:#4A5568;line-height:1.65;margin-bottom:6px;">R. Padre Rolim, 850 · BH</div>
+        <div style="font-size:12px;font-weight:600;color:#430593;background:#E8F3F5;border-radius:9999px;padding:3px 10px;display:inline-block;">Seg–Sex 7h–19h</div>
+      </div>
+      <div class="unit-card" style="border-color:rgba(251,92,61,0.15);box-shadow:0 2px 10px rgba(251,92,61,0.08);">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;"><div style="width:10px;height:10px;border-radius:50%;background:#FB5C3D;flex-shrink:0;"></div><span style="font-size:11px;font-weight:700;color:#d63e1d;background:rgba(251,92,61,0.10);padding:2px 10px;border-radius:9999px;letter-spacing:0.06em;text-transform:uppercase;border:1px solid rgba(251,92,61,0.20);">Pronto Cuidar</span></div>
+        <div style="font-size:17px;font-weight:700;color:#430593;margin-bottom:8px;">Funcionários</div>
+        <div style="font-size:14px;color:#4A5568;line-height:1.65;margin-bottom:6px;">Av. Brasil, 1477 · BH</div>
+        <div style="font-size:12px;font-weight:600;color:#d63e1d;background:rgba(251,92,61,0.08);border-radius:9999px;padding:3px 10px;display:inline-block;">Seg–Sex 7h–22h</div>
+      </div>
+      <div class="unit-card">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;"><div style="width:10px;height:10px;border-radius:50%;background:#27CC95;flex-shrink:0;"></div><span style="font-size:11px;font-weight:700;color:#15a675;background:rgba(39,204,149,0.10);padding:2px 10px;border-radius:9999px;letter-spacing:0.06em;text-transform:uppercase;">Betim</span></div>
+        <div style="font-size:17px;font-weight:700;color:#430593;margin-bottom:8px;">Betim</div>
+        <div style="font-size:14px;color:#4A5568;line-height:1.65;margin-bottom:6px;">R. Mato Grosso, 926 · Betim</div>
+        <div style="font-size:12px;font-weight:600;color:#430593;background:#E8F3F5;border-radius:9999px;padding:3px 10px;display:inline-block;">Consultar disponibilidade</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA FINAL ══ -->
+<section id="cta-final" class="sec sec-purple" style="position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;pointer-events:none;overflow:hidden;">
+    <div style="position:absolute;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(39,204,149,0.20) 0%,transparent 70%);top:-100px;right:-50px;animation:meshDrift 14s ease-in-out infinite;"></div>
+    <div style="position:absolute;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(91,10,184,0.50) 0%,transparent 70%);bottom:-60px;left:5%;animation:meshDrift 18s ease-in-out infinite reverse;"></div>
+  </div>
+  <div class="wrap" style="position:relative;z-index:1;max-width:760px;margin:0 auto;text-align:center;">
+    <span class="tag tag-white" style="margin-bottom:20px;display:inline-flex;">Próximo passo</span>
+    <h2 style="font-size:clamp(28px,3vw,44px);font-weight:700;color:#FFF;line-height:1.1;letter-spacing:-0.03em;margin-bottom:16px;">Mais autonomia para quem você ama</h2>
+    <p style="font-size:17px;color:rgba(255,255,255,0.70);line-height:1.75;margin-bottom:36px;max-width:560px;margin-left:auto;margin-right:auto;">Agende uma avaliação e descubra como a reabilitação integrada da Mais60 pode ajudar seu familiar. Nossa equipe entra em contato em até 24 horas.</p>
+    <!-- Form -->
+    <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);border-radius:24px;padding:40px;backdrop-filter:blur(12px);text-align:left;max-width:560px;margin:0 auto;">
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div>
+          <label style="display:block;font-size:12px;font-weight:700;color:rgba(255,255,255,0.60);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:6px;">Nome completo</label>
+          <input type="text" placeholder="Nome do familiar ou responsável" style="width:100%;background:rgba(255,255,255,0.08);border:1.5px solid rgba(255,255,255,0.20);border-radius:12px;padding:13px 16px;font-family:'Poppins',sans-serif;font-size:15px;color:#FFF;outline:none;transition:all 0.2s;box-sizing:border-box;" onfocus="this.style.borderColor='#27CC95';this.style.boxShadow='0 0 0 3px rgba(39,204,149,0.18)'" onblur="this.style.borderColor='rgba(255,255,255,0.20)';this.style.boxShadow='none'" />
+        </div>
+        <div>
+          <label style="display:block;font-size:12px;font-weight:700;color:rgba(255,255,255,0.60);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:6px;">WhatsApp</label>
+          <input type="tel" placeholder="(31) 9 0000-0000" style="width:100%;background:rgba(255,255,255,0.08);border:1.5px solid rgba(255,255,255,0.20);border-radius:12px;padding:13px 16px;font-family:'Poppins',sans-serif;font-size:15px;color:#FFF;outline:none;transition:all 0.2s;box-sizing:border-box;" onfocus="this.style.borderColor='#27CC95';this.style.boxShadow='0 0 0 3px rgba(39,204,149,0.18)'" onblur="this.style.borderColor='rgba(255,255,255,0.20)';this.style.boxShadow='none'" />
+        </div>
+        <div>
+          <label style="display:block;font-size:12px;font-weight:700;color:rgba(255,255,255,0.60);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:6px;">Unidade preferida</label>
+          <div style="position:relative;">
+            <select style="width:100%;background:rgba(255,255,255,0.08);border:1.5px solid rgba(255,255,255,0.20);border-radius:12px;padding:13px 40px 13px 16px;font-family:'Poppins',sans-serif;font-size:15px;color:rgba(255,255,255,0.85);outline:none;appearance:none;cursor:pointer;box-sizing:border-box;" onfocus="this.style.borderColor='#27CC95'" onblur="this.style.borderColor='rgba(255,255,255,0.20)'">
+              <option style="background:#430593;">Selecionar unidade</option>
+              <option style="background:#430593;">Barro Preto</option>
+              <option style="background:#430593;">Pampulha</option>
+              <option style="background:#430593;">Santo Agostinho</option>
+              <option style="background:#430593;">Santa Efigênia</option>
+              <option style="background:#430593;">Betim</option>
+              <option style="background:#430593;">Não sei ainda</option>
+            </select>
+            <span style="position:absolute;right:14px;top:50%;transform:translateY(-50%);color:rgba(255,255,255,0.50);pointer-events:none;font-size:12px;">▾</span>
+          </div>
+        </div>
+        <button id="btn-cta-final-agendar-avaliacao" class="btn btn-green" style="width:100%;justify-content:center;height:48px;font-size:15px;">
+          Agendar avaliação
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <p style="font-size:12px;color:rgba(255,255,255,0.35);text-align:center;">Respondemos em até 24 horas. Sem compromisso.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section class="sec sec-white">
+  <div class="wrap" style="max-width:760px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:40px;">
+      <span class="tag" style="margin-bottom:14px;display:inline-flex;">Perguntas frequentes</span>
+      <h2 style="font-size:clamp(22px,2.2vw,30px);font-weight:700;color:#430593;line-height:1.15;letter-spacing:-0.025em;">Dúvidas sobre reabilitação na Mais60</h2>
+    </div>
+    <div id="faq-list">
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">
+          Quando o idoso precisa de reabilitação?
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#430593" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="faq-a">Após quedas, cirurgias, AVCs ou diagnóstico de Parkinson e outras condições que afetam mobilidade, fala ou autonomia. Também é indicada de forma preventiva para idosos com risco aumentado de queda ou perda funcional, neste caso, o geriatra faz a avaliação inicial.</div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">
+          A reabilitação previne quedas?
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#430593" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="faq-a">Sim. A avaliação geriátrica identifica os fatores de risco, fraqueza muscular, alteração de equilíbrio, efeitos de medicamentos, e a equipe multidisciplinar age sobre cada um deles antes que o acidente aconteça. Na Mais60, o farmacêutico clínico também revisa medicamentos que aumentam o risco de queda.</div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">
+          A Mais60 atende reabilitação por convênio?
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#430593" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="faq-a">Atendemos pelos convênios Unimed BH, Fundaffemg e Desban. Para beneficiários sem cobertura adequada, o plano Mais60 Essencial complementa o convênio, com fisioterapia, fonoaudiologia e terapia ocupacional integradas ao geriatra por R$329/mês.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer style="background:#0F0A1E;padding:48px 0 24px;">
+  <div class="wrap">
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,0.08);">
+      <div>
+        <img src="assets/logo-branco.png" alt="mais60 Saúde" style="height:28px;width:auto;margin-bottom:12px;" />
+        <p style="font-size:14px;color:rgba(255,255,255,0.45);line-height:1.7;max-width:320px;">Mais cuidado para mais saúde. Clínica geriátrica em BH com equipe multidisciplinar integrada.</p>
+      </div>
+      <div>
+        <div style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.30);letter-spacing:0.10em;text-transform:uppercase;margin-bottom:14px;">Reabilitação</div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <a href="fisioterapia-idosos-bh.html" style="font-size:14px;color:rgba(255,255,255,0.55);transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.90)'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">Fisioterapia</a>
+          <a href="fonoaudiologia-idosos-bh.html" style="font-size:14px;color:rgba(255,255,255,0.55);transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.90)'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">Fonoaudiologia</a>
+          <a href="terapeuta-ocupacional-idosos-bh.html" style="font-size:14px;color:rgba(255,255,255,0.55);transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.90)'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">Terapia Ocupacional</a>
+          <a href="prevencao-quedas-idosos-bh.html" style="font-size:14px;color:rgba(255,255,255,0.55);transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.90)'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">Prevenção de Quedas</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.30);letter-spacing:0.10em;text-transform:uppercase;margin-bottom:14px;">Convênios</div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <span style="font-size:14px;color:rgba(255,255,255,0.55);">Unimed BH</span>
+          <span style="font-size:14px;color:rgba(255,255,255,0.55);">Fundaffemg</span>
+          <span style="font-size:14px;color:rgba(255,255,255,0.55);">Desban</span>
+          <span style="font-size:14px;color:#27CC95;font-weight:600;">Mais60 Essencial R$329/mês</span>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:20px;">
+      <span style="font-size:12px;color:rgba(255,255,255,0.25);">© 2026 Mais60 Saúde | EFG Saúde LTDA | CNPJ 18.627.245/0001-09</span>
+      <div style="display:flex;gap:20px;">
+        <a href="#" style="font-size:12px;color:rgba(255,255,255,0.25);transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.55)'" onmouseout="this.style.color='rgba(255,255,255,0.25)'">Política de Privacidade</a>
+        <a href="#" style="font-size:12px;color:rgba(255,255,255,0.25);transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.55)'" onmouseout="this.style.color='rgba(255,255,255,0.25)'">Termos de Uso</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp float -->
+<div style="position:fixed;bottom:28px;right:28px;z-index:998;">
+  <button style="width:56px;height:56px;border-radius:9999px;background:#25D366;border:none;cursor:pointer;box-shadow:0 4px 20px rgba(37,211,102,0.45);display:flex;align-items:center;justify-content:center;transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.10)'" onmouseout="this.style.transform='scale(1)'" title="Falar pelo WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="#FFF"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+  </button>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const nav = document.getElementById('nav') || document.querySelector('header');
+  window.addEventListener('scroll', () => {
+    if (nav) nav.style.boxShadow = window.scrollY > 30 ? '0 4px 24px rgba(67,5,147,0.08)' : 'none';
+  }, { passive: true });
+});
+</script>
+</body>
+</html>
