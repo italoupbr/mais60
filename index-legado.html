@@ -8,7 +8,7 @@
 <link rel="canonical" href="https://www.mais60saude.com.br/">
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500&display=swap" rel="stylesheet" />
 <style>
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -40,28 +40,29 @@
     .hp-2col-45  { display:grid; grid-template-columns:45fr 55fr; gap:64px; align-items:start; }
     .hp-grid3    { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
     .hp-grid4    { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+    .hp-metrics  { display:grid; grid-template-columns:repeat(5,1fr); }
     .hp-nav-links{ display:flex; gap:4px; flex:1; justify-content:center; align-items:center; }
     .hp-nav-mobile{ display:none; }
     .hp-mobile-menu{ display:none; }
     .hp-hero-img { display:block; }
-    .hp-authority-bar { gap:56px; }
 
     @media (max-width: 960px) {
       .hp-2col, .hp-2col-55, .hp-2col-45 { grid-template-columns:1fr; gap:40px; }
       .hp-grid3 { grid-template-columns:repeat(2,1fr); gap:14px; }
       .hp-grid4 { grid-template-columns:repeat(2,1fr); gap:14px; }
+      .hp-metrics{ grid-template-columns:repeat(2,1fr); }
       .hp-nav-links{ display:none; }
       .hp-nav-mobile{ display:flex; }
       .hp-hero-img{ display:none; }
-      .hp-authority-bar{ flex-wrap:wrap !important; height:auto !important; padding:14px 24px !important; gap:10px 28px; }
       .hp-footer-grid{ grid-template-columns:1fr 1fr !important; gap:32px !important; }
     }
     @media (max-width: 600px) {
       .hp-grid3 { grid-template-columns:1fr; }
       .hp-grid4 { grid-template-columns:1fr; }
+      .hp-metrics{ grid-template-columns:1fr 1fr; }
       .hp-footer-grid{ grid-template-columns:1fr !important; }
     }
-
+  
 
     .nav-drop{position:relative;height:68px;display:flex;align-items:center;}
     .nav-link{font-size:15px;font-weight:500;color:#1A1A2E;padding:0 14px;height:68px;display:flex;align-items:center;transition:color 0.2s;cursor:pointer;white-space:nowrap;}
@@ -72,11 +73,6 @@
     .nav-col-title{font-size:11px;font-weight:700;color:rgba(67,5,147,0.40);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;padding:0 8px;}
     .nav-panel a{font-size:14px;color:#4A5568;padding:7px 8px;border-radius:8px;transition:all 0.15s;white-space:nowrap;}
     .nav-panel a:hover{background:rgba(67,5,147,0.06);color:#430593;}
-
-    .m60-card{background:#FFFFFF;border:1px solid rgba(67,5,147,0.10);border-radius:16px;padding:26px 24px;cursor:pointer;transition:all 0.25s;display:flex;flex-direction:column;}
-    .m60-card:hover{transform:translateY(-4px);box-shadow:0 8px 28px rgba(67,5,147,0.12);border-color:rgba(67,5,147,0.22);}
-    .m60-card-footer{margin-top:18px;background:rgba(67,5,147,0.05);border-radius:9999px;padding:9px 10px;text-align:center;}
-    .m60-card-footer a{font-size:13px;font-weight:700;color:#430593;display:inline-flex;align-items:center;gap:5px;}
 </style>
 
 </head>
@@ -178,92 +174,253 @@
   </div>
 </div>
 
-<!-- ═══ HERO (Figma: Dobra 1) ═══ -->
-<section style="position:relative; background:linear-gradient(135deg,#430593 0%,#2d0369 100%); overflow:hidden; padding:112px 48px 0;">
-  <!-- Decorative diagonal shape (behind photo) -->
+<!-- ═══ HERO ═══ -->
+<section style="position:relative; min-height:100vh; background:linear-gradient(135deg,#430593 0%,#2d0369 100%); overflow:hidden; display:flex; align-items:center; padding:112px 48px;">
+  <!-- Mesh gradient layers -->
   <div style="position:absolute; inset:0; pointer-events:none; overflow:hidden;">
-    <div style="position:absolute; width:369px; height:917px; top:-220px; right:6%; background:linear-gradient(180deg,#5a17b1 0%,#430593 100%); transform:rotate(19.32deg); opacity:0.55; filter:blur(1px);"></div>
-    <div style="position:absolute; width:500px; height:500px; border-radius:50%; background:radial-gradient(circle, rgba(39,204,149,0.20) 0%, transparent 70%); top:15%; right:2%; animation:meshDrift 15s ease-in-out infinite reverse;"></div>
+    <div style="position:absolute; width:700px; height:700px; border-radius:50%; background:radial-gradient(circle, rgba(91,10,184,0.7) 0%, transparent 70%); top:-200px; left:-100px; animation:meshDrift 12s ease-in-out infinite;"></div>
+    <div style="position:absolute; width:500px; height:500px; border-radius:50%; background:radial-gradient(circle, rgba(39,204,149,0.25) 0%, transparent 70%); top:20%; right:5%; animation:meshDrift 15s ease-in-out infinite reverse;"></div>
+    <div style="position:absolute; width:400px; height:400px; border-radius:50%; background:radial-gradient(circle, rgba(6,170,252,0.15) 0%, transparent 70%); bottom:10%; left:30%; animation:meshDrift 18s ease-in-out infinite;"></div>
+    <div style="position:absolute; width:300px; height:300px; border-radius:50%; background:radial-gradient(circle, rgba(39,204,149,0.20) 0%, transparent 70%); bottom:20%; right:20%; animation:meshDrift 10s ease-in-out infinite reverse;"></div>
   </div>
 
-  <div class="hp-2col" style="position:relative; z-index:1; width:100%; max-width:1280px; margin:0 auto; padding-bottom:76px;">
+  <!-- Content wrapper -->
+  <div style="position:relative; z-index:1; width:100%; max-width:1280px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center;">
 
     <!-- Left: Copy -->
     <div style="animation:fadeUp 0.8s ease both;">
-      <!-- Home Tag -->
-      <div style="display:inline-flex; align-items:center; gap:10px; margin-bottom:22px;">
-        <span style="width:30px; height:30px; border-radius:9999px; background:rgba(39,204,149,0.18); border:1px solid rgba(39,204,149,0.45); display:flex; align-items:center; justify-content:center; color:#27CC95; flex-shrink:0;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M8 12h8M12 8v8"/></svg></span>
-        <span style="font-size:14px; font-weight:700; color:#27CC95; letter-spacing:-0.02em;">6 unidades da nossa clínica geriátrica em BH e Betim</span>
+      <!-- Badge -->
+      <div style="display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.20); border-radius:9999px; padding:6px 16px; margin-bottom:28px;">
+        <span style="color:#FFFFFF;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M12 8v8M8 12h8"/></svg></span>
+        <span style="font-size:11px; font-weight:600; color:#FFFFFF; letter-spacing:0.10em; text-transform:uppercase;">Clínica Geriátrica em Belo Horizonte</span>
       </div>
 
       <!-- H1 -->
-      <h1 style="font-size:clamp(32px,4vw,46px); line-height:1.15; letter-spacing:-0.03em; margin-bottom:22px;">
-        <span style="font-weight:700; color:#FFFFFF;">Geriatra em Belo Horizonte </span><span style="font-weight:400; color:#FFFFFF;">com Acompanhamento Contínuo.</span>
+      <h1 style="font-size:clamp(38px,4.5vw,64px); font-weight:900; color:#FFFFFF; line-height:1.0; letter-spacing:-0.035em; margin-bottom:24px;">
+        Geriatra em BH<br/>
+        com Acompanhamento<br/>
+        <span style="background:linear-gradient(135deg,#FFFFFF 0%,#27CC95 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">Contínuo.</span>
       </h1>
 
       <!-- Subtitle -->
-      <p style="font-family:'Montserrat',sans-serif; font-size:16px; font-weight:500; color:rgba(255,255,255,0.75); line-height:1.8; margin-bottom:32px; max-width:500px;">
-        Esqueça as longas filas de espera do SUS ou os atendimentos frios e impessoais das grandes redes. Na Mais60, cuidamos de você como se fosse da nossa própria família. Alta tecnologia, resultados rápidos e preços acessíveis.
+      <p style="font-size:clamp(15px,1.3vw,18px); font-weight:500; color:rgba(255,255,255,0.75); line-height:1.85; margin-bottom:36px; max-width:520px;">
+        A Mais60 Saúde é uma clínica geriátrica em Belo Horizonte com geriatra, equipe de enfermagem 24h, fisioterapeuta, nutricionista, psicólogo, fonoaudiólogo, terapeuta ocupacional e farmacêutico clínico integrados em uma única equipe. Atendemos pela Unimed BH, Fundaffemg, Desban e pelo plano particular Mais60 Essencial em 6 unidades em BH e Betim.
       </p>
 
       <!-- CTAs -->
-      <div style="display:flex; gap:14px; flex-wrap:wrap; margin-bottom:28px;">
-        <button id="btn-hero-convenio" onclick="document.getElementById('formulario').scrollIntoView()" style="background:#FFFFFF; color:#430593; font-size:14px; font-weight:700; padding:14px 26px; border-radius:9999px; border:none; cursor:pointer; display:flex; align-items:center; gap:8px; transition:all 0.25s; box-shadow:0 4px 20px rgba(0,0,0,0.20);" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 28px rgba(0,0,0,0.25)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.20)'">Verificar meu convênio <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-2px;margin-left:2px;"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-        <button id="btn-hero-conhecer" onclick="document.getElementById('sobre').scrollIntoView()" style="background:transparent; color:#FFFFFF; font-size:14px; font-weight:600; padding:12px 24px; border-radius:9999px; border:2px solid rgba(255,255,255,0.55); cursor:pointer; transition:all 0.25s;" onmouseover="this.style.background='rgba(255,255,255,0.12)';this.style.borderColor='rgba(255,255,255,0.9)'" onmouseout="this.style.background='transparent';this.style.borderColor='rgba(255,255,255,0.55)'">Conhecer a Mais60</button>
+      <div style="display:flex; gap:14px; flex-wrap:wrap; margin-bottom:36px;">
+        <button id="btn-hero-convenio" onclick="document.getElementById('formulario').scrollIntoView()" style="background:#FFFFFF; color:#430593; font-size:15px; font-weight:700; padding:15px 28px; border-radius:9999px; border:none; cursor:pointer; display:flex; align-items:center; gap:8px; transition:all 0.25s; box-shadow:0 4px 20px rgba(0,0,0,0.20);" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 28px rgba(0,0,0,0.25)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.20)'">Verificar meu convênio <span> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-2px;margin-left:2px;"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+        <button id="btn-hero-conhecer" onclick="document.getElementById('sobre').scrollIntoView()" style="background:transparent; color:#FFFFFF; font-size:15px; font-weight:600; padding:13px 26px; border-radius:9999px; border:2px solid rgba(255,255,255,0.55); cursor:pointer; transition:all 0.25s;" onmouseover="this.style.background='rgba(255,255,255,0.12)';this.style.borderColor='rgba(255,255,255,0.9)'" onmouseout="this.style.background='transparent';this.style.borderColor='rgba(255,255,255,0.55)'">Conhecer a Mais60</button>
       </div>
 
       <!-- Trust signals -->
-      <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
-        <span style="font-size:13px; color:rgba(255,255,255,0.55); font-weight:400;">Atendemos por:</span>
-        <span style="font-size:13px; font-weight:600; color:#FFFFFF; background:#501799; padding:5px 14px; border-radius:9999px; border:1px solid rgba(255,255,255,0.13);">Unimed BH</span>
-        <span style="font-size:13px; font-weight:600; color:#FFFFFF; background:#501799; padding:5px 14px; border-radius:9999px; border:1px solid rgba(255,255,255,0.13);">Fundaffemg</span>
-        <span style="font-size:13px; font-weight:600; color:#FFFFFF; background:#501799; padding:5px 14px; border-radius:9999px; border:1px solid rgba(255,255,255,0.13);">Desban</span>
-        <span style="font-size:13px; font-weight:600; color:#FFFFFF; background:#501799; padding:5px 14px; border-radius:9999px; border:1px solid rgba(255,255,255,0.13);">Mais60 Essencial</span>
+      <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
+        <span style="font-size:13px; color:rgba(255,255,255,0.50); font-weight:400;">Atendemos por:</span>
+        <span style="font-size:13px; font-weight:600; color:rgba(255,255,255,0.70); background:rgba(255,255,255,0.10); padding:4px 12px; border-radius:9999px; border:1px solid rgba(255,255,255,0.15);">Unimed BH</span>
+        <span style="font-size:13px; font-weight:600; color:rgba(255,255,255,0.70); background:rgba(255,255,255,0.10); padding:4px 12px; border-radius:9999px; border:1px solid rgba(255,255,255,0.15);">Fundaffemg</span>
+        <span style="font-size:13px; font-weight:600; color:rgba(255,255,255,0.70); background:rgba(255,255,255,0.10); padding:4px 12px; border-radius:9999px; border:1px solid rgba(255,255,255,0.15);">Desban</span>
+        <span style="font-size:13px; font-weight:600; color:rgba(255,255,255,0.70); background:rgba(255,255,255,0.10); padding:4px 12px; border-radius:9999px; border:1px solid rgba(255,255,255,0.15);">Mais60 Essencial</span>
       </div>
     </div>
 
-    <!-- Right: Photo -->
+    <!-- Right: Photo placeholder -->
     <div class="hp-hero-img" style="position:relative; animation:fadeUp 1s ease 0.2s both;">
-      <div style="position:relative; width:100%; max-width:386px; margin:0 auto; aspect-ratio:386/482; border-radius:30px; overflow:hidden; box-shadow:-45px 50px 67px 0px rgba(0,0,0,0.17), -101px 113px 91px 0px rgba(0,0,0,0.10), -179px 201px 108px 0px rgba(0,0,0,0.03), -11px 13px 37px 0px rgba(0,0,0,0.20);">
-        <img src="assets/fig-hero-photo.jpg" alt="Idosa sorrindo em ambiente acolhedor, paciente da Mais60 Saúde" style="width:100%; height:100%; object-fit:cover; object-position:center top;" />
+      <div style="position:relative; border-radius:24px; overflow:hidden; aspect-ratio:4/5; background:linear-gradient(160deg, rgba(91,10,184,0.4) 0%, rgba(39,204,149,0.15) 100%); border:1px solid rgba(255,255,255,0.15); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:16px; text-align:center; padding:32px;">
+        <!-- Decorative rings -->
+        <div style="position:absolute; width:300px; height:300px; border-radius:50%; border:1px solid rgba(255,255,255,0.06); top:50%; left:50%; transform:translate(-50%,-50%);"></div>
+        <div style="position:absolute; width:220px; height:220px; border-radius:50%; border:1px solid rgba(255,255,255,0.08); top:50%; left:50%; transform:translate(-50%,-50%);"></div>
+        <div style="opacity:0.6; color:#FFFFFF;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg></div>
+        <div style="background:rgba(0,0,0,0.3); border:1px dashed rgba(255,255,255,0.30); border-radius:12px; padding:16px 20px; max-width:280px;">
+          <div style="font-size:11px; font-weight:600; color:rgba(255,255,255,0.50); letter-spacing:0.08em; text-transform:uppercase; margin-bottom:6px;">Placeholder: foto real</div>
+          <div style="font-size:13px; color:rgba(255,255,255,0.70); line-height:1.85;">Idosa de ~75 anos sendo abraçada por filha. Luz natural quente. Sorriso genuíno. Ambiente clínico acolhedor ao fundo.</div>
+        </div>
+        <!-- Decorative badge -->
+        <div style="position:absolute; bottom:24px; right:24px; background:rgba(39,204,149,0.20); border:1px solid rgba(39,204,149,0.35); border-radius:12px; padding:10px 14px; backdrop-filter:blur(8px);">
+          <div style="font-size:20px; font-weight:900; color:#27CC95; line-height:1;">6</div>
+          <div style="font-size:11px; font-weight:500; color:rgba(255,255,255,0.70); letter-spacing:0.04em;">unidades em BH</div>
+        </div>
       </div>
     </div>
-  </div>
-
-  <!-- Authority bar -->
-  <div class="hp-authority-bar" style="position:relative; z-index:1; background:#27CC95; height:40px; display:flex; align-items:center; justify-content:center; padding:0 24px; margin:0 -48px;">
-    <span style="font-size:14px; font-weight:700; color:#FFFFFF; letter-spacing:-0.02em; white-space:nowrap;">6 unidades em BH e Betim</span>
-    <span style="font-size:14px; font-weight:700; color:#FFFFFF; letter-spacing:-0.02em; white-space:nowrap;">9+ Especialidades Integradas</span>
-    <span style="font-size:14px; font-weight:700; color:#FFFFFF; letter-spacing:-0.02em; white-space:nowrap;">30+ Anos de Exp. Geriátrica</span>
-    <span style="font-size:14px; font-weight:700; color:#FFFFFF; letter-spacing:-0.02em; white-space:nowrap;">R$329 Plano Particular / Mês</span>
-    <span style="font-size:14px; font-weight:700; color:#FFFFFF; letter-spacing:-0.02em; white-space:nowrap;">24h Enfermeiro Navegador</span>
   </div>
 </section>
 
-<!-- ═══ POR QUE A MAIS60 EXISTE (Figma: Dobra 2) ═══ -->
-<section id="sobre" style="background:#E8F3F5; padding:120px 48px;">
+<!-- ═══ METRICS STRIP ═══ -->
+<section style="background:#430593; padding:0 48px 84px;">
+  <!-- Wave top -->
+  <div style="margin:0 -48px; overflow:hidden; line-height:0;">
+    <svg viewBox="0 0 1440 40" style="display:block; width:100%; height:40px;" preserveAspectRatio="none">
+      <path d="M0,0 C360,40 1080,0 1440,40 L1440,0 Z" fill="#2d0369" opacity="0.5"/>
+    </svg>
+  </div>
+  <div class="hp-metrics" style="max-width:1280px; margin:0 auto; border:1px solid rgba(255,255,255,0.10); border-radius:16px; overflow:hidden;">
+    <div style="padding:32px 24px; text-align:center; border-right:1px solid rgba(255,255,255,0.10); cursor:default; transition:background 0.25s;" onmouseover="this.style.background='rgba(255,255,255,0.06)'" onmouseout="this.style.background='transparent'">
+      <div style="font-size:48px; font-weight:900; color:#FFFFFF; line-height:1; letter-spacing:-0.03em;">6</div>
+      <div style="font-size:12px; font-weight:500; color:rgba(255,255,255,0.55); letter-spacing:0.08em; text-transform:uppercase; margin-top:8px;">Unidades em BH e Betim</div>
+    </div>
+    <div style="padding:32px 24px; text-align:center; border-right:1px solid rgba(255,255,255,0.10); cursor:default; transition:background 0.25s;" onmouseover="this.style.background='rgba(255,255,255,0.06)'" onmouseout="this.style.background='transparent'">
+      <div style="font-size:48px; font-weight:900; background:linear-gradient(135deg,#FFFFFF 0%,#27CC95 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; line-height:1; letter-spacing:-0.03em;">9+</div>
+      <div style="font-size:12px; font-weight:500; color:rgba(255,255,255,0.55); letter-spacing:0.08em; text-transform:uppercase; margin-top:8px;">Especialidades Integradas</div>
+    </div>
+    <div style="padding:32px 24px; text-align:center; border-right:1px solid rgba(255,255,255,0.10); cursor:default; transition:background 0.25s;" onmouseover="this.style.background='rgba(255,255,255,0.06)'" onmouseout="this.style.background='transparent'">
+      <div style="font-size:48px; font-weight:900; color:#FFFFFF; line-height:1; letter-spacing:-0.03em;">30+</div>
+      <div style="font-size:12px; font-weight:500; color:rgba(255,255,255,0.55); letter-spacing:0.08em; text-transform:uppercase; margin-top:8px;">Anos de Exp. Geriátrica</div>
+    </div>
+    <div style="padding:32px 24px; text-align:center; border-right:1px solid rgba(255,255,255,0.10); cursor:default; transition:background 0.25s;" onmouseover="this.style.background='rgba(255,255,255,0.06)'" onmouseout="this.style.background='transparent'">
+      <div style="font-size:48px; font-weight:900; background:linear-gradient(135deg,#FFFFFF 0%,#27CC95 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; line-height:1; letter-spacing:-0.03em;">R$329</div>
+      <div style="font-size:12px; font-weight:500; color:rgba(255,255,255,0.55); letter-spacing:0.08em; text-transform:uppercase; margin-top:8px;">Plano Particular / Mês</div>
+    </div>
+    <div style="padding:32px 24px; text-align:center; cursor:default; transition:background 0.25s;" onmouseover="this.style.background='rgba(255,255,255,0.06)'" onmouseout="this.style.background='transparent'">
+      <div style="font-size:48px; font-weight:900; color:#FFFFFF; line-height:1; letter-spacing:-0.03em;">24h</div>
+      <div style="font-size:12px; font-weight:500; color:rgba(255,255,255,0.55); letter-spacing:0.08em; text-transform:uppercase; margin-top:8px;">Enfermeiro Navegador</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PRONTO CUIDAR ═══ -->
+<section id="pronto-cuidar" style="background:linear-gradient(135deg,#FB5C3D 0%,#e04a2c 100%); padding:112px 48px;">
   <div style="max-width:1280px; margin:0 auto;">
     <div class="hp-2col">
+
+      <!-- Left -->
+      <div>
+        <div style="margin-bottom:20px; color:#FFFFFF;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+        <h2 style="font-size:clamp(26px,2.8vw,36px); font-weight:800; color:#FFFFFF; line-height:1.15; letter-spacing:-0.02em; margin-bottom:20px;">Urgências sem fila de pronto-socorro.</h2>
+        <p style="font-size:16px; color:rgba(255,255,255,0.88); line-height:1.85; margin-bottom:24px;">O Pronto Cuidar da Mais60 atende urgências de baixa e média complexidade para pessoas com mais de 60 anos sem a espera e o risco do pronto-socorro hospitalar. Infecção urinária, pressão descontrolada, febre, hidratação venosa e medicação intravenosa resolvidos com equipe geriátrica especializada.</p>
+        <div style="display:flex; flex-direction:column; gap:8px; margin-bottom:32px;">
+          <div style="display:flex; align-items:center; gap:10px;">
+            <span style="color:#FFFFFF;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg></span>
+            <span style="font-size:15px; font-weight:500; color:rgba(255,255,255,0.90);">Av. Brasil, 1477, Funcionários, Belo Horizonte</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px;">
+            <span style="color:#FFFFFF;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span>
+            <span style="font-size:15px; font-weight:500; color:rgba(255,255,255,0.90);">Segunda a sexta, das 7h às 22h</span>
+          </div>
+        </div>
+        <a id="btn-prontocuidar-ir" href="https://lp.mais60saude.com.br/pronto-cuidar" style="background:#FFFFFF; color:#FB5C3D; font-size:15px; font-weight:700; padding:15px 28px; border-radius:9999px; border:none; cursor:pointer; display:inline-flex; align-items:center; gap:8px; transition:all 0.25s; box-shadow:0 4px 20px rgba(0,0,0,0.20);" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 28px rgba(0,0,0,0.25)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.20)'">Ir ao Pronto Cuidar <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-2px;margin-left:2px;"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+
+      <!-- Right: info card -->
+      <div style="background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.20); border-radius:20px; padding:36px; backdrop-filter:blur(8px);">
+        <div style="font-size:12px; font-weight:600; color:rgba(255,255,255,0.60); letter-spacing:0.08em; text-transform:uppercase; margin-bottom:20px;">Para quem é o Pronto Cuidar?</div>
+        <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:28px;">
+          <div style="display:flex; align-items:flex-start; gap:10px;"><span style="color:#FFFFFF; font-size:15px; flex-shrink:0; margin-top:1px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:14px; color:rgba(255,255,255,0.85); line-height:1.85;">Pacientes ativos da Mais60</span></div>
+          <div style="display:flex; align-items:flex-start; gap:10px;"><span style="color:#FFFFFF; font-size:15px; flex-shrink:0; margin-top:1px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:14px; color:rgba(255,255,255,0.85); line-height:1.85;">Clientes Unimed BH com 60 anos ou mais</span></div>
+        </div>
+        <div style="height:1px; background:rgba(255,255,255,0.15); margin-bottom:20px;"></div>
+        <div style="display:flex; align-items:center; gap:12px;">
+          <div style="width:44px; height:44px; border-radius:12px; background:rgba(255,255,255,0.15); display:flex; align-items:center; justify-content:center; flex-shrink:0; color:#FFFFFF;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
+          <div>
+            <div style="font-size:15px; font-weight:700; color:#FFFFFF;">Funcionários, BH</div>
+            <div style="font-size:13px; color:rgba(255,255,255,0.65);">Av. Brasil, 1477 · Próximo ao metrô</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SEÇÃO PROBLEMA ═══ -->
+<section id="sobre" style="background:#E8F3F5; padding:140px 48px;">
+  <div style="max-width:1280px; margin:0 auto;">
+    <div class="hp-2col-55">
 
       <!-- Left: copy -->
       <div>
         <span style="display:inline-block; font-size:11px; font-weight:600; color:#430593; letter-spacing:0.10em; text-transform:uppercase; background:rgba(67,5,147,0.08); border:1px solid rgba(67,5,147,0.14); border-radius:9999px; padding:4px 14px; margin-bottom:20px;">Por que a Mais60 existe</span>
-        <h2 style="font-size:clamp(26px,2.8vw,36px); font-weight:800; color:#430593; line-height:1.15; letter-spacing:-0.025em; margin-bottom:20px;">Por que o seu familiar com múltiplas condições precisa mais do que especialistas isolados?</h2>
-        <p style="font-size:16px; font-weight:400; color:#4A5568; line-height:1.85; margin-bottom:32px;">Na Mais60, o geriatra não vê o paciente por 30 minutos e encaminha. Ele é o gestor do cuidado: coordena fisioterapia, consulta o farmacêutico antes de qualquer alteração e recebe notificação do enfermeiro quando qualquer sinal clínico muda entre as consultas. Todos os profissionais compartilham o mesmo histórico. Nenhuma informação se perde.</p>
-        <button onclick="document.getElementById('servicos').scrollIntoView()" style="background:#430593; color:#FFFFFF; font-size:15px; font-weight:600; padding:14px 28px; border-radius:9999px; border:none; cursor:pointer; transition:all 0.25s;" onmouseover="this.style.background='#2d0369';this.style.transform='translateY(-1px)'" onmouseout="this.style.background='#430593';this.style.transform='translateY(0)'">Conhecer a equipe <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-2px;margin-left:2px;"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <h2 style="font-size:clamp(28px,3vw,40px); font-weight:800; color:#430593; line-height:1.15; letter-spacing:-0.025em; margin-bottom:24px;">Por que o seu familiar com múltiplas condições precisa mais do que especialistas isolados?</h2>
+        <div style="font-size:16px; font-weight:400; color:#4A5568; line-height:1.85; display:flex; flex-direction:column; gap:1.2em;">
+          <p>Um paciente típico de 78 anos chega à Mais60 com hipertensão, diabetes, osteoporose e suspeita de comprometimento cognitivo. Cinco condições. Cinco médicos diferentes em consultórios diferentes. Com receitas que às vezes se contradizem.</p>
+          <p>O cardiologista prescreve um diurético para controle da pressão. O endocrinologista ajusta a metformina sem saber da nova dose diurética. O resultado não é necessariamente uma crise imediata. É uma degradação lenta da qualidade de vida que a família atribui à "velhice".</p>
+          <p>Na Mais60, o geriatra não vê o paciente por 30 minutos e encaminha. Ele é o gestor do cuidado: coordena fisioterapia, consulta o farmacêutico antes de qualquer alteração e recebe notificação do enfermeiro quando qualquer sinal clínico muda entre as consultas. Todos os profissionais compartilham o mesmo histórico. Nenhuma informação se perde.</p>
+        </div>
+        <div style="margin-top:32px; display:flex; gap:12px; flex-wrap:wrap;">
+          <button onclick="document.getElementById('servicos').scrollIntoView()" style="background:#430593; color:#FFFFFF; font-size:15px; font-weight:600; padding:14px 28px; border-radius:9999px; border:none; cursor:pointer; transition:all 0.25s;" onmouseover="this.style.background='#2d0369';this.style.transform='translateY(-1px)'" onmouseout="this.style.background='#430593';this.style.transform='translateY(0)'">Conhecer a equipe <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-2px;margin-left:2px;"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
       </div>
 
-      <!-- Right: sistema mais60 diagram -->
-      <div style="background:#FFFFFF; border-radius:24px; padding:20px; box-shadow:0 8px 32px rgba(67,5,147,0.10);">
-        <img src="assets/fig-sistema-mais60.png" alt="Diagrama do sistema integrado de cuidado Mais60: geriatra, enfermeiro navegador, fisioterapeuta, nutricionista e demais especialistas compartilhando o mesmo histórico clínico" style="width:100%; height:auto; border-radius:12px;" />
+      <!-- Right: diagram -->
+      <div style="background:#FFFFFF; border-radius:24px; padding:32px; box-shadow:0 8px 32px rgba(67,5,147,0.10);">
+        <div style="display:grid; grid-template-columns:1fr auto 1fr; gap:16px; align-items:center;">
+
+          <!-- Fragmentado -->
+          <div>
+            <div style="font-size:11px; font-weight:600; color:#d63e1d; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:16px; text-align:center;">Sistema fragmentado</div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:12px;">
+              <div style="background:#F7F7F7; border:1px solid #E5E7EB; border-radius:10px; padding:10px 8px; text-align:center;">
+                <div style="opacity:0.5; color:#9CA3AF;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg></div>
+                <div style="font-size:10px; color:#9CA3AF; font-weight:500; margin-top:4px;">Cardio</div>
+              </div>
+              <div style="background:#F7F7F7; border:1px solid #E5E7EB; border-radius:10px; padding:10px 8px; text-align:center;">
+                <div style="opacity:0.5; color:#9CA3AF;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg></div>
+                <div style="font-size:10px; color:#9CA3AF; font-weight:500; margin-top:4px;">Endócrino</div>
+              </div>
+              <div style="background:#F7F7F7; border:1px solid #E5E7EB; border-radius:10px; padding:10px 8px; text-align:center;">
+                <div style="opacity:0.5; color:#9CA3AF;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="18" r="3"/><circle cx="18" cy="6" r="3"/><line x1="8.5" y1="15.5" x2="15.5" y2="8.5"/></svg></div>
+                <div style="font-size:10px; color:#9CA3AF; font-weight:500; margin-top:4px;">Orto</div>
+              </div>
+              <div style="background:#F7F7F7; border:1px solid #E5E7EB; border-radius:10px; padding:10px 8px; text-align:center;">
+                <div style="opacity:0.5; color:#9CA3AF;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4a3 3 0 0 0-3 3v1a3 3 0 0 0-1 5.5A3 3 0 0 0 8 18a3 3 0 0 0 3-3V7a3 3 0 0 0-2-3Z"/><path d="M15 4a3 3 0 0 1 3 3v1a3 3 0 0 1 1 5.5A3 3 0 0 1 16 18a3 3 0 0 1-3-3V7a3 3 0 0 1 2-3Z"/></svg></div>
+                <div style="font-size:10px; color:#9CA3AF; font-weight:500; margin-top:4px;">Neuro</div>
+              </div>
+            </div>
+            <div style="background:rgba(251,92,61,0.08); border:1px solid rgba(251,92,61,0.20); border-radius:8px; padding:8px 10px; text-align:center;">
+              <div style="font-size:11px; color:#d63e1d; font-weight:600; line-height:1.4;">4 prontuários.<br/>Sem comunicação.</div>
+            </div>
+          </div>
+
+          <!-- VS -->
+          <div style="display:flex; flex-direction:column; align-items:center; gap:4px;">
+            <div style="width:1px; height:32px; background:rgba(67,5,147,0.15);"></div>
+            <div style="font-size:11px; font-weight:700; color:#4A5568; letter-spacing:0.06em; background:#E8F3F5; border-radius:9999px; padding:4px 8px;">VS</div>
+            <div style="width:1px; height:32px; background:rgba(67,5,147,0.15);"></div>
+          </div>
+
+          <!-- Integrado -->
+          <div>
+            <div style="font-size:11px; font-weight:600; color:#15a675; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:16px; text-align:center;">Sistema Mais60</div>
+            <!-- Hub diagram -->
+            <div style="position:relative; aspect-ratio:1; max-width:180px; margin:0 auto 12px;">
+              <!-- Center geriatra -->
+              <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:52px; height:52px; border-radius:50%; background:#430593; display:flex; align-items:center; justify-content:center; z-index:2; box-shadow:0 0 0 4px rgba(67,5,147,0.15);">
+                <span style="color:#FFFFFF;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="7" r="2.5"/><circle cx="7" cy="17" r="2.5"/><circle cx="17" cy="17" r="2.5"/><line x1="9.5" y1="7" x2="14.5" y2="7"/><line x1="9.5" y1="17" x2="14.5" y2="17"/><line x1="7" y1="9.5" x2="7" y2="14.5"/><line x1="17" y1="9.5" x2="17" y2="14.5"/></svg></span>
+              </div>
+              <!-- Ring -->
+              <svg style="position:absolute; inset:0; width:100%; height:100%;" viewBox="0 0 180 180">
+                <circle cx="90" cy="90" r="68" stroke="rgba(67,5,147,0.15)" stroke-width="1.5" fill="none"/>
+                <!-- Connecting lines -->
+                <line x1="90" y1="90" x2="90" y2="22" stroke="#27CC95" stroke-width="1.5" opacity="0.7"/>
+                <line x1="90" y1="90" x2="138" y2="42" stroke="#27CC95" stroke-width="1.5" opacity="0.7"/>
+                <line x1="90" y1="90" x2="158" y2="90" stroke="#27CC95" stroke-width="1.5" opacity="0.7"/>
+                <line x1="90" y1="90" x2="138" y2="138" stroke="#27CC95" stroke-width="1.5" opacity="0.7"/>
+                <line x1="90" y1="90" x2="90" y2="158" stroke="#27CC95" stroke-width="1.5" opacity="0.7"/>
+                <line x1="90" y1="90" x2="42" y2="138" stroke="#27CC95" stroke-width="1.5" opacity="0.7"/>
+                <line x1="90" y1="90" x2="22" y2="90" stroke="#27CC95" stroke-width="1.5" opacity="0.7"/>
+                <line x1="90" y1="90" x2="42" y2="42" stroke="#27CC95" stroke-width="1.5" opacity="0.7"/>
+              </svg>
+              <!-- Specialist icons around ring -->
+              <div style="position:absolute; top:4px; left:50%; transform:translateX(-50%); width:28px; height:28px; border-radius:50%; background:rgba(39,204,149,0.15); border:1.5px solid #27CC95; display:flex; align-items:center; justify-content:center; "><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#27CC95" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg></div>
+              <div style="position:absolute; top:18px; right:10px; width:28px; height:28px; border-radius:50%; background:rgba(39,204,149,0.15); border:1.5px solid #27CC95; display:flex; align-items:center; justify-content:center; "><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#27CC95" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+              <div style="position:absolute; top:50%; right:4px; transform:translateY(-50%); width:28px; height:28px; border-radius:50%; background:rgba(39,204,149,0.15); border:1.5px solid #27CC95; display:flex; align-items:center; justify-content:center; "><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#27CC95" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c4 0 7 4 7 8a7 7 0 0 1-14 0c0-4 3-8 7-8Z"/><path d="M12 7v10"/></svg></div>
+              <div style="position:absolute; bottom:18px; right:10px; width:28px; height:28px; border-radius:50%; background:rgba(39,204,149,0.15); border:1.5px solid #27CC95; display:flex; align-items:center; justify-content:center; "><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#27CC95" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4a3 3 0 0 0-3 3v1a3 3 0 0 0-1 5.5A3 3 0 0 0 8 18a3 3 0 0 0 3-3V7a3 3 0 0 0-2-3Z"/><path d="M15 4a3 3 0 0 1 3 3v1a3 3 0 0 1 1 5.5A3 3 0 0 1 16 18a3 3 0 0 1-3-3V7a3 3 0 0 1 2-3Z"/></svg></div>
+              <div style="position:absolute; bottom:4px; left:50%; transform:translateX(-50%); width:28px; height:28px; border-radius:50%; background:rgba(39,204,149,0.15); border:1.5px solid #27CC95; display:flex; align-items:center; justify-content:center; "><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#27CC95" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="11" rx="3"/><path d="M5 10v1a7 7 0 0 0 14 0v-1"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="8" y1="22" x2="16" y2="22"/></svg></div>
+              <div style="position:absolute; bottom:18px; left:10px; width:28px; height:28px; border-radius:50%; background:rgba(39,204,149,0.15); border:1.5px solid #27CC95; display:flex; align-items:center; justify-content:center; "><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#27CC95" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="9" width="20" height="6" rx="3"/><line x1="12" y1="9" x2="12" y2="15"/></svg></div>
+              <div style="position:absolute; top:50%; left:4px; transform:translateY(-50%); width:28px; height:28px; border-radius:50%; background:rgba(39,204,149,0.15); border:1.5px solid #27CC95; display:flex; align-items:center; justify-content:center; "><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#27CC95" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="9" height="9" rx="2"/><rect x="12" y="12" width="9" height="9" rx="2"/></svg></div>
+              <div style="position:absolute; top:18px; left:10px; width:28px; height:28px; border-radius:50%; background:rgba(39,204,149,0.15); border:1.5px solid #27CC95; display:flex; align-items:center; justify-content:center; "><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#27CC95" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="9" width="3" height="6" rx="1"/><rect x="20" y="9" width="3" height="6" rx="1"/><line x1="6" y1="12" x2="18" y2="12"/><rect x="6" y="7" width="2.5" height="10" rx="1"/><rect x="15.5" y="7" width="2.5" height="10" rx="1"/></svg></div>
+            </div>
+            <div style="background:rgba(39,204,149,0.08); border:1px solid rgba(39,204,149,0.25); border-radius:8px; padding:8px 10px; text-align:center;">
+              <div style="font-size:11px; color:#15a675; font-weight:600; line-height:1.4;">1 histórico.<br/>Comunicação em tempo real.</div>
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- ═══ NOSSA EQUIPE (Figma: Dobra 3) ═══ -->
-<section id="servicos" style="background:#FFFFFF; padding:120px 48px;">
+<!-- ═══ EQUIPE ═══ -->
+<section id="servicos" style="background:#FFFFFF; padding:140px 48px;">
   <div style="max-width:1280px; margin:0 auto;">
     <div style="text-align:center; max-width:680px; margin:0 auto 56px;">
       <span style="display:inline-block; font-size:11px; font-weight:600; color:#430593; letter-spacing:0.10em; text-transform:uppercase; background:rgba(67,5,147,0.08); border:1px solid rgba(67,5,147,0.14); border-radius:9999px; padding:4px 14px; margin-bottom:16px;">Nossa Equipe</span>
@@ -272,160 +429,129 @@
     </div>
 
     <div class="hp-grid3">
-      <!-- Card 1: Geriatra Coordenador -->
-      <div class="m60-card">
-        <div style="width:44px; height:44px; border-radius:14px; background:rgba(39,204,149,0.12); display:flex; align-items:center; justify-content:center; margin-bottom:16px;"><span style="color:#27CC95;"><svg width="20" height="21" viewBox="0 0 18 19" fill="currentColor"><path d="M 13.462 1.142 C 13.498 1.038 13.515 0.927 13.511 0.815 C 13.507 0.704 13.482 0.595 13.438 0.493 C 13.393 0.392 13.331 0.301 13.253 0.226 C 13.176 0.15 13.085 0.091 12.986 0.052 C 12.887 0.014 12.781 -0.004 12.676 0.001 C 12.57 0.005 12.466 0.031 12.37 0.078 C 12.177 0.172 12.026 0.344 11.952 0.555 C 11.359 2.251 11.396 4.121 12.055 5.789 L 12.055 5.791 C 12.381 6.607 12.517 7.494 12.452 8.377 C 12.387 9.261 12.123 10.115 11.682 10.869 L 7.626 6.589 C 8.268 6.092 9.005 5.751 9.786 5.59 C 9.992 5.544 10.174 5.415 10.291 5.229 C 10.408 5.043 10.451 4.817 10.411 4.598 C 10.37 4.379 10.25 4.186 10.076 4.06 C 9.902 3.934 9.687 3.885 9.479 3.924 C 8.127 4.202 6.882 4.896 5.902 5.918 L 5.895 5.925 C 5.121 6.751 4.547 7.761 4.218 8.869 C 3.889 9.977 3.817 11.152 4.006 12.295 C 2.842 12.072 1.643 12.179 0.531 12.603 C 0.432 12.641 0.341 12.699 0.263 12.774 C 0.185 12.849 0.121 12.94 0.076 13.041 C 0.031 13.141 0.006 13.251 0.001 13.362 C -0.004 13.473 0.012 13.584 0.048 13.689 C 0.083 13.794 0.139 13.89 0.21 13.973 C 0.281 14.055 0.367 14.122 0.462 14.169 C 0.558 14.217 0.661 14.244 0.767 14.249 C 0.872 14.254 0.978 14.237 1.077 14.199 C 2.206 13.77 3.441 13.773 4.568 14.206 C 4.957 15.388 4.954 16.68 4.551 17.865 C 4.516 17.97 4.5 18.081 4.505 18.193 C 4.51 18.304 4.536 18.413 4.581 18.514 C 4.626 18.615 4.69 18.705 4.768 18.78 C 4.846 18.855 4.937 18.913 5.037 18.95 C 5.136 18.988 5.242 19.004 5.347 18.999 C 5.453 18.994 5.556 18.966 5.652 18.919 C 5.747 18.871 5.833 18.804 5.904 18.722 C 5.975 18.639 6.03 18.543 6.066 18.438 C 6.644 16.733 6.592 14.86 5.919 13.194 C 5.594 12.371 5.459 11.477 5.528 10.589 C 5.596 9.7 5.865 8.841 6.313 8.084 L 10.383 12.377 C 9.734 12.893 8.98 13.247 8.177 13.412 C 8.073 13.434 7.975 13.476 7.887 13.538 C 7.799 13.6 7.723 13.679 7.664 13.771 C 7.605 13.864 7.564 13.968 7.543 14.077 C 7.522 14.186 7.522 14.298 7.542 14.408 C 7.562 14.517 7.603 14.621 7.661 14.714 C 7.72 14.807 7.795 14.887 7.883 14.949 C 8.06 15.074 8.277 15.121 8.486 15.078 C 9.845 14.797 11.094 14.098 12.076 13.069 L 12.081 13.064 C 12.854 12.239 13.429 11.232 13.759 10.126 C 14.088 9.02 14.162 7.846 13.974 6.704 C 15.14 6.928 16.35 6.826 17.483 6.397 C 17.679 6.318 17.839 6.161 17.927 5.959 C 18.015 5.757 18.024 5.527 17.953 5.318 C 17.881 5.109 17.735 4.938 17.546 4.841 C 17.356 4.744 17.138 4.73 16.938 4.801 C 15.799 5.233 14.553 5.23 13.415 4.794 C 13.033 3.608 13.049 2.319 13.46 1.144"/></svg></span></div>
+      <!-- Card 1 -->
+      <div style="background:#FFFFFF; border:1px solid rgba(67,5,147,0.10); border-radius:16px; padding:28px 24px; cursor:pointer; transition:all 0.25s; display:flex; flex-direction:column; gap:0;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 28px rgba(67,5,147,0.12)';this.style.borderColor='rgba(67,5,147,0.22)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';this.style.borderColor='rgba(67,5,147,0.10)'">
+        <div style="width:48px; height:48px; border-radius:14px; background:rgba(39,204,149,0.12); display:flex; align-items:center; justify-content:center; margin-bottom:16px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#27CC95" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="7" r="2.5"/><circle cx="7" cy="17" r="2.5"/><circle cx="17" cy="17" r="2.5"/><line x1="9.5" y1="7" x2="14.5" y2="7"/><line x1="9.5" y1="17" x2="14.5" y2="17"/><line x1="7" y1="9.5" x2="7" y2="14.5"/><line x1="17" y1="9.5" x2="17" y2="14.5"/></svg></div>
         <div style="font-size:17px; font-weight:600; color:#430593; margin-bottom:8px;">Geriatra Coordenador</div>
         <div style="font-size:14px; color:#4A5568; line-height:1.85; flex:1;">Gestor central do cuidado. Coordena todos os profissionais e mantém o histórico longitudinal do paciente.</div>
-        <div class="m60-card-footer"><a href="geriatra-bh.html">Saiba Mais <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <a href="geriatra-bh.html" style="font-size:14px; font-weight:600; color:#430593; margin-top:16px; display:inline-flex; align-items:center; gap:4px;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Saiba mais <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-2px;margin-left:2px;"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
 
-      <!-- Card 2: Enfermeiro Navegador -->
-      <div class="m60-card">
-        <div style="width:44px; height:44px; border-radius:14px; background:rgba(39,204,149,0.12); display:flex; align-items:center; justify-content:center; margin-bottom:16px;"><span style="color:#27CC95;"><svg width="20" height="14" viewBox="0 0 15.717 10.916" fill="currentColor"><path d="M 7.859 0 C 3.403 0 0.728 2.671 0.09 3.388 C 0.044 3.44 0.014 3.504 0.004 3.573 C -0.006 3.642 0.003 3.713 0.032 3.776 L 2.932 10.663 C 3.025 10.885 3.295 10.977 3.512 10.873 C 4.226 10.532 5.83 9.896 7.859 9.896 C 9.887 9.896 11.491 10.532 12.205 10.874 C 12.422 10.977 12.692 10.885 12.785 10.663 L 15.685 3.776 C 15.714 3.713 15.723 3.642 15.713 3.573 C 15.703 3.504 15.673 3.44 15.627 3.388 C 14.989 2.671 12.314 0 7.859 0 Z"/></svg></span></div>
+      <!-- Card 2 -->
+      <div style="background:#FFFFFF; border:1px solid rgba(67,5,147,0.10); border-radius:16px; padding:28px 24px; cursor:pointer; transition:all 0.25s; display:flex; flex-direction:column; gap:0; position:relative;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 28px rgba(67,5,147,0.12)';this.style.borderColor='rgba(67,5,147,0.22)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';this.style.borderColor='rgba(67,5,147,0.10)'">
+        <div style="position:absolute; top:16px; right:16px; font-size:10px; font-weight:600; color:#15a675; background:rgba(39,204,149,0.12); border:1px solid rgba(39,204,149,0.25); border-radius:9999px; padding:2px 9px; letter-spacing:0.05em; text-transform:uppercase;">Exclusivo</div>
+        <div style="width:48px; height:48px; border-radius:14px; background:rgba(39,204,149,0.12); display:flex; align-items:center; justify-content:center; margin-bottom:16px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#27CC95" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg></div>
         <div style="font-size:17px; font-weight:600; color:#430593; margin-bottom:8px;">Enfermeiro Navegador</div>
         <div style="font-size:14px; color:#4A5568; line-height:1.85; flex:1;">Monitora 24h entre as consultas. Aciona o geriatra antes que qualquer mudança vire urgência.</div>
-        <div class="m60-card-footer"><a href="enfermeiro-navegador-cuidado-coordenado.html">Saiba Mais <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <a href="enfermeiro-navegador-cuidado-coordenado.html" style="font-size:14px; font-weight:600; color:#430593; margin-top:16px; display:inline-flex; align-items:center; gap:4px;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Saiba mais <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-2px;margin-left:2px;"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
 
-      <!-- Card 3: Fisioterapeuta -->
-      <div class="m60-card">
-        <div style="width:44px; height:44px; border-radius:14px; background:rgba(39,204,149,0.12); display:flex; align-items:center; justify-content:center; margin-bottom:16px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#27CC95" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+      <!-- Card 3 -->
+      <div style="background:#FFFFFF; border:1px solid rgba(67,5,147,0.10); border-radius:16px; padding:28px 24px; cursor:pointer; transition:all 0.25s; display:flex; flex-direction:column; gap:0;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 28px rgba(67,5,147,0.12)';this.style.borderColor='rgba(67,5,147,0.22)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';this.style.borderColor='rgba(67,5,147,0.10)'">
+        <div style="width:48px; height:48px; border-radius:14px; background:rgba(39,204,149,0.12); display:flex; align-items:center; justify-content:center; margin-bottom:16px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#27CC95" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
         <div style="font-size:17px; font-weight:600; color:#430593; margin-bottom:8px;">Fisioterapeuta</div>
         <div style="font-size:14px; color:#4A5568; line-height:1.85; flex:1;">Reabilitação geriátrica integrada ao plano médico. Prevenção de quedas e recuperação de mobilidade.</div>
-        <div class="m60-card-footer"><a href="fisioterapia-idosos-bh.html">Saiba Mais <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <a href="fisioterapia-idosos-bh.html" style="font-size:14px; font-weight:600; color:#430593; margin-top:16px; display:inline-flex; align-items:center; gap:4px;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Saiba mais <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-2px;margin-left:2px;"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
 
-      <!-- Card 4: Nutricionista -->
-      <div class="m60-card">
-        <div style="width:44px; height:44px; border-radius:14px; background:rgba(39,204,149,0.12); display:flex; align-items:center; justify-content:center; margin-bottom:16px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#27CC95" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c4 0 7 4 7 8a7 7 0 0 1-14 0c0-4 3-8 7-8Z"/><path d="M12 7v10"/></svg></div>
+      <!-- Card 4 -->
+      <div style="background:#FFFFFF; border:1px solid rgba(67,5,147,0.10); border-radius:16px; padding:28px 24px; cursor:pointer; transition:all 0.25s; display:flex; flex-direction:column; gap:0;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 28px rgba(67,5,147,0.12)';this.style.borderColor='rgba(67,5,147,0.22)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';this.style.borderColor='rgba(67,5,147,0.10)'">
+        <div style="width:48px; height:48px; border-radius:14px; background:rgba(39,204,149,0.12); display:flex; align-items:center; justify-content:center; margin-bottom:16px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#27CC95" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c4 0 7 4 7 8a7 7 0 0 1-14 0c0-4 3-8 7-8Z"/><path d="M12 7v10"/></svg></div>
         <div style="font-size:17px; font-weight:600; color:#430593; margin-bottom:8px;">Nutricionista</div>
         <div style="font-size:14px; color:#4A5568; line-height:1.85; flex:1;">Plano alimentar que respeita medicamentos, condições crônicas e dificuldades de deglutição.</div>
-        <div class="m60-card-footer"><a href="nutricionista-idosos-bh.html">Saiba Mais <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <a href="nutricionista-idosos-bh.html" style="font-size:14px; font-weight:600; color:#430593; margin-top:16px; display:inline-flex; align-items:center; gap:4px;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Saiba mais <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-2px;margin-left:2px;"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
 
-      <!-- Card 5: Psicólogo -->
-      <div class="m60-card">
-        <div style="width:44px; height:44px; border-radius:14px; background:rgba(39,204,149,0.12); display:flex; align-items:center; justify-content:center; margin-bottom:16px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#27CC95" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
+      <!-- Card 5 -->
+      <div style="background:#FFFFFF; border:1px solid rgba(67,5,147,0.10); border-radius:16px; padding:28px 24px; cursor:pointer; transition:all 0.25s; display:flex; flex-direction:column; gap:0;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 28px rgba(67,5,147,0.12)';this.style.borderColor='rgba(67,5,147,0.22)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';this.style.borderColor='rgba(67,5,147,0.10)'">
+        <div style="width:48px; height:48px; border-radius:14px; background:rgba(39,204,149,0.12); display:flex; align-items:center; justify-content:center; margin-bottom:16px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#27CC95" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
         <div style="font-size:17px; font-weight:600; color:#430593; margin-bottom:8px;">Psicólogo</div>
         <div style="font-size:14px; color:#4A5568; line-height:1.85; flex:1;">Suporte para depressão, ansiedade, luto e adaptação ao envelhecimento. Integrado ao geriatra.</div>
-        <div class="m60-card-footer"><a href="psicologo-idosos-bh.html">Saiba Mais <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <a href="psicologo-idosos-bh.html" style="font-size:14px; font-weight:600; color:#430593; margin-top:16px; display:inline-flex; align-items:center; gap:4px;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Saiba mais <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-2px;margin-left:2px;"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
 
-      <!-- Card 6: Fonoaudiólogo -->
-      <div class="m60-card">
-        <div style="width:44px; height:44px; border-radius:14px; background:rgba(39,204,149,0.12); display:flex; align-items:center; justify-content:center; margin-bottom:16px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#27CC95" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="11" rx="3"/><path d="M5 10v1a7 7 0 0 0 14 0v-1"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="8" y1="22" x2="16" y2="22"/></svg></div>
+      <!-- Card 6 -->
+      <div style="background:#FFFFFF; border:1px solid rgba(67,5,147,0.10); border-radius:16px; padding:28px 24px; cursor:pointer; transition:all 0.25s; display:flex; flex-direction:column; gap:0;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 28px rgba(67,5,147,0.12)';this.style.borderColor='rgba(67,5,147,0.22)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';this.style.borderColor='rgba(67,5,147,0.10)'">
+        <div style="width:48px; height:48px; border-radius:14px; background:rgba(39,204,149,0.12); display:flex; align-items:center; justify-content:center; margin-bottom:16px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#27CC95" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="11" rx="3"/><path d="M5 10v1a7 7 0 0 0 14 0v-1"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="8" y1="22" x2="16" y2="22"/></svg></div>
         <div style="font-size:17px; font-weight:600; color:#430593; margin-bottom:8px;">Fonoaudiólogo</div>
         <div style="font-size:14px; color:#4A5568; line-height:1.85; flex:1;">Tratamento de disfagia (dificuldade de engolir) e distúrbios de comunicação no envelhecimento.</div>
-        <div class="m60-card-footer"><a href="fonoaudiologia-idosos-bh.html">Saiba Mais <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <a href="fonoaudiologia-idosos-bh.html" style="font-size:14px; font-weight:600; color:#430593; margin-top:16px; display:inline-flex; align-items:center; gap:4px;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Saiba mais <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-2px;margin-left:2px;"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
 
-      <!-- Card 7: Terapeuta Ocupacional -->
-      <div class="m60-card">
-        <div style="width:44px; height:44px; border-radius:14px; background:rgba(39,204,149,0.12); display:flex; align-items:center; justify-content:center; margin-bottom:16px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#27CC95" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="9" height="9" rx="2"/><rect x="12" y="12" width="9" height="9" rx="2"/></svg></div>
+      <!-- Card 7 -->
+      <div style="background:#FFFFFF; border:1px solid rgba(67,5,147,0.10); border-radius:16px; padding:28px 24px; cursor:pointer; transition:all 0.25s; display:flex; flex-direction:column; gap:0;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 28px rgba(67,5,147,0.12)';this.style.borderColor='rgba(67,5,147,0.22)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';this.style.borderColor='rgba(67,5,147,0.10)'">
+        <div style="width:48px; height:48px; border-radius:14px; background:rgba(39,204,149,0.12); display:flex; align-items:center; justify-content:center; margin-bottom:16px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#27CC95" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="9" height="9" rx="2"/><rect x="12" y="12" width="9" height="9" rx="2"/></svg></div>
         <div style="font-size:17px; font-weight:600; color:#430593; margin-bottom:8px;">Terapeuta Ocupacional</div>
         <div style="font-size:14px; color:#4A5568; line-height:1.85; flex:1;">Preserva a autonomia nas atividades do dia a dia. Adapta o ambiente doméstico para segurança.</div>
-        <div class="m60-card-footer"><a href="terapeuta-ocupacional-idosos-bh.html">Saiba Mais <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <a href="terapeuta-ocupacional-idosos-bh.html" style="font-size:14px; font-weight:600; color:#430593; margin-top:16px; display:inline-flex; align-items:center; gap:4px;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Saiba mais <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-2px;margin-left:2px;"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
 
-      <!-- Card 8: Farmacêutico Clínico -->
-      <div class="m60-card">
-        <div style="width:44px; height:44px; border-radius:14px; background:rgba(39,204,149,0.12); display:flex; align-items:center; justify-content:center; margin-bottom:16px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#27CC95" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="9" width="20" height="6" rx="3"/><line x1="12" y1="9" x2="12" y2="15"/></svg></div>
+      <!-- Card 8 -->
+      <div style="background:#FFFFFF; border:1px solid rgba(67,5,147,0.10); border-radius:16px; padding:28px 24px; cursor:pointer; transition:all 0.25s; display:flex; flex-direction:column; gap:0;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 28px rgba(67,5,147,0.12)';this.style.borderColor='rgba(67,5,147,0.22)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';this.style.borderColor='rgba(67,5,147,0.10)'">
+        <div style="width:48px; height:48px; border-radius:14px; background:rgba(39,204,149,0.12); display:flex; align-items:center; justify-content:center; margin-bottom:16px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#27CC95" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="9" width="20" height="6" rx="3"/><line x1="12" y1="9" x2="12" y2="15"/></svg></div>
         <div style="font-size:17px; font-weight:600; color:#430593; margin-bottom:8px;">Farmacêutico Clínico</div>
         <div style="font-size:14px; color:#4A5568; line-height:1.85; flex:1;">Revisão de todos os medicamentos. Identifica interações perigosas e polifarmácia com rigor clínico.</div>
-        <div class="m60-card-footer"><a href="farmaceutico-clinico-idosos-bh.html">Saiba Mais <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <a href="farmaceutico-clinico-idosos-bh.html" style="font-size:14px; font-weight:600; color:#430593; margin-top:16px; display:inline-flex; align-items:center; gap:4px;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Saiba mais <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-2px;margin-left:2px;"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
 
-      <!-- Card 9: Educador Físico -->
-      <div class="m60-card">
-        <div style="width:44px; height:44px; border-radius:14px; background:rgba(39,204,149,0.12); display:flex; align-items:center; justify-content:center; margin-bottom:16px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#27CC95" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="9" width="3" height="6" rx="1"/><rect x="20" y="9" width="3" height="6" rx="1"/><line x1="6" y1="12" x2="18" y2="12"/><rect x="6" y="7" width="2.5" height="10" rx="1"/><rect x="15.5" y="7" width="2.5" height="10" rx="1"/></svg></div>
+      <!-- Card 9 -->
+      <div style="background:#FFFFFF; border:1px solid rgba(67,5,147,0.10); border-radius:16px; padding:28px 24px; cursor:pointer; transition:all 0.25s; display:flex; flex-direction:column; gap:0;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 28px rgba(67,5,147,0.12)';this.style.borderColor='rgba(67,5,147,0.22)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';this.style.borderColor='rgba(67,5,147,0.10)'">
+        <div style="width:48px; height:48px; border-radius:14px; background:rgba(39,204,149,0.12); display:flex; align-items:center; justify-content:center; margin-bottom:16px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#27CC95" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="9" width="3" height="6" rx="1"/><rect x="20" y="9" width="3" height="6" rx="1"/><line x1="6" y1="12" x2="18" y2="12"/><rect x="6" y="7" width="2.5" height="10" rx="1"/><rect x="15.5" y="7" width="2.5" height="10" rx="1"/></svg></div>
         <div style="font-size:17px; font-weight:600; color:#430593; margin-bottom:8px;">Educador Físico</div>
         <div style="font-size:14px; color:#4A5568; line-height:1.85; flex:1;">Exercício supervisionado e individualizado, respeitando limitações e comorbidades do paciente.</div>
-        <div class="m60-card-footer"><a href="educacao-fisica-idosos-bh.html">Saiba Mais <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <a href="educacao-fisica-idosos-bh.html" style="font-size:14px; font-weight:600; color:#430593; margin-top:16px; display:inline-flex; align-items:center; gap:4px;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Saiba mais <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-2px;margin-left:2px;"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ MAIS60 ESSENCIAL — PLANO PARTICULAR (Figma: Dobra 4) ═══ -->
-<section id="mais60-essencial" style="background:#FFFFFF; padding:120px 48px;">
-  <div style="max-width:1280px; margin:0 auto;">
-    <div class="hp-2col-45">
-
-      <!-- Left: checklist + CTAs -->
-      <div>
-        <span style="display:inline-block; font-size:11px; font-weight:600; color:#430593; letter-spacing:0.10em; text-transform:uppercase; background:rgba(67,5,147,0.08); border:1px solid rgba(67,5,147,0.14); border-radius:9999px; padding:4px 14px; margin-bottom:20px;">Plano Particular</span>
-        <h2 style="font-size:clamp(24px,2.6vw,32px); font-weight:800; color:#430593; line-height:1.2; letter-spacing:-0.02em; margin-bottom:16px;">Mais60 Essencial: Cuidado Completo por R$329 ao Mês.</h2>
-        <p style="font-size:15px; color:#4A5568; line-height:1.85; margin-bottom:28px; max-width:480px;">Para quem não tem convênio ou tem plano com rede limitada. Geriatra ilimitado, equipe completa, sem carência, sem coparticipação, em qualquer unidade.</p>
-        <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:32px;">
-          <div style="display:flex; align-items:center; gap:10px;"><span style="color:#27CC95; flex-shrink:0;"><svg width="15" height="15" viewBox="0 0 9 9" fill="currentColor"><path d="M 8.812 0.264 C 8.932 0.432 9 0.661 9 0.9 C 9 1.139 8.932 1.367 8.812 1.536 L 3.664 8.736 C 3.543 8.905 3.38 9 3.209 9 C 3.039 9 2.875 8.905 2.754 8.736 L 0.181 5.136 C 0.063 4.967 -0.001 4.739 0 4.503 C 0.001 4.267 0.069 4.042 0.188 3.875 C 0.308 3.708 0.469 3.613 0.638 3.611 C 0.807 3.609 0.969 3.7 1.09 3.864 L 3.209 6.827 L 7.902 0.264 C 8.022 0.095 8.186 0 8.357 0 C 8.527 0 8.691 0.095 8.812 0.264 Z"/></svg></span><span style="font-size:14px; color:#1A1A2E;">Geriatra com consultas ilimitadas</span></div>
-          <div style="display:flex; align-items:center; gap:10px;"><span style="color:#27CC95; flex-shrink:0;"><svg width="15" height="15" viewBox="0 0 9 9" fill="currentColor"><path d="M 8.812 0.264 C 8.932 0.432 9 0.661 9 0.9 C 9 1.139 8.932 1.367 8.812 1.536 L 3.664 8.736 C 3.543 8.905 3.38 9 3.209 9 C 3.039 9 2.875 8.905 2.754 8.736 L 0.181 5.136 C 0.063 4.967 -0.001 4.739 0 4.503 C 0.001 4.267 0.069 4.042 0.188 3.875 C 0.308 3.708 0.469 3.613 0.638 3.611 C 0.807 3.609 0.969 3.7 1.09 3.864 L 3.209 6.827 L 7.902 0.264 C 8.022 0.095 8.186 0 8.357 0 C 8.527 0 8.691 0.095 8.812 0.264 Z"/></svg></span><span style="font-size:14px; color:#1A1A2E;">Enfermagem 24h com telemonitoramento</span></div>
-          <div style="display:flex; align-items:center; gap:10px;"><span style="color:#27CC95; flex-shrink:0;"><svg width="15" height="15" viewBox="0 0 9 9" fill="currentColor"><path d="M 8.812 0.264 C 8.932 0.432 9 0.661 9 0.9 C 9 1.139 8.932 1.367 8.812 1.536 L 3.664 8.736 C 3.543 8.905 3.38 9 3.209 9 C 3.039 9 2.875 8.905 2.754 8.736 L 0.181 5.136 C 0.063 4.967 -0.001 4.739 0 4.503 C 0.001 4.267 0.069 4.042 0.188 3.875 C 0.308 3.708 0.469 3.613 0.638 3.611 C 0.807 3.609 0.969 3.7 1.09 3.864 L 3.209 6.827 L 7.902 0.264 C 8.022 0.095 8.186 0 8.357 0 C 8.527 0 8.691 0.095 8.812 0.264 Z"/></svg></span><span style="font-size:14px; color:#1A1A2E;">Fisioterapia, Nutrição, Psicologia</span></div>
-          <div style="display:flex; align-items:center; gap:10px;"><span style="color:#27CC95; flex-shrink:0;"><svg width="15" height="15" viewBox="0 0 9 9" fill="currentColor"><path d="M 8.812 0.264 C 8.932 0.432 9 0.661 9 0.9 C 9 1.139 8.932 1.367 8.812 1.536 L 3.664 8.736 C 3.543 8.905 3.38 9 3.209 9 C 3.039 9 2.875 8.905 2.754 8.736 L 0.181 5.136 C 0.063 4.967 -0.001 4.739 0 4.503 C 0.001 4.267 0.069 4.042 0.188 3.875 C 0.308 3.708 0.469 3.613 0.638 3.611 C 0.807 3.609 0.969 3.7 1.09 3.864 L 3.209 6.827 L 7.902 0.264 C 8.022 0.095 8.186 0 8.357 0 C 8.527 0 8.691 0.095 8.812 0.264 Z"/></svg></span><span style="font-size:14px; color:#1A1A2E;">Fonoaudiologia, Terapia Ocupacional, Ed. Física</span></div>
-          <div style="display:flex; align-items:center; gap:10px;"><span style="color:#27CC95; flex-shrink:0;"><svg width="15" height="15" viewBox="0 0 9 9" fill="currentColor"><path d="M 8.812 0.264 C 8.932 0.432 9 0.661 9 0.9 C 9 1.139 8.932 1.367 8.812 1.536 L 3.664 8.736 C 3.543 8.905 3.38 9 3.209 9 C 3.039 9 2.875 8.905 2.754 8.736 L 0.181 5.136 C 0.063 4.967 -0.001 4.739 0 4.503 C 0.001 4.267 0.069 4.042 0.188 3.875 C 0.308 3.708 0.469 3.613 0.638 3.611 C 0.807 3.609 0.969 3.7 1.09 3.864 L 3.209 6.827 L 7.902 0.264 C 8.022 0.095 8.186 0 8.357 0 C 8.527 0 8.691 0.095 8.812 0.264 Z"/></svg></span><span style="font-size:14px; color:#1A1A2E;">Farmacêutico Clínico integrado</span></div>
-          <div style="display:flex; align-items:center; gap:10px;"><span style="color:#27CC95; flex-shrink:0;"><svg width="15" height="15" viewBox="0 0 9 9" fill="currentColor"><path d="M 8.812 0.264 C 8.932 0.432 9 0.661 9 0.9 C 9 1.139 8.932 1.367 8.812 1.536 L 3.664 8.736 C 3.543 8.905 3.38 9 3.209 9 C 3.039 9 2.875 8.905 2.754 8.736 L 0.181 5.136 C 0.063 4.967 -0.001 4.739 0 4.503 C 0.001 4.267 0.069 4.042 0.188 3.875 C 0.308 3.708 0.469 3.613 0.638 3.611 C 0.807 3.609 0.969 3.7 1.09 3.864 L 3.209 6.827 L 7.902 0.264 C 8.022 0.095 8.186 0 8.357 0 C 8.527 0 8.691 0.095 8.812 0.264 Z"/></svg></span><span style="font-size:14px; color:#1A1A2E;">Pronto Cuidar para urgências</span></div>
-          <div style="display:flex; align-items:center; gap:10px;"><span style="color:#27CC95; flex-shrink:0;"><svg width="15" height="15" viewBox="0 0 9 9" fill="currentColor"><path d="M 8.812 0.264 C 8.932 0.432 9 0.661 9 0.9 C 9 1.139 8.932 1.367 8.812 1.536 L 3.664 8.736 C 3.543 8.905 3.38 9 3.209 9 C 3.039 9 2.875 8.905 2.754 8.736 L 0.181 5.136 C 0.063 4.967 -0.001 4.739 0 4.503 C 0.001 4.267 0.069 4.042 0.188 3.875 C 0.308 3.708 0.469 3.613 0.638 3.611 C 0.807 3.609 0.969 3.7 1.09 3.864 L 3.209 6.827 L 7.902 0.264 C 8.022 0.095 8.186 0 8.357 0 C 8.527 0 8.691 0.095 8.812 0.264 Z"/></svg></span><span style="font-size:14px; color:#1A1A2E;">Acesso em todas as 6 unidades</span></div>
-        </div>
-        <div style="display:flex; gap:12px; flex-wrap:wrap;">
-          <button onclick="document.getElementById('formulario').scrollIntoView({behavior:'smooth'})" style="background:#430593; color:#FFFFFF; font-size:14px; font-weight:700; padding:14px 26px; border-radius:9999px; border:none; cursor:pointer; display:inline-flex; align-items:center; gap:8px; transition:all 0.25s;" onmouseover="this.style.background='#2d0369';this.style.transform='translateY(-1px)'" onmouseout="this.style.background='#430593';this.style.transform='translateY(0)'">Contratar a Mais60 Essencial <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-2px;margin-left:2px;"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-          <a href="mais60-essencial-plano-particular-idoso.html" style="background:transparent; color:#430593; font-size:14px; font-weight:600; padding:12px 24px; border-radius:9999px; border:2px solid rgba(67,5,147,0.25); display:inline-flex; align-items:center; transition:all 0.2s;" onmouseover="this.style.borderColor='#430593'" onmouseout="this.style.borderColor='rgba(67,5,147,0.25)'">Saber mais sobre o Essencial</a>
-        </div>
-      </div>
-
-      <!-- Right: price card -->
-      <div style="background:linear-gradient(135deg,#430593 0%,#2d0369 100%); border-radius:24px; padding:36px 32px; position:relative; overflow:hidden;">
-        <div style="position:absolute; width:300px; height:300px; border-radius:50%; background:radial-gradient(circle, rgba(39,204,149,0.18) 0%, transparent 70%); top:-80px; right:-80px;"></div>
-        <div style="position:relative; z-index:1;">
-          <span style="display:inline-block; font-size:11px; font-weight:600; color:rgba(255,255,255,0.65); letter-spacing:0.10em; text-transform:uppercase; background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.20); border-radius:9999px; padding:4px 14px; margin-bottom:20px;">Mais60 Essencial</span>
-          <div style="display:flex; align-items:baseline; gap:8px; margin-bottom:24px;">
-            <span style="font-size:44px; font-weight:900; color:#FFFFFF; letter-spacing:-0.03em;">R$329</span>
-            <span style="font-size:16px; font-weight:400; color:rgba(255,255,255,0.55);">/ Mês</span>
-          </div>
-          <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:24px;">
-            <div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); border-radius:12px; padding:12px 16px; font-size:14px; font-weight:600; color:#FFFFFF;">Sem carência</div>
-            <div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); border-radius:12px; padding:12px 16px; font-size:14px; font-weight:600; color:#FFFFFF;">Sem coparticipação</div>
-            <div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); border-radius:12px; padding:12px 16px; font-size:14px; font-weight:600; color:#FFFFFF;">Sem diferenciação por idade</div>
-          </div>
-          <div style="height:1px; background:rgba(255,255,255,0.15); margin-bottom:24px;"></div>
-          <p style="font-size:14px; color:rgba(255,255,255,0.70); line-height:1.85;">Equipe geriátrica completa disponível em qualquer uma das 6 unidades, sem letras miúdas.</p>
-        </div>
-      </div>
-
-    </div>
+<!-- ═══ PLANOS: CONVÊNIO OU MAIS60 ESSENCIAL ═══ -->
+<section id="mais60-essencial" style="position:relative; background:linear-gradient(135deg,#430593 0%,#2d0369 100%); padding:140px 48px; overflow:hidden;">
+  <div style="position:absolute; inset:0; pointer-events:none; overflow:hidden;">
+    <div style="position:absolute; width:600px; height:600px; border-radius:50%; background:radial-gradient(circle,rgba(39,204,149,0.18) 0%,transparent 70%); top:-100px; right:-100px; animation:meshDrift 14s ease-in-out infinite;"></div>
+    <div style="position:absolute; width:400px; height:400px; border-radius:50%; background:radial-gradient(circle,rgba(6,170,252,0.12) 0%,transparent 70%); bottom:-50px; left:20%; animation:meshDrift 18s ease-in-out infinite reverse;"></div>
   </div>
-</section>
+  <div style="position:relative; z-index:1; max-width:1280px; margin:0 auto;">
+    <div style="text-align:center; max-width:680px; margin:0 auto 56px;">
+      <span style="display:inline-block; font-size:11px; font-weight:600; color:rgba(255,255,255,0.60); letter-spacing:0.10em; text-transform:uppercase; background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.20); border-radius:9999px; padding:4px 14px; margin-bottom:20px;">Como Contratar</span>
+      <h2 style="font-size:clamp(28px,3vw,44px); font-weight:800; color:#FFFFFF; line-height:1.1; letter-spacing:-0.025em; margin-bottom:20px;">Duas formas de cuidar do seu familiar com a Mais60.</h2>
+      <p style="font-size:17px; font-weight:500; color:rgba(255,255,255,0.75); line-height:1.85;">Já tem convênio? Verificamos a cobertura na hora. Não tem? O plano particular Mais60 Essencial oferece a mesma equipe completa, sem carência.</p>
+    </div>
 
-<!-- ═══ PRONTO CUIDAR (Figma: Dobra 5) ═══ -->
-<section id="pronto-cuidar" style="background:linear-gradient(135deg,#FB5C3D 0%,#e04a2c 100%); padding:120px 48px;">
-  <div style="max-width:1280px; margin:0 auto;">
-    <div class="hp-2col">
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:32px; align-items:stretch;">
 
-      <!-- Left -->
-      <div>
-        <span style="display:inline-block; font-size:11px; font-weight:600; color:#FFFFFF; letter-spacing:0.10em; text-transform:uppercase; background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.25); border-radius:9999px; padding:4px 14px; margin-bottom:20px;">Para quem é o Pronto Cuidar?</span>
-        <h2 style="font-size:clamp(26px,2.8vw,36px); font-weight:800; color:#FFFFFF; line-height:1.15; letter-spacing:-0.02em; margin-bottom:20px;">Urgências sem fila de pronto-socorro.</h2>
-        <p style="font-size:16px; color:rgba(255,255,255,0.88); line-height:1.85; margin-bottom:24px;">O Pronto Cuidar da Mais60 atende urgências de baixa e média complexidade para pessoas com mais de 60 anos sem a espera e o risco do pronto-socorro hospitalar. Infecção urinária, pressão descontrolada, febre, hidratação venosa e medicação intravenosa resolvidos com equipe geriátrica especializada.</p>
-        <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:28px;">
-          <div style="display:flex; align-items:center; gap:10px;"><span style="color:#FFFFFF; flex-shrink:0;"><svg width="13" height="13" viewBox="0 0 9 9" fill="currentColor"><path d="M 8.812 0.264 C 8.932 0.432 9 0.661 9 0.9 C 9 1.139 8.932 1.367 8.812 1.536 L 3.664 8.736 C 3.543 8.905 3.38 9 3.209 9 C 3.039 9 2.875 8.905 2.754 8.736 L 0.181 5.136 C 0.063 4.967 -0.001 4.739 0 4.503 C 0.001 4.267 0.069 4.042 0.188 3.875 C 0.308 3.708 0.469 3.613 0.638 3.611 C 0.807 3.609 0.969 3.7 1.09 3.864 L 3.209 6.827 L 7.902 0.264 C 8.022 0.095 8.186 0 8.357 0 C 8.527 0 8.691 0.095 8.812 0.264 Z"/></svg></span><span style="font-size:14px; font-weight:500; color:rgba(255,255,255,0.92);">Pacientes da Mais60 e Mais60 Essencial</span></div>
-          <div style="display:flex; align-items:center; gap:10px;"><span style="color:#FFFFFF; flex-shrink:0;"><svg width="13" height="13" viewBox="0 0 9 9" fill="currentColor"><path d="M 8.812 0.264 C 8.932 0.432 9 0.661 9 0.9 C 9 1.139 8.932 1.367 8.812 1.536 L 3.664 8.736 C 3.543 8.905 3.38 9 3.209 9 C 3.039 9 2.875 8.905 2.754 8.736 L 0.181 5.136 C 0.063 4.967 -0.001 4.739 0 4.503 C 0.001 4.267 0.069 4.042 0.188 3.875 C 0.308 3.708 0.469 3.613 0.638 3.611 C 0.807 3.609 0.969 3.7 1.09 3.864 L 3.209 6.827 L 7.902 0.264 C 8.022 0.095 8.186 0 8.357 0 C 8.527 0 8.691 0.095 8.812 0.264 Z"/></svg></span><span style="font-size:14px; font-weight:500; color:rgba(255,255,255,0.92);">Beneficiários Unimed BH 60+</span></div>
-          <div style="display:flex; align-items:center; gap:10px;"><span style="color:#FFFFFF; flex-shrink:0;"><svg width="13" height="13" viewBox="0 0 9 9" fill="currentColor"><path d="M 8.812 0.264 C 8.932 0.432 9 0.661 9 0.9 C 9 1.139 8.932 1.367 8.812 1.536 L 3.664 8.736 C 3.543 8.905 3.38 9 3.209 9 C 3.039 9 2.875 8.905 2.754 8.736 L 0.181 5.136 C 0.063 4.967 -0.001 4.739 0 4.503 C 0.001 4.267 0.069 4.042 0.188 3.875 C 0.308 3.708 0.469 3.613 0.638 3.611 C 0.807 3.609 0.969 3.7 1.09 3.864 L 3.209 6.827 L 7.902 0.264 C 8.022 0.095 8.186 0 8.357 0 C 8.527 0 8.691 0.095 8.812 0.264 Z"/></svg></span><span style="font-size:14px; font-weight:500; color:rgba(255,255,255,0.92);">Pessoas com mais de 60 anos</span></div>
-          <div style="display:flex; align-items:center; gap:10px;"><span style="color:#FFFFFF; flex-shrink:0;"><svg width="13" height="13" viewBox="0 0 9 9" fill="currentColor"><path d="M 8.812 0.264 C 8.932 0.432 9 0.661 9 0.9 C 9 1.139 8.932 1.367 8.812 1.536 L 3.664 8.736 C 3.543 8.905 3.38 9 3.209 9 C 3.039 9 2.875 8.905 2.754 8.736 L 0.181 5.136 C 0.063 4.967 -0.001 4.739 0 4.503 C 0.001 4.267 0.069 4.042 0.188 3.875 C 0.308 3.708 0.469 3.613 0.638 3.611 C 0.807 3.609 0.969 3.7 1.09 3.864 L 3.209 6.827 L 7.902 0.264 C 8.022 0.095 8.186 0 8.357 0 C 8.527 0 8.691 0.095 8.812 0.264 Z"/></svg></span><span style="font-size:14px; font-weight:500; color:rgba(255,255,255,0.92);">Urgências de baixa e média complexidade</span></div>
+      <!-- Card A: Tenho convênio -->
+      <div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.16); border-radius:24px; padding:44px 40px; backdrop-filter:blur(12px); display:flex; flex-direction:column;">
+        <span style="display:inline-block; font-size:11px; font-weight:600; color:rgba(255,255,255,0.60); letter-spacing:0.10em; text-transform:uppercase; background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.20); border-radius:9999px; padding:4px 14px; margin-bottom:20px; align-self:flex-start;">Tenho convênio</span>
+        <h3 style="font-size:26px; font-weight:800; color:#FFFFFF; line-height:1.15; letter-spacing:-0.02em; margin-bottom:14px;">Atendimento pelo seu plano de saúde</h3>
+        <p style="font-size:15px; font-weight:500; color:rgba(255,255,255,0.75); line-height:1.85; margin-bottom:28px;">A Mais60 atende diretamente pelos convênios abaixo, sem custo adicional para o beneficiário.</p>
+        <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:32px;">
+          <div style="display:flex; align-items:center; gap:10px;"><span style="color:#27CC95; font-size:16px; flex-shrink:0;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:15px; color:rgba(255,255,255,0.85);">Unimed BH</span></div>
+          <div style="display:flex; align-items:center; gap:10px;"><span style="color:#27CC95; font-size:16px; flex-shrink:0;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:15px; color:rgba(255,255,255,0.85);">Fundaffemg</span></div>
+          <div style="display:flex; align-items:center; gap:10px;"><span style="color:#27CC95; font-size:16px; flex-shrink:0;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:15px; color:rgba(255,255,255,0.85);">Desban</span></div>
         </div>
-        <div style="display:flex; align-items:center; gap:10px; margin-bottom:8px;">
-          <span style="color:#FFFFFF; flex-shrink:0;"><svg width="15" height="16" viewBox="0 0 13 14" fill="currentColor"><path d="M 0 5.701 C 0 2.552 2.91 0 6.5 0 C 10.09 0 13 2.552 13 5.701 C 13 8.824 10.926 12.469 7.689 13.772 C 7.313 13.923 6.908 14 6.5 14 C 6.092 14 5.687 13.923 5.311 13.772 C 2.074 12.469 0 8.823 0 5.701 Z M 6.5 7.875 C 6.993 7.875 7.465 7.691 7.813 7.362 C 8.161 7.034 8.357 6.589 8.357 6.125 C 8.357 5.661 8.161 5.216 7.813 4.888 C 7.465 4.559 6.993 4.375 6.5 4.375 C 6.007 4.375 5.535 4.559 5.187 4.888 C 4.839 5.216 4.643 5.661 4.643 6.125 C 4.643 6.589 4.839 7.034 5.187 7.362 C 5.535 7.691 6.007 7.875 6.5 7.875 Z"/></svg></span>
-          <span style="font-size:15px; font-weight:700; color:#FFFFFF;">Funcionários, Belo Horizonte</span>
-        </div>
-        <div style="font-size:14px; color:rgba(255,255,255,0.80); margin-left:25px;">Av. Brasil, 1477 · Próximo ao metrô · Seg–Sex das 7h às 22h</div>
+        <button id="btn-convenio-verificar" onclick="document.getElementById('formulario').scrollIntoView({behavior:'smooth'})" style="margin-top:auto; background:#FFFFFF; color:#430593; font-size:15px; font-weight:700; padding:15px 28px; border-radius:9999px; border:none; cursor:pointer; display:inline-flex; align-items:center; gap:8px; transition:all 0.25s;" onmouseover="this.style.transform='translateY(-1px)'" onmouseout="this.style.transform='translateY(0)'">Verificar meu convênio <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-2px;margin-left:2px;"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
       </div>
 
-      <!-- Right: photo + CTA -->
-      <div style="position:relative; border-radius:24px; overflow:hidden; aspect-ratio:520/423; background:linear-gradient(160deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.05) 100%); border:1px solid rgba(255,255,255,0.20); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; text-align:center; padding:28px;">
-        <div style="opacity:0.7; color:#FFFFFF;"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg></div>
-        <div style="background:rgba(0,0,0,0.28); border:1px dashed rgba(255,255,255,0.30); border-radius:12px; padding:14px 18px; max-width:280px;">
-          <div style="font-size:11px; font-weight:600; color:rgba(255,255,255,0.55); letter-spacing:0.08em; text-transform:uppercase; margin-bottom:6px;">Placeholder de foto</div>
-          <div style="font-size:13px; color:rgba(255,255,255,0.75); line-height:1.7;">Paciente +60 sendo atendido no Pronto Cuidar, ambiente clínico acolhedor.</div>
+      <!-- Card B: Não tenho convênio -->
+      <div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.16); border-radius:24px; padding:44px 40px; backdrop-filter:blur(12px); display:flex; flex-direction:column;">
+        <span style="display:inline-block; font-size:11px; font-weight:600; color:rgba(255,255,255,0.60); letter-spacing:0.10em; text-transform:uppercase; background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.20); border-radius:9999px; padding:4px 14px; margin-bottom:20px; align-self:flex-start;">Não tenho convênio</span>
+        <h3 style="font-size:26px; font-weight:800; color:#FFFFFF; line-height:1.15; letter-spacing:-0.02em; margin-bottom:4px;">Mais60 Essencial</h3>
+        <div style="display:flex; align-items:baseline; gap:8px; margin-bottom:14px;">
+          <span style="font-size:36px; font-weight:900; background:linear-gradient(135deg,#FFFFFF 0%,#27CC95 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; letter-spacing:-0.03em;">R$329</span>
+          <span style="font-size:15px; font-weight:400; color:rgba(255,255,255,0.55);">/mês</span>
         </div>
-        <a href="https://lp.mais60saude.com.br/pronto-cuidar" id="btn-prontocuidar-ir" style="position:absolute; bottom:20px; left:20px; right:20px; background:#FFFFFF; color:#FB5C3D; font-size:14px; font-weight:700; padding:14px 20px; border-radius:9999px; text-align:center; display:flex; align-items:center; justify-content:center; gap:8px; transition:all 0.25s; box-shadow:0 4px 20px rgba(0,0,0,0.20);" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Ir ao Pronto Cuidar <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <p style="font-size:15px; font-weight:500; color:rgba(255,255,255,0.75); line-height:1.85; margin-bottom:24px;">Cuidado completo, sem carência, sem coparticipação, em qualquer unidade.</p>
+        <div style="display:flex; flex-direction:column; gap:9px; margin-bottom:32px;">
+          <div style="display:flex; align-items:center; gap:10px;"><span style="color:#27CC95; font-size:16px; flex-shrink:0;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:15px; color:rgba(255,255,255,0.85);">Geriatra com consultas ilimitadas</span></div>
+          <div style="display:flex; align-items:center; gap:10px;"><span style="color:#27CC95; font-size:16px; flex-shrink:0;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:15px; color:rgba(255,255,255,0.85);">Enfermagem 24h com telemonitoramento</span></div>
+          <div style="display:flex; align-items:center; gap:10px;"><span style="color:#27CC95; font-size:16px; flex-shrink:0;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:15px; color:rgba(255,255,255,0.85);">Fisioterapia, Nutrição, Psicologia</span></div>
+          <div style="display:flex; align-items:center; gap:10px;"><span style="color:#27CC95; font-size:16px; flex-shrink:0;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:15px; color:rgba(255,255,255,0.85);">Fonoaudiologia, Terapia Ocupacional, Ed. Física</span></div>
+          <div style="display:flex; align-items:center; gap:10px;"><span style="color:#27CC95; font-size:16px; flex-shrink:0;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:15px; color:rgba(255,255,255,0.85);">Farmacêutico Clínico integrado</span></div>
+          <div style="display:flex; align-items:center; gap:10px;"><span style="color:#27CC95; font-size:16px; flex-shrink:0;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:15px; color:rgba(255,255,255,0.85);">Pronto Cuidar para urgências</span></div>
+          <div style="display:flex; align-items:center; gap:10px;"><span style="color:#27CC95; font-size:16px; flex-shrink:0;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size:15px; color:rgba(255,255,255,0.85);">Acesso em todas as 6 unidades</span></div>
+        </div>
+        <button id="btn-essencial-conhecer" onclick="document.getElementById('formulario').scrollIntoView({behavior:'smooth'})" style="margin-top:auto; background:#27CC95; color:#FFFFFF; font-size:15px; font-weight:700; padding:15px 28px; border-radius:9999px; border:none; cursor:pointer; display:inline-flex; align-items:center; gap:8px; transition:all 0.25s;" onmouseover="this.style.background='#1ea87a';this.style.transform='translateY(-1px)'" onmouseout="this.style.background='#27CC95';this.style.transform='translateY(0)'">Conhecer o Essencial <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-2px;margin-left:2px;"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
       </div>
 
     </div>
@@ -433,7 +559,7 @@
 </section>
 
 <!-- ═══ CONDIÇÕES ═══ -->
-<section style="background:#E8F3F5; padding:120px 48px;">
+<section style="background:#E8F3F5; padding:140px 48px;">
   <div style="max-width:1280px; margin:0 auto;">
     <div style="text-align:center; max-width:680px; margin:0 auto 56px;">
       <span style="display:inline-block; font-size:11px; font-weight:600; color:#430593; letter-spacing:0.10em; text-transform:uppercase; background:rgba(67,5,147,0.08); border:1px solid rgba(67,5,147,0.14); border-radius:9999px; padding:4px 14px; margin-bottom:16px;">Condições Clínicas</span>
