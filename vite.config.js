@@ -58,6 +58,7 @@ const pages = [
   "clinica-idosos-santo-agostinho-bh",
   "clinica-idosos-santa-efigenia-bh",
   "clinica-idosos-betim-mg",
+  "revisao-admin",
 ];
 
 const input = {};

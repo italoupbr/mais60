@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Painel de Revisão — Mais60 Saúde</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Poppins', sans-serif; background: #F7F7FB; color: #1A1A2E; padding: 40px 24px 80px; }
+  .wrap { max-width: 1040px; margin: 0 auto; }
+  h1 { font-size: 24px; font-weight: 800; color: #430593; margin-bottom: 4px; }
+  .sub { font-size: 14px; color: #6b6b85; margin-bottom: 28px; }
+
+  .stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; margin-bottom: 32px; }
+  .stat { background: #fff; border-radius: 14px; padding: 18px; border: 1px solid rgba(67,5,147,0.08); }
+  .stat .n { font-size: 28px; font-weight: 800; color: #430593; }
+  .stat .l { font-size: 12px; color: #6b6b85; margin-top: 4px; }
+
+  .page-card { background: #fff; border-radius: 14px; border: 1px solid rgba(67,5,147,0.08); margin-bottom: 10px; overflow: hidden; }
+  .page-row { display: flex; align-items: center; gap: 12px; padding: 14px 18px; cursor: pointer; }
+  .page-row:hover { background: #fafaff; }
+  .page-row .icon { font-size: 16px; flex-shrink: 0; }
+  .page-row .title { font-size: 14px; font-weight: 600; flex: 1; }
+  .page-row .count { font-size: 12px; font-weight: 600; color: #6b6b85; background: #F0EDF8; border-radius: 999px; padding: 3px 10px; }
+  .page-row .count.has-open { color: #B3271C; background: rgba(179,39,28,0.10); }
+  .page-row .chevron { font-size: 12px; color: #9CA3AF; transition: transform 0.15s; }
+  .page-card.open .chevron { transform: rotate(90deg); }
+  .page-card.open .page-row { background: #fafaff; }
+
+  .anno-list { display: none; border-top: 1px solid rgba(67,5,147,0.06); }
+  .page-card.open .anno-list { display: block; }
+  .anno-item { padding: 14px 18px; border-bottom: 1px solid rgba(67,5,147,0.05); font-size: 13px; }
+  .anno-item:last-child { border-bottom: none; }
+  .anno-meta { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
+  .anno-tipo { font-size: 10.5px; font-weight: 700; color: #430593; text-transform: uppercase; letter-spacing: 0.06em; background: rgba(67,5,147,0.08); border-radius: 999px; padding: 2px 9px; }
+  .anno-date { font-size: 11px; color: #9CA3AF; }
+  .anno-text { color: #40405c; line-height: 1.6; margin-bottom: 8px; }
+  .anno-actions button { font-family: inherit; font-size: 12px; font-weight: 600; border-radius: 999px; padding: 6px 14px; cursor: pointer; border: none; }
+  .btn-resolver { background: #27CC95; color: #06331f; }
+  .btn-resolver[disabled] { opacity: 0.5; cursor: default; }
+  .badge-resolvido { font-size: 11px; font-weight: 600; color: #178a5f; }
+  .empty { padding: 16px 18px; font-size: 13px; color: #9CA3AF; }
+  .open-page-link { font-size: 12px; color: #430593; font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Painel de Revisão</h1>
+  <div class="sub">Mais60 Saúde — acompanhamento de aprovação de páginas e apontamentos do cliente</div>
+
+  <div class="stats" id="stats"></div>
+  <div id="pages"></div>
+</div>
+
+<script type="module">
+import { SITE_PAGES } from "./src/site-pages.js";
+
+const SUPABASE_URL = "https://viidsfngwjpuejsezzsj.supabase.co";
+const SUPABASE_KEY = "sb_publishable_6fHwtzhQyBuUQfnUxZceTg_Mj-p7Tc3";
+
+function headers() {
+  return { "Content-Type": "application/json", apikey: SUPABASE_KEY, Authorization: `Bearer ${SUPABASE_KEY}` };
+}
+async function get(path) {
+  const res = await fetch(`${SUPABASE_URL}/rest/v1/${path}`, { headers: headers() });
+  if (!res.ok) throw new Error(`GET ${path} -> ${res.status}`);
+  return res.json();
+}
+async function patch(path, body) {
+  const res = await fetch(`${SUPABASE_URL}/rest/v1/${path}`, {
+    method: "PATCH",
+    headers: { ...headers(), Prefer: "return=minimal" },
+    body: JSON.stringify(body),
+  });
+  if (!res.ok) throw new Error(`PATCH ${path} -> ${res.status}`);
+}
+function escapeHtml(str) {
+  const div = document.createElement("div");
+  div.textContent = str;
+  return div.innerHTML;
+}
+function fmtDate(iso) {
+  return new Date(iso).toLocaleString("pt-BR", { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" });
+}
+
+const TOOL_LABELS = { comentario: "Comentário", caixa: "Área marcada", caneta: "Grifo" };
+
+async function load() {
+  const [statusRows, annoRows] = await Promise.all([
+    get("mais60_page_status?select=page_slug,visitado,aprovado"),
+    get("mais60_anotacoes?select=*&order=created_at.desc"),
+  ]);
+  const statusBySlug = Object.fromEntries(statusRows.map((r) => [r.page_slug, r]));
+  const annosBySlug = {};
+  annoRows.forEach((a) => {
+    (annosBySlug[a.page_slug] = annosBySlug[a.page_slug] || []).push(a);
+  });
+
+  const visitadas = statusRows.filter((r) => r.visitado).length;
+  const aprovadas = statusRows.filter((r) => r.aprovado).length;
+  const abertos = annoRows.filter((a) => a.status !== "resolvido").length;
+
+  document.getElementById("stats").innerHTML = `
+    <div class="stat"><div class="n">${SITE_PAGES.length}</div><div class="l">Páginas no site</div></div>
+    <div class="stat"><div class="n">${visitadas}</div><div class="l">Visitadas pelo cliente</div></div>
+    <div class="stat"><div class="n">${aprovadas}</div><div class="l">Aprovadas</div></div>
+    <div class="stat"><div class="n">${abertos}</div><div class="l">Comentários abertos</div></div>
+  `;
+
+  const pagesEl = document.getElementById("pages");
+  pagesEl.innerHTML = SITE_PAGES.map((p) => {
+    const st = statusBySlug[p.slug] || {};
+    const icon = st.aprovado ? "✅" : st.visitado ? "🔵" : "⬜";
+    const annos = annosBySlug[p.slug] || [];
+    const openCount = annos.filter((a) => a.status !== "resolvido").length;
+    const href = p.slug === "index" ? "index.html" : `${p.slug}.html`;
+    return `
+      <div class="page-card" data-slug="${p.slug}">
+        <div class="page-row" data-toggle>
+          <span class="icon">${icon}</span>
+          <span class="title">${escapeHtml(p.title)}</span>
+          <a class="open-page-link" href="${href}" target="_blank" onclick="event.stopPropagation()">abrir página ↗</a>
+          <span class="count ${openCount > 0 ? "has-open" : ""}">${annos.length ? `${openCount} aberto(s) / ${annos.length}` : "sem comentários"}</span>
+          <span class="chevron">▶</span>
+        </div>
+        <div class="anno-list">
+          ${
+            annos.length === 0
+              ? `<div class="empty">Nenhum apontamento nesta página.</div>`
+              : annos
+                  .map(
+                    (a) => `
+                <div class="anno-item" data-id="${a.id}">
+                  <div class="anno-meta">
+                    <span class="anno-tipo">${TOOL_LABELS[a.tipo] || a.tipo}</span>
+                    <span class="anno-date">${fmtDate(a.created_at)}</span>
+                  </div>
+                  <div class="anno-text">${escapeHtml(a.comentario)}</div>
+                  <div class="anno-actions">
+                    ${
+                      a.status === "resolvido"
+                        ? `<span class="badge-resolvido">✓ resolvido</span>`
+                        : `<button type="button" class="btn-resolver" data-id="${a.id}">Marcar como resolvido</button>`
+                    }
+                  </div>
+                </div>`
+                  )
+                  .join("")
+          }
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  pagesEl.querySelectorAll("[data-toggle]").forEach((row) => {
+    row.addEventListener("click", () => row.closest(".page-card").classList.toggle("open"));
+  });
+  pagesEl.querySelectorAll(".btn-resolver").forEach((btn) => {
+    btn.addEventListener("click", async (e) => {
+      e.stopPropagation();
+      btn.disabled = true;
+      btn.textContent = "Salvando...";
+      try {
+        await patch(`mais60_anotacoes?id=eq.${btn.dataset.id}`, { status: "resolvido" });
+        load();
+      } catch (err) {
+        btn.disabled = false;
+        btn.textContent = "Marcar como resolvido";
+      }
+    });
+  });
+}
+
+load();
+</script>
+</body>
+</html>
