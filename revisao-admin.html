@@ -43,6 +43,16 @@
   .badge-resolvido { font-size: 11px; font-weight: 600; color: #178a5f; }
   .empty { padding: 16px 18px; font-size: 13px; color: #9CA3AF; }
   .open-page-link { font-size: 12px; color: #430593; font-weight: 600; }
+
+  .section-label { font-size: 10.5px; font-weight: 700; color: #9CA3AF; text-transform: uppercase; letter-spacing: 0.06em; padding: 12px 18px 6px; }
+  .anno-tipo.tipo-sugestao { background: rgba(39,204,149,0.14); color: #178a5f; }
+  .sug-item { padding: 14px 18px; border-bottom: 1px solid rgba(67,5,147,0.05); font-size: 13px; }
+  .sug-item:last-child { border-bottom: none; }
+  .sug-diff { border-radius: 10px; margin-bottom: 8px; overflow: hidden; }
+  .sug-label { display: block; font-size: 9.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #9CA3AF; margin-bottom: 3px; }
+  .sug-original { background: rgba(179,39,28,0.06); border-left: 3px solid #B3271C; padding: 8px 12px; font-size: 12.5px; color: #40405c; line-height: 1.5; }
+  .sug-original span.txt { text-decoration: line-through; text-decoration-color: rgba(179,39,28,0.45); text-decoration-thickness: 1.5px; }
+  .sug-proposta { background: rgba(39,204,149,0.08); border-left: 3px solid #27CC95; padding: 8px 12px; font-size: 13px; color: #1A1A2E; font-weight: 500; line-height: 1.5; margin-top: 4px; border-radius: 0 0 8px 8px; }
 </style>
 </head>
 <body>
@@ -87,26 +97,39 @@ function fmtDate(iso) {
 
 const TOOL_LABELS = { comentario: "Comentário", caixa: "Área marcada", caneta: "Grifo" };
 
+function slugFromPagePath(pagePath) {
+  const path = (pagePath || "").replace(/^\/+|\/+$/g, "");
+  if (!path || path === "index.html") return "index";
+  return path.replace(/\.html$/, "");
+}
+
 async function load() {
-  const [statusRows, annoRows] = await Promise.all([
+  const [statusRows, annoRows, sugRows] = await Promise.all([
     get("mais60_page_status?select=page_slug,visitado,aprovado"),
     get("mais60_anotacoes?select=*&order=created_at.desc"),
+    get("mais60_sugestoes?select=*&order=created_at.desc"),
   ]);
   const statusBySlug = Object.fromEntries(statusRows.map((r) => [r.page_slug, r]));
   const annosBySlug = {};
   annoRows.forEach((a) => {
     (annosBySlug[a.page_slug] = annosBySlug[a.page_slug] || []).push(a);
   });
+  const sugsBySlug = {};
+  sugRows.forEach((s) => {
+    const slug = slugFromPagePath(s.page_path);
+    (sugsBySlug[slug] = sugsBySlug[slug] || []).push(s);
+  });
 
   const visitadas = statusRows.filter((r) => r.visitado).length;
   const aprovadas = statusRows.filter((r) => r.aprovado).length;
   const abertos = annoRows.filter((a) => a.status !== "resolvido").length;
+  const sugPendentes = sugRows.filter((s) => s.status !== "resolvido").length;
 
   document.getElementById("stats").innerHTML = `
     <div class="stat"><div class="n">${SITE_PAGES.length}</div><div class="l">Páginas no site</div></div>
     <div class="stat"><div class="n">${visitadas}</div><div class="l">Visitadas pelo cliente</div></div>
     <div class="stat"><div class="n">${aprovadas}</div><div class="l">Aprovadas</div></div>
-    <div class="stat"><div class="n">${abertos}</div><div class="l">Comentários abertos</div></div>
+    <div class="stat"><div class="n">${abertos + sugPendentes}</div><div class="l">Pendentes (${sugPendentes} sugestões de texto, ${abertos} apontamentos)</div></div>
   `;
 
   const pagesEl = document.getElementById("pages");
@@ -114,7 +137,9 @@ async function load() {
     const st = statusBySlug[p.slug] || {};
     const icon = st.aprovado ? "✅" : st.visitado ? "🔵" : "⬜";
     const annos = annosBySlug[p.slug] || [];
-    const openCount = annos.filter((a) => a.status !== "resolvido").length;
+    const sugs = sugsBySlug[p.slug] || [];
+    const openCount = annos.filter((a) => a.status !== "resolvido").length + sugs.filter((s) => s.status !== "resolvido").length;
+    const totalCount = annos.length + sugs.length;
     const href = p.slug === "index" ? "index.html" : `${p.slug}.html`;
     return `
       <div class="page-card" data-slug="${p.slug}">
@@ -122,14 +147,43 @@ async function load() {
           <span class="icon">${icon}</span>
           <span class="title">${escapeHtml(p.title)}</span>
           <a class="open-page-link" href="${href}" target="_blank" onclick="event.stopPropagation()">abrir página ↗</a>
-          <span class="count ${openCount > 0 ? "has-open" : ""}">${annos.length ? `${openCount} aberto(s) / ${annos.length}` : "sem comentários"}</span>
+          <span class="count ${openCount > 0 ? "has-open" : ""}">${totalCount ? `${openCount} pendente(s) / ${totalCount}` : "sem comentários"}</span>
           <span class="chevron">▶</span>
         </div>
         <div class="anno-list">
+          ${totalCount === 0 ? `<div class="empty">Nenhum apontamento nesta página.</div>` : ""}
+          ${
+            sugs.length === 0
+              ? ""
+              : `<div class="section-label">Sugestões de texto (${sugs.length})</div>` +
+                sugs
+                  .map(
+                    (s) => `
+                <div class="sug-item" data-id="${s.id}">
+                  <div class="anno-meta">
+                    <span class="anno-tipo tipo-sugestao">Sugestão de texto</span>
+                    <span class="anno-date">${fmtDate(s.created_at)}</span>
+                  </div>
+                  <div class="sug-diff">
+                    <div class="sug-original"><span class="sug-label">Texto atual no site</span><span class="txt">"${escapeHtml(s.texto_selecionado)}"</span></div>
+                    <div class="sug-proposta"><span class="sug-label">Sugestão do cliente</span>${escapeHtml(s.comentario)}</div>
+                  </div>
+                  <div class="anno-actions">
+                    ${
+                      s.status === "resolvido"
+                        ? `<span class="badge-resolvido">✓ resolvido</span>`
+                        : `<button type="button" class="btn-resolver-sug" data-id="${s.id}">Marcar como resolvido</button>`
+                    }
+                  </div>
+                </div>`
+                  )
+                  .join("")
+          }
           ${
             annos.length === 0
-              ? `<div class="empty">Nenhum apontamento nesta página.</div>`
-              : annos
+              ? ""
+              : `<div class="section-label">Apontamentos visuais (${annos.length})</div>` +
+                annos
                   .map(
                     (a) => `
                 <div class="anno-item" data-id="${a.id}">
@@ -164,6 +218,20 @@ async function load() {
       btn.textContent = "Salvando...";
       try {
         await patch(`mais60_anotacoes?id=eq.${btn.dataset.id}`, { status: "resolvido" });
+        load();
+      } catch (err) {
+        btn.disabled = false;
+        btn.textContent = "Marcar como resolvido";
+      }
+    });
+  });
+  pagesEl.querySelectorAll(".btn-resolver-sug").forEach((btn) => {
+    btn.addEventListener("click", async (e) => {
+      e.stopPropagation();
+      btn.disabled = true;
+      btn.textContent = "Salvando...";
+      try {
+        await patch(`mais60_sugestoes?id=eq.${btn.dataset.id}`, { status: "resolvido" });
         load();
       } catch (err) {
         btn.disabled = false;

@@ -306,8 +306,24 @@ class SuggestionWidget {
     document.addEventListener("mouseup", (e) => this.onSelectionEnd(e));
     document.addEventListener("touchend", (e) => this.onSelectionEnd(e));
     document.addEventListener("mousedown", (e) => this.onOutsideInteraction(e));
-    document.addEventListener("scroll", () => this.dismissAll(), true);
-    window.addEventListener("resize", () => this.dismissAll());
+    document.addEventListener("scroll", (e) => this.onScroll(e), true);
+    window.addEventListener("resize", () => this.onResize());
+  }
+
+  onScroll(e) {
+    // Não fecha o formulário aberto por causa de scroll: o textarea rola
+    // internamente conforme o cliente digita um texto longo, e isso disparava
+    // esse mesmo listener (capture) e fechava a sugestão no meio da escrita.
+    if (this.panel) return;
+    if (this.trigger && this.trigger.contains(e.target)) return;
+    this.removeTrigger();
+  }
+
+  onResize() {
+    // Teclado do celular abrindo/fechando dispara "resize" — não pode fechar
+    // o formulário que o cliente está preenchendo por causa disso.
+    if (this.panel) return;
+    this.removeTrigger();
   }
 
   onOutsideInteraction(e) {
